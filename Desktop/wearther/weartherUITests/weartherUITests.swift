@@ -2,8 +2,8 @@
 //  weartherUITests.swift
 //  weartherUITests
 //
-//  Created by Tiasha Joardar on 3/20/18.
-//  Copyright © 2018 Tiasha Joardar. All rights reserved.
+//  Created by Amy Fang on 3/22/18.
+//  Copyright © 2018 Amy Fang. All rights reserved.
 //
 
 import XCTest

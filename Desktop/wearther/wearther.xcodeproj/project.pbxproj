@@ -7,64 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		661D869D2061C6CC001666A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D869C2061C6CC001666A4 /* AppDelegate.swift */; };
-		661D869F2061C6CC001666A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D869E2061C6CC001666A4 /* ViewController.swift */; };
-		661D86A22061C6CC001666A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661D86A02061C6CC001666A4 /* Main.storyboard */; };
-		661D86A42061C6CC001666A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661D86A32061C6CC001666A4 /* Assets.xcassets */; };
-		661D86A72061C6CC001666A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661D86A52061C6CC001666A4 /* LaunchScreen.storyboard */; };
-		661D86B22061C6CC001666A4 /* weartherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D86B12061C6CC001666A4 /* weartherTests.swift */; };
-		661D86BD2061C6CC001666A4 /* weartherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D86BC2061C6CC001666A4 /* weartherUITests.swift */; };
+		F804F894206487BE006E1B15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F893206487BE006E1B15 /* AppDelegate.swift */; };
+		F804F896206487BE006E1B15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F895206487BE006E1B15 /* ViewController.swift */; };
+		F804F899206487BE006E1B15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F804F897206487BE006E1B15 /* Main.storyboard */; };
+		F804F89C206487BE006E1B15 /* wearther.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F804F89A206487BE006E1B15 /* wearther.xcdatamodeld */; };
+		F804F89E206487BE006E1B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F804F89D206487BE006E1B15 /* Assets.xcassets */; };
+		F804F8A1206487BE006E1B15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F804F89F206487BE006E1B15 /* LaunchScreen.storyboard */; };
+		F804F8AC206487BF006E1B15 /* weartherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F8AB206487BF006E1B15 /* weartherTests.swift */; };
+		F804F8B7206487BF006E1B15 /* weartherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F8B6206487BF006E1B15 /* weartherUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		661D86AE2061C6CC001666A4 /* PBXContainerItemProxy */ = {
+		F804F8A8206487BF006E1B15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 661D86912061C6CB001666A4 /* Project object */;
+			containerPortal = F804F888206487BE006E1B15 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 661D86982061C6CC001666A4;
+			remoteGlobalIDString = F804F88F206487BE006E1B15;
 			remoteInfo = wearther;
 		};
-		661D86B92061C6CC001666A4 /* PBXContainerItemProxy */ = {
+		F804F8B3206487BF006E1B15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 661D86912061C6CB001666A4 /* Project object */;
+			containerPortal = F804F888206487BE006E1B15 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 661D86982061C6CC001666A4;
+			remoteGlobalIDString = F804F88F206487BE006E1B15;
 			remoteInfo = wearther;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		661D86992061C6CC001666A4 /* wearther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wearther.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		661D869C2061C6CC001666A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		661D869E2061C6CC001666A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		661D86A12061C6CC001666A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		661D86A32061C6CC001666A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		661D86A62061C6CC001666A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		661D86A82061C6CC001666A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		661D86AD2061C6CC001666A4 /* weartherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weartherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		661D86B12061C6CC001666A4 /* weartherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weartherTests.swift; sourceTree = "<group>"; };
-		661D86B32061C6CC001666A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		661D86B82061C6CC001666A4 /* weartherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weartherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		661D86BC2061C6CC001666A4 /* weartherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weartherUITests.swift; sourceTree = "<group>"; };
-		661D86BE2061C6CC001666A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F804F890206487BE006E1B15 /* wearther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wearther.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F804F893206487BE006E1B15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F804F895206487BE006E1B15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F804F898206487BE006E1B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F804F89B206487BE006E1B15 /* wearther.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wearther.xcdatamodel; sourceTree = "<group>"; };
+		F804F89D206487BE006E1B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F804F8A0206487BE006E1B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F804F8A2206487BE006E1B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F804F8A7206487BF006E1B15 /* weartherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weartherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F804F8AB206487BF006E1B15 /* weartherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weartherTests.swift; sourceTree = "<group>"; };
+		F804F8AD206487BF006E1B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F804F8B2206487BF006E1B15 /* weartherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weartherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F804F8B6206487BF006E1B15 /* weartherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weartherUITests.swift; sourceTree = "<group>"; };
+		F804F8B8206487BF006E1B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		661D86962061C6CC001666A4 /* Frameworks */ = {
+		F804F88D206487BE006E1B15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		661D86AA2061C6CC001666A4 /* Frameworks */ = {
+		F804F8A4206487BF006E1B15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		661D86B52061C6CC001666A4 /* Frameworks */ = {
+		F804F8AF206487BF006E1B15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,53 +76,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		661D86902061C6CB001666A4 = {
+		F804F887206487BE006E1B15 = {
 			isa = PBXGroup;
 			children = (
-				661D869B2061C6CC001666A4 /* wearther */,
-				661D86B02061C6CC001666A4 /* weartherTests */,
-				661D86BB2061C6CC001666A4 /* weartherUITests */,
-				661D869A2061C6CC001666A4 /* Products */,
+				F804F892206487BE006E1B15 /* wearther */,
+				F804F8AA206487BF006E1B15 /* weartherTests */,
+				F804F8B5206487BF006E1B15 /* weartherUITests */,
+				F804F891206487BE006E1B15 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		661D869A2061C6CC001666A4 /* Products */ = {
+		F804F891206487BE006E1B15 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				661D86992061C6CC001666A4 /* wearther.app */,
-				661D86AD2061C6CC001666A4 /* weartherTests.xctest */,
-				661D86B82061C6CC001666A4 /* weartherUITests.xctest */,
+				F804F890206487BE006E1B15 /* wearther.app */,
+				F804F8A7206487BF006E1B15 /* weartherTests.xctest */,
+				F804F8B2206487BF006E1B15 /* weartherUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		661D869B2061C6CC001666A4 /* wearther */ = {
+		F804F892206487BE006E1B15 /* wearther */ = {
 			isa = PBXGroup;
 			children = (
-				661D869C2061C6CC001666A4 /* AppDelegate.swift */,
-				661D869E2061C6CC001666A4 /* ViewController.swift */,
-				661D86A02061C6CC001666A4 /* Main.storyboard */,
-				661D86A32061C6CC001666A4 /* Assets.xcassets */,
-				661D86A52061C6CC001666A4 /* LaunchScreen.storyboard */,
-				661D86A82061C6CC001666A4 /* Info.plist */,
+				F804F893206487BE006E1B15 /* AppDelegate.swift */,
+				F804F895206487BE006E1B15 /* ViewController.swift */,
+				F804F897206487BE006E1B15 /* Main.storyboard */,
+				F804F89D206487BE006E1B15 /* Assets.xcassets */,
+				F804F89F206487BE006E1B15 /* LaunchScreen.storyboard */,
+				F804F8A2206487BE006E1B15 /* Info.plist */,
+				F804F89A206487BE006E1B15 /* wearther.xcdatamodeld */,
 			);
 			path = wearther;
 			sourceTree = "<group>";
 		};
-		661D86B02061C6CC001666A4 /* weartherTests */ = {
+		F804F8AA206487BF006E1B15 /* weartherTests */ = {
 			isa = PBXGroup;
 			children = (
-				661D86B12061C6CC001666A4 /* weartherTests.swift */,
-				661D86B32061C6CC001666A4 /* Info.plist */,
+				F804F8AB206487BF006E1B15 /* weartherTests.swift */,
+				F804F8AD206487BF006E1B15 /* Info.plist */,
 			);
 			path = weartherTests;
 			sourceTree = "<group>";
 		};
-		661D86BB2061C6CC001666A4 /* weartherUITests */ = {
+		F804F8B5206487BF006E1B15 /* weartherUITests */ = {
 			isa = PBXGroup;
 			children = (
-				661D86BC2061C6CC001666A4 /* weartherUITests.swift */,
-				661D86BE2061C6CC001666A4 /* Info.plist */,
+				F804F8B6206487BF006E1B15 /* weartherUITests.swift */,
+				F804F8B8206487BF006E1B15 /* Info.plist */,
 			);
 			path = weartherUITests;
 			sourceTree = "<group>";
@@ -128,13 +131,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		661D86982061C6CC001666A4 /* wearther */ = {
+		F804F88F206487BE006E1B15 /* wearther */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 661D86C12061C6CC001666A4 /* Build configuration list for PBXNativeTarget "wearther" */;
+			buildConfigurationList = F804F8BB206487BF006E1B15 /* Build configuration list for PBXNativeTarget "wearther" */;
 			buildPhases = (
-				661D86952061C6CC001666A4 /* Sources */,
-				661D86962061C6CC001666A4 /* Frameworks */,
-				661D86972061C6CC001666A4 /* Resources */,
+				F804F88C206487BE006E1B15 /* Sources */,
+				F804F88D206487BE006E1B15 /* Frameworks */,
+				F804F88E206487BE006E1B15 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -142,72 +145,72 @@
 			);
 			name = wearther;
 			productName = wearther;
-			productReference = 661D86992061C6CC001666A4 /* wearther.app */;
+			productReference = F804F890206487BE006E1B15 /* wearther.app */;
 			productType = "com.apple.product-type.application";
 		};
-		661D86AC2061C6CC001666A4 /* weartherTests */ = {
+		F804F8A6206487BF006E1B15 /* weartherTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 661D86C42061C6CC001666A4 /* Build configuration list for PBXNativeTarget "weartherTests" */;
+			buildConfigurationList = F804F8BE206487BF006E1B15 /* Build configuration list for PBXNativeTarget "weartherTests" */;
 			buildPhases = (
-				661D86A92061C6CC001666A4 /* Sources */,
-				661D86AA2061C6CC001666A4 /* Frameworks */,
-				661D86AB2061C6CC001666A4 /* Resources */,
+				F804F8A3206487BF006E1B15 /* Sources */,
+				F804F8A4206487BF006E1B15 /* Frameworks */,
+				F804F8A5206487BF006E1B15 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				661D86AF2061C6CC001666A4 /* PBXTargetDependency */,
+				F804F8A9206487BF006E1B15 /* PBXTargetDependency */,
 			);
 			name = weartherTests;
 			productName = weartherTests;
-			productReference = 661D86AD2061C6CC001666A4 /* weartherTests.xctest */;
+			productReference = F804F8A7206487BF006E1B15 /* weartherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		661D86B72061C6CC001666A4 /* weartherUITests */ = {
+		F804F8B1206487BF006E1B15 /* weartherUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 661D86C72061C6CC001666A4 /* Build configuration list for PBXNativeTarget "weartherUITests" */;
+			buildConfigurationList = F804F8C1206487BF006E1B15 /* Build configuration list for PBXNativeTarget "weartherUITests" */;
 			buildPhases = (
-				661D86B42061C6CC001666A4 /* Sources */,
-				661D86B52061C6CC001666A4 /* Frameworks */,
-				661D86B62061C6CC001666A4 /* Resources */,
+				F804F8AE206487BF006E1B15 /* Sources */,
+				F804F8AF206487BF006E1B15 /* Frameworks */,
+				F804F8B0206487BF006E1B15 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				661D86BA2061C6CC001666A4 /* PBXTargetDependency */,
+				F804F8B4206487BF006E1B15 /* PBXTargetDependency */,
 			);
 			name = weartherUITests;
 			productName = weartherUITests;
-			productReference = 661D86B82061C6CC001666A4 /* weartherUITests.xctest */;
+			productReference = F804F8B2206487BF006E1B15 /* weartherUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		661D86912061C6CB001666A4 /* Project object */ = {
+		F804F888206487BE006E1B15 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = "Tiasha Joardar";
+				ORGANIZATIONNAME = "Amy Fang";
 				TargetAttributes = {
-					661D86982061C6CC001666A4 = {
+					F804F88F206487BE006E1B15 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					661D86AC2061C6CC001666A4 = {
+					F804F8A6206487BF006E1B15 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 661D86982061C6CC001666A4;
+						TestTargetID = F804F88F206487BE006E1B15;
 					};
-					661D86B72061C6CC001666A4 = {
+					F804F8B1206487BF006E1B15 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 661D86982061C6CC001666A4;
+						TestTargetID = F804F88F206487BE006E1B15;
 					};
 				};
 			};
-			buildConfigurationList = 661D86942061C6CB001666A4 /* Build configuration list for PBXProject "wearther" */;
+			buildConfigurationList = F804F88B206487BE006E1B15 /* Build configuration list for PBXProject "wearther" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -215,37 +218,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 661D86902061C6CB001666A4;
-			productRefGroup = 661D869A2061C6CC001666A4 /* Products */;
+			mainGroup = F804F887206487BE006E1B15;
+			productRefGroup = F804F891206487BE006E1B15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				661D86982061C6CC001666A4 /* wearther */,
-				661D86AC2061C6CC001666A4 /* weartherTests */,
-				661D86B72061C6CC001666A4 /* weartherUITests */,
+				F804F88F206487BE006E1B15 /* wearther */,
+				F804F8A6206487BF006E1B15 /* weartherTests */,
+				F804F8B1206487BF006E1B15 /* weartherUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		661D86972061C6CC001666A4 /* Resources */ = {
+		F804F88E206487BE006E1B15 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661D86A72061C6CC001666A4 /* LaunchScreen.storyboard in Resources */,
-				661D86A42061C6CC001666A4 /* Assets.xcassets in Resources */,
-				661D86A22061C6CC001666A4 /* Main.storyboard in Resources */,
+				F804F8A1206487BE006E1B15 /* LaunchScreen.storyboard in Resources */,
+				F804F89E206487BE006E1B15 /* Assets.xcassets in Resources */,
+				F804F899206487BE006E1B15 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		661D86AB2061C6CC001666A4 /* Resources */ = {
+		F804F8A5206487BF006E1B15 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		661D86B62061C6CC001666A4 /* Resources */ = {
+		F804F8B0206487BF006E1B15 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,59 +258,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		661D86952061C6CC001666A4 /* Sources */ = {
+		F804F88C206487BE006E1B15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661D869F2061C6CC001666A4 /* ViewController.swift in Sources */,
-				661D869D2061C6CC001666A4 /* AppDelegate.swift in Sources */,
+				F804F896206487BE006E1B15 /* ViewController.swift in Sources */,
+				F804F894206487BE006E1B15 /* AppDelegate.swift in Sources */,
+				F804F89C206487BE006E1B15 /* wearther.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		661D86A92061C6CC001666A4 /* Sources */ = {
+		F804F8A3206487BF006E1B15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661D86B22061C6CC001666A4 /* weartherTests.swift in Sources */,
+				F804F8AC206487BF006E1B15 /* weartherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		661D86B42061C6CC001666A4 /* Sources */ = {
+		F804F8AE206487BF006E1B15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661D86BD2061C6CC001666A4 /* weartherUITests.swift in Sources */,
+				F804F8B7206487BF006E1B15 /* weartherUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		661D86AF2061C6CC001666A4 /* PBXTargetDependency */ = {
+		F804F8A9206487BF006E1B15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 661D86982061C6CC001666A4 /* wearther */;
-			targetProxy = 661D86AE2061C6CC001666A4 /* PBXContainerItemProxy */;
+			target = F804F88F206487BE006E1B15 /* wearther */;
+			targetProxy = F804F8A8206487BF006E1B15 /* PBXContainerItemProxy */;
 		};
-		661D86BA2061C6CC001666A4 /* PBXTargetDependency */ = {
+		F804F8B4206487BF006E1B15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 661D86982061C6CC001666A4 /* wearther */;
-			targetProxy = 661D86B92061C6CC001666A4 /* PBXContainerItemProxy */;
+			target = F804F88F206487BE006E1B15 /* wearther */;
+			targetProxy = F804F8B3206487BF006E1B15 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		661D86A02061C6CC001666A4 /* Main.storyboard */ = {
+		F804F897206487BE006E1B15 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				661D86A12061C6CC001666A4 /* Base */,
+				F804F898206487BE006E1B15 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		661D86A52061C6CC001666A4 /* LaunchScreen.storyboard */ = {
+		F804F89F206487BE006E1B15 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				661D86A62061C6CC001666A4 /* Base */,
+				F804F8A0206487BE006E1B15 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -315,7 +319,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		661D86BF2061C6CC001666A4 /* Debug */ = {
+		F804F8B9206487BF006E1B15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -372,7 +376,7 @@
 			};
 			name = Debug;
 		};
-		661D86C02061C6CC001666A4 /* Release */ = {
+		F804F8BA206487BF006E1B15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -422,35 +426,35 @@
 			};
 			name = Release;
 		};
-		661D86C22061C6CC001666A4 /* Debug */ = {
+		F804F8BC206487BF006E1B15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = wearther/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = CS329e.wearther;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amyfang.wearther;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		661D86C32061C6CC001666A4 /* Release */ = {
+		F804F8BD206487BF006E1B15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = wearther/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = CS329e.wearther;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amyfang.wearther;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		661D86C52061C6CC001666A4 /* Debug */ = {
+		F804F8BF206487BF006E1B15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -458,7 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = weartherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = CS329e.weartherTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amyfang.weartherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,7 +470,7 @@
 			};
 			name = Debug;
 		};
-		661D86C62061C6CC001666A4 /* Release */ = {
+		F804F8C0206487BF006E1B15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -474,7 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = weartherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = CS329e.weartherTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amyfang.weartherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -482,14 +486,14 @@
 			};
 			name = Release;
 		};
-		661D86C82061C6CC001666A4 /* Debug */ = {
+		F804F8C2206487BF006E1B15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = weartherUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = CS329e.weartherUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amyfang.weartherUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -497,14 +501,14 @@
 			};
 			name = Debug;
 		};
-		661D86C92061C6CC001666A4 /* Release */ = {
+		F804F8C3206487BF006E1B15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = weartherUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = CS329e.weartherUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amyfang.weartherUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -515,43 +519,56 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		661D86942061C6CB001666A4 /* Build configuration list for PBXProject "wearther" */ = {
+		F804F88B206487BE006E1B15 /* Build configuration list for PBXProject "wearther" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				661D86BF2061C6CC001666A4 /* Debug */,
-				661D86C02061C6CC001666A4 /* Release */,
+				F804F8B9206487BF006E1B15 /* Debug */,
+				F804F8BA206487BF006E1B15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		661D86C12061C6CC001666A4 /* Build configuration list for PBXNativeTarget "wearther" */ = {
+		F804F8BB206487BF006E1B15 /* Build configuration list for PBXNativeTarget "wearther" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				661D86C22061C6CC001666A4 /* Debug */,
-				661D86C32061C6CC001666A4 /* Release */,
+				F804F8BC206487BF006E1B15 /* Debug */,
+				F804F8BD206487BF006E1B15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		661D86C42061C6CC001666A4 /* Build configuration list for PBXNativeTarget "weartherTests" */ = {
+		F804F8BE206487BF006E1B15 /* Build configuration list for PBXNativeTarget "weartherTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				661D86C52061C6CC001666A4 /* Debug */,
-				661D86C62061C6CC001666A4 /* Release */,
+				F804F8BF206487BF006E1B15 /* Debug */,
+				F804F8C0206487BF006E1B15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		661D86C72061C6CC001666A4 /* Build configuration list for PBXNativeTarget "weartherUITests" */ = {
+		F804F8C1206487BF006E1B15 /* Build configuration list for PBXNativeTarget "weartherUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				661D86C82061C6CC001666A4 /* Debug */,
-				661D86C92061C6CC001666A4 /* Release */,
+				F804F8C2206487BF006E1B15 /* Debug */,
+				F804F8C3206487BF006E1B15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F804F89A206487BE006E1B15 /* wearther.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F804F89B206487BE006E1B15 /* wearther.xcdatamodel */,
+			);
+			currentVersion = F804F89B206487BE006E1B15 /* wearther.xcdatamodel */;
+			path = wearther.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 661D86912061C6CB001666A4 /* Project object */;
+	rootObject = F804F888206487BE006E1B15 /* Project object */;
 }
