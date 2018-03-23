@@ -15,6 +15,8 @@
 		F804F8A1206487BE006E1B15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F804F89F206487BE006E1B15 /* LaunchScreen.storyboard */; };
 		F804F8AC206487BF006E1B15 /* weartherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F8AB206487BF006E1B15 /* weartherTests.swift */; };
 		F804F8B7206487BF006E1B15 /* weartherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F8B6206487BF006E1B15 /* weartherUITests.swift */; };
+		F804F8C520648C24006E1B15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F8C420648C24006E1B15 /* LoginViewController.swift */; };
+		F804F8C720648C31006E1B15 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F8C620648C31006E1B15 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F804F8B2206487BF006E1B15 /* weartherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weartherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F804F8B6206487BF006E1B15 /* weartherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weartherUITests.swift; sourceTree = "<group>"; };
 		F804F8B8206487BF006E1B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F804F8C420648C24006E1B15 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F804F8C620648C31006E1B15 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				F804F893206487BE006E1B15 /* AppDelegate.swift */,
 				F804F895206487BE006E1B15 /* ViewController.swift */,
+				F804F8C420648C24006E1B15 /* LoginViewController.swift */,
+				F804F8C620648C31006E1B15 /* RegisterViewController.swift */,
 				F804F897206487BE006E1B15 /* Main.storyboard */,
 				F804F89D206487BE006E1B15 /* Assets.xcassets */,
 				F804F89F206487BE006E1B15 /* LaunchScreen.storyboard */,
@@ -262,6 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F804F8C520648C24006E1B15 /* LoginViewController.swift in Sources */,
+				F804F8C720648C31006E1B15 /* RegisterViewController.swift in Sources */,
 				F804F896206487BE006E1B15 /* ViewController.swift in Sources */,
 				F804F894206487BE006E1B15 /* AppDelegate.swift in Sources */,
 				F804F89C206487BE006E1B15 /* wearther.xcdatamodeld in Sources */,
