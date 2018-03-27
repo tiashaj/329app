@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F804F894206487BE006E1B15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F893206487BE006E1B15 /* AppDelegate.swift */; };
-		F804F896206487BE006E1B15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F895206487BE006E1B15 /* ViewController.swift */; };
 		F804F899206487BE006E1B15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F804F897206487BE006E1B15 /* Main.storyboard */; };
 		F804F89C206487BE006E1B15 /* wearther.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F804F89A206487BE006E1B15 /* wearther.xcdatamodeld */; };
 		F804F89E206487BE006E1B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F804F89D206487BE006E1B15 /* Assets.xcassets */; };
@@ -39,7 +38,6 @@
 /* Begin PBXFileReference section */
 		F804F890206487BE006E1B15 /* wearther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wearther.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F804F893206487BE006E1B15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F804F895206487BE006E1B15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F804F898206487BE006E1B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F804F89B206487BE006E1B15 /* wearther.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wearther.xcdatamodel; sourceTree = "<group>"; };
 		F804F89D206487BE006E1B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				F804F893206487BE006E1B15 /* AppDelegate.swift */,
-				F804F895206487BE006E1B15 /* ViewController.swift */,
 				F804F8C420648C24006E1B15 /* LoginViewController.swift */,
 				F804F8C620648C31006E1B15 /* RegisterViewController.swift */,
 				F804F897206487BE006E1B15 /* Main.storyboard */,
@@ -270,7 +267,6 @@
 			files = (
 				F804F8C520648C24006E1B15 /* LoginViewController.swift in Sources */,
 				F804F8C720648C31006E1B15 /* RegisterViewController.swift in Sources */,
-				F804F896206487BE006E1B15 /* ViewController.swift in Sources */,
 				F804F894206487BE006E1B15 /* AppDelegate.swift in Sources */,
 				F804F89C206487BE006E1B15 /* wearther.xcdatamodeld in Sources */,
 			);

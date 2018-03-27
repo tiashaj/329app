@@ -7,21 +7,45 @@
 //
 
 import UIKit
+import CoreData
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func register(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        // Create the entity we want to save
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)
+        let newUser = NSManagedObject(entity: entity!, insertInto: managedContext)
+        
+        newUser.setValue(name.text, forKey: "name")
+        newUser.setValue(email.text, forKey: "email")
+        newUser.setValue(password.text, forKey: "password")
+        
+        // Commit changes
+        do {
+            try managedContext.save()
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
