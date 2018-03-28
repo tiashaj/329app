@@ -14,9 +14,13 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var confirmPassword: UITextField!
+    @IBOutlet weak var errorMessage: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        password.isSecureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,19 +35,46 @@ class RegisterViewController: UIViewController {
         let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)
         let newUser = NSManagedObject(entity: entity!, insertInto: managedContext)
         
-        newUser.setValue(name.text, forKey: "name")
-        newUser.setValue(email.text, forKey: "email")
-        newUser.setValue(password.text, forKey: "password")
-        
-        // Commit changes
-        do {
-            try managedContext.save()
-        } catch {
-            // what to do if an error occurs?
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
+        if !(name.text?.isEmpty ?? true) && !(email.text?.isEmpty ?? true) && !(password.text?.isEmpty ?? true) && !(confirmPassword.text?.isEmpty ?? true) {
+            if !isValidPassword(password: password.text!) {
+                errorMessage.text = "Password needs at least 8 characters"
+            }
+            else if !(passwordsMatch(password: password.text!, confirmPassword: confirmPassword.text!)) {
+                errorMessage.text = "Passwords do not match"
+            }
+            else {
+                newUser.setValue(name.text, forKey: "name")
+                newUser.setValue(email.text, forKey: "email")
+                newUser.setValue(password.text, forKey: "password")
+                
+                // Commit changes
+                do {
+                    try managedContext.save()
+                    errorMessage.text = ""
+                    print("User saved")
+                } catch {
+                    // what to do if an error occurs?
+                    let nserror = error as NSError
+                    NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+                    abort()
+                }
+            }
         }
+        else {
+            errorMessage.text = "All fields need to be filled"
+        }
+    }
+    
+    func isValidPassword (password:String) -> Bool {
+        return (password.count >= 8)
+    }
+    
+    func passwordsMatch (password:String, confirmPassword:String) -> Bool {
+        return (password == confirmPassword)
+    }
+    
+    @IBAction func segueToLogin(_ sender: Any) {
+        self.performSegue(withIdentifier: "login", sender: sender)
     }
     
     /*

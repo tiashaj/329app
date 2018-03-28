@@ -13,9 +13,11 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var errorMessage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        password.isSecureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +30,29 @@ class LoginViewController: UIViewController {
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         request.returnsObjectsAsFaults = false
+        request.predicate = NSPredicate(format: "email = %@", "" + email.text!)
+        
+        let results:NSArray = try! managedContext.fetch(request) as NSArray
+        
+        if(results.count >= 1){
+            let res = results[0] as! NSManagedObject
+            email.text = res.value(forKey: "email") as? String
+            password.text = res.value(forKey: "password") as? String
+            
+            errorMessage.text = ""
+        }
+        else{
+            errorMessage.text = "Invalid username and password"
+        }
+    }
+   /*
+    func checkForEmailAndPasswordMatch (email:String, password:String) -> Bool {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+    }
+    */
+    @IBAction func segueToRegister(_ sender: Any) {
+        self.performSegue(withIdentifier: "register", sender: sender)
     }
     
     /*
