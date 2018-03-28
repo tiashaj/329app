@@ -182,13 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEz-cO-a3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="1948" y="-340.47976011994007"/>
-||||||| merged common ancestors
-            <point key="canvasLocation" x="1615" y="-340"/>
-=======
-            <point key="canvasLocation" x="1890" y="-493"/>
->>>>>>> b5b2e12e4bef926b1d4be44df7ca0a5608b03d45
+            <point key="canvasLocation" x="2105" y="-523"/>
         </scene>
     </scenes>
     <resources>
