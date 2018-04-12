@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66633D89207C54C60086EDAD /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66633D88207C54C60086EDAD /* OutputViewController.swift */; };
 		F804F894206487BE006E1B15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F893206487BE006E1B15 /* AppDelegate.swift */; };
 		F804F899206487BE006E1B15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F804F897206487BE006E1B15 /* Main.storyboard */; };
 		F804F89C206487BE006E1B15 /* wearther.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F804F89A206487BE006E1B15 /* wearther.xcdatamodeld */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66633D88207C54C60086EDAD /* OutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
 		F804F890206487BE006E1B15 /* wearther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wearther.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F804F893206487BE006E1B15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F804F898206487BE006E1B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				F804F893206487BE006E1B15 /* AppDelegate.swift */,
 				F804F8C420648C24006E1B15 /* LoginViewController.swift */,
 				F804F8C620648C31006E1B15 /* RegisterViewController.swift */,
+				66633D88207C54C60086EDAD /* OutputViewController.swift */,
 				F804F897206487BE006E1B15 /* Main.storyboard */,
 				F804F89D206487BE006E1B15 /* Assets.xcassets */,
 				F804F89F206487BE006E1B15 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66633D89207C54C60086EDAD /* OutputViewController.swift in Sources */,
 				F804F8C520648C24006E1B15 /* LoginViewController.swift in Sources */,
 				F804F8C720648C31006E1B15 /* RegisterViewController.swift in Sources */,
 				F804F894206487BE006E1B15 /* AppDelegate.swift in Sources */,
