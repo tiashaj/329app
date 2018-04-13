@@ -18,14 +18,15 @@ class OutputViewController: UIViewController {
     @IBOutlet weak var outfit: UILabel!
     
     @IBAction func onClick(_ sender: Any) {
-        if((temp.text?.isEmpty)!){
+        
+        if((temp.text?.isEmpty)! || !(temp.text?.isNumber)!){
             outfit.text = "You must enter a value"
         }
             
         else{
             if let tempInt: Int = Int(temp.text!){
-                if (temp.text == "" || temp.text == " "){
-                    outfit.text = "enter temp"
+                if (tempInt > 120 || tempInt < -20){
+                    outfit.text = "Enter a temperature between -20 and 120"
                 }
                 else if(tempInt >= 70){
                     outfit.text = "short-sleeved shirt and short pants."
@@ -33,8 +34,11 @@ class OutputViewController: UIViewController {
                 else if(tempInt < 70 && tempInt >= 60){
                     outfit.text = "short-sleeved shirt and long pants. Bring a sweater!"
                 }
-                else if(tempInt < 60 && tempInt > 50){
+                else if(tempInt < 60 && tempInt >= 50){
                     outfit.text = "long-sleeved shirt and long pants. Bring a sweater!"
+                }
+                else {
+                    outfit.text = "wear all your clothes :)"
                 }
             }
         }
@@ -62,4 +66,10 @@ class OutputViewController: UIViewController {
     }
     */
 
+}
+
+extension String  {
+    var isNumber: Bool {
+        return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
+    }
 }
