@@ -19,6 +19,7 @@
 		F804F8B7206487BF006E1B15 /* weartherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F8B6206487BF006E1B15 /* weartherUITests.swift */; };
 		F804F8C520648C24006E1B15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F8C420648C24006E1B15 /* LoginViewController.swift */; };
 		F804F8C720648C31006E1B15 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F8C620648C31006E1B15 /* RegisterViewController.swift */; };
+		F8219C28208130590057049B /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8219C27208130590057049B /* MyTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F804F8B8206487BF006E1B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F804F8C420648C24006E1B15 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F804F8C620648C31006E1B15 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F8219C27208130590057049B /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				F804F893206487BE006E1B15 /* AppDelegate.swift */,
 				F804F8C420648C24006E1B15 /* LoginViewController.swift */,
 				F804F8C620648C31006E1B15 /* RegisterViewController.swift */,
+				F8219C27208130590057049B /* MyTabBarController.swift */,
 				66633D88207C54C60086EDAD /* OutputViewController.swift */,
 				0A5A7D6920803189007D1A6B /* ProfileViewController.swift */,
 				0A5A7D6B20803322007D1A6B /* EditProfileViewController.swift */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A5A7D6A20803189007D1A6B /* ProfileViewController.swift in Sources */,
+				F8219C28208130590057049B /* MyTabBarController.swift in Sources */,
 				66633D89207C54C60086EDAD /* OutputViewController.swift in Sources */,
 				F804F8C520648C24006E1B15 /* LoginViewController.swift in Sources */,
 				F804F8C720648C31006E1B15 /* RegisterViewController.swift in Sources */,

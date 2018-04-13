@@ -82,8 +82,8 @@ class RegisterViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "home" {
-            print("Segued successfully from Register")
+        if let destinationVC = segue.destination as? MyTabBarController {
+            destinationVC.user_email = email.text
         }
     }
 

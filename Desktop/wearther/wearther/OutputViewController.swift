@@ -11,16 +11,14 @@ import UIKit
 class OutputViewController: UIViewController {
 
     @IBOutlet weak var today: UILabel!
-    
     @IBOutlet weak var temp: UITextField!
-    
-    
     @IBOutlet weak var outfit: UILabel!
+    
     
     @IBAction func onClick(_ sender: Any) {
         
         if((temp.text?.isEmpty)! || !(temp.text?.isNumber)!){
-            outfit.text = "You must enter a value"
+            outfit.text = "You must enter a number"
         }
             
         else{
@@ -38,7 +36,7 @@ class OutputViewController: UIViewController {
                     outfit.text = "long-sleeved shirt and long pants. Bring a sweater!"
                 }
                 else {
-                    outfit.text = "wear all your clothes :)"
+                    outfit.text = "thick coat, sweater, and long pants."
                 }
             }
         }
@@ -46,13 +44,10 @@ class OutputViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
