@@ -9,10 +9,16 @@
 import UIKit
 import CoreData
 
+protocol EditProfileProtocolDelegate {
+    func somethingHappened()
+}
+
 class EditProfileViewController: UIViewController {
 
     @IBOutlet weak var NameTextField: UITextField!
     @IBOutlet weak var EmailTextField: UITextField!
+    
+    var delegate: EditProfileProtocolDelegate?
     
     //create core date object
     var profiles: [NSManagedObject] = []
@@ -70,13 +76,10 @@ class EditProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Edit Profile Information"
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
@@ -91,6 +94,7 @@ class EditProfileViewController: UIViewController {
             else{
                 destinationVC.retrievedName = NameTextField.text!
                 destinationVC.retrievedEmail = EmailTextField.text!
+
             }
             //destinationVC.retrievedName = (profiles.value(forKey: "name") as? String)!
             //destinationVC.retrievedEmail = (profiles.value(forKey: "email") as? String)!
