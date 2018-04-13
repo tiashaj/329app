@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4um-Nr-COS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dzC-8j-GpE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -34,6 +34,7 @@
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="dzC-8j-GpE" eventType="touchUpInside" id="CZZ-jK-xfN"/>
+                                    <segue destination="d4v-yj-xUB" kind="show" identifier="home" id="OR8-5B-FtD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrO-G2-PW4">
@@ -136,6 +137,7 @@
                                 </state>
                                 <connections>
                                     <action selector="register:" destination="OkI-AY-DIu" eventType="touchUpInside" id="Gig-dw-QDh"/>
+                                    <segue destination="d4v-yj-xUB" kind="show" identifier="home" id="cPg-S6-tVD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jT-BT-6va">
@@ -373,6 +375,7 @@
         <image name="logo" width="598" height="543"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y17-er-1Qy"/>
+        <segue reference="UBY-Zn-mPh"/>
+        <segue reference="cPg-S6-tVD"/>
     </inferredMetricsTieBreakers>
 </document>
