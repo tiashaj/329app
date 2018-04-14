@@ -320,6 +320,15 @@
                                     <segue destination="S0y-Cv-fUI" kind="presentation" id="Wwv-Sf-ObB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3j-hD-9A6">
+                                <rect key="frame" x="164" y="519" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backHome:" destination="4um-Nr-COS" eventType="touchUpInside" id="Tyf-T7-7Js"/>
+                                    <segue destination="9oW-cC-LAn" kind="show" identifier="profileToHome" id="To8-vS-tdK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="a6g-lh-xyB"/>
@@ -333,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esV-21-Bnx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3686" y="-761"/>
+            <point key="canvasLocation" x="3685.5999999999999" y="-761.46926536731644"/>
         </scene>
         <!--Settings-->
         <scene sceneID="DAi-4n-0dd">
@@ -452,7 +461,7 @@
         <image name="settings" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IRQ-kj-Yky"/>
-        <segue reference="oqc-rc-REg"/>
+        <segue reference="aSc-EZ-hkn"/>
+        <segue reference="To8-vS-tdK"/>
     </inferredMetricsTieBreakers>
 </document>
