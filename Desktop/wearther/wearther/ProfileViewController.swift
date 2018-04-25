@@ -36,6 +36,9 @@ class ProfileViewController: UIViewController {
     }
     
     
+    @IBAction func backHome(_ sender: Any) {
+        self.performSegue(withIdentifier: "profileToHome", sender: sender)
+    }
     
     /*
     // MARK: - Navigation
