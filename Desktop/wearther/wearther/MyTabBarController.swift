@@ -24,6 +24,11 @@ class MyTabBarController: UITabBarController {
         
         fetchRequest.predicate = NSPredicate(format: "email == %@", user_email)
         */
+        
+        /*
+        let weather = WeatherGetter()
+        weather.getWeather(city: "Austin")
+        */
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0A5A7D6A20803189007D1A6B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A7D6920803189007D1A6B /* ProfileViewController.swift */; };
 		0A5A7D6C20803322007D1A6B /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A7D6B20803322007D1A6B /* EditProfileViewController.swift */; };
+		0A99A4C4208FE58800BE695E /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A99A4C3208FE58800BE695E /* DisplayViewController.swift */; };
+		0A99A4C7208FE5B200BE695E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A99A4C5208FE5B200BE695E /* Weather.swift */; };
+		0A99A4C8208FE5B200BE695E /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A99A4C6208FE5B200BE695E /* WeatherGetter.swift */; };
 		66633D89207C54C60086EDAD /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66633D88207C54C60086EDAD /* OutputViewController.swift */; };
 		F804F894206487BE006E1B15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F893206487BE006E1B15 /* AppDelegate.swift */; };
 		F804F899206487BE006E1B15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F804F897206487BE006E1B15 /* Main.storyboard */; };
@@ -42,6 +45,9 @@
 /* Begin PBXFileReference section */
 		0A5A7D6920803189007D1A6B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0A5A7D6B20803322007D1A6B /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		0A99A4C3208FE58800BE695E /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		0A99A4C5208FE5B200BE695E /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = "../../../../../../Downloads/SimpleWeather part 3/SimpleWeather/Weather.swift"; sourceTree = "<group>"; };
+		0A99A4C6208FE5B200BE695E /* WeatherGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherGetter.swift; path = "../../../../../../Downloads/SimpleWeather part 3/SimpleWeather/WeatherGetter.swift"; sourceTree = "<group>"; };
 		66633D88207C54C60086EDAD /* OutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
 		F804F890206487BE006E1B15 /* wearther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wearther.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F804F893206487BE006E1B15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,8 +122,11 @@
 				66633D88207C54C60086EDAD /* OutputViewController.swift */,
 				0A5A7D6920803189007D1A6B /* ProfileViewController.swift */,
 				0A5A7D6B20803322007D1A6B /* EditProfileViewController.swift */,
-				F804F89A206487BE006E1B15 /* wearther.xcdatamodeld */,
 				F804F897206487BE006E1B15 /* Main.storyboard */,
+				0A99A4C3208FE58800BE695E /* DisplayViewController.swift */,
+				0A99A4C5208FE5B200BE695E /* Weather.swift */,
+				0A99A4C6208FE5B200BE695E /* WeatherGetter.swift */,
+				F804F89A206487BE006E1B15 /* wearther.xcdatamodeld */,
 				F804F89D206487BE006E1B15 /* Assets.xcassets */,
 				F804F89F206487BE006E1B15 /* LaunchScreen.storyboard */,
 				F804F8A2206487BE006E1B15 /* Info.plist */,
@@ -281,9 +290,12 @@
 				F8219C28208130590057049B /* MyTabBarController.swift in Sources */,
 				66633D89207C54C60086EDAD /* OutputViewController.swift in Sources */,
 				F804F8C520648C24006E1B15 /* LoginViewController.swift in Sources */,
+				0A99A4C7208FE5B200BE695E /* Weather.swift in Sources */,
 				F804F8C720648C31006E1B15 /* RegisterViewController.swift in Sources */,
 				F804F894206487BE006E1B15 /* AppDelegate.swift in Sources */,
+				0A99A4C8208FE5B200BE695E /* WeatherGetter.swift in Sources */,
 				F804F89C206487BE006E1B15 /* wearther.xcdatamodeld in Sources */,
+				0A99A4C4208FE58800BE695E /* DisplayViewController.swift in Sources */,
 				0A5A7D6C20803322007D1A6B /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
