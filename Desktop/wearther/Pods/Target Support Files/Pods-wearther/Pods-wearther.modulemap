@@ -1,0 +1,6 @@
+framework module Pods_wearther {
+  umbrella header "Pods-wearther-umbrella.h"
+
+  export *
+  module * { export * }
+}
