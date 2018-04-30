@@ -22,7 +22,6 @@ class DisplayViewController: UIViewController,
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var getCityWeatherButton: UIButton!
-    @IBOutlet weak var errorLabel: UILabel!
     
     var weather: WeatherGetter!
     
@@ -46,7 +45,6 @@ class DisplayViewController: UIViewController,
         cityTextField.placeholder = "Enter city name"
         cityTextField.delegate = self
         cityTextField.enablesReturnKeyAutomatically = true
-        errorLabel.text = ""
         //getCityWeatherButton.isEnabled = false
     }
     
@@ -64,7 +62,6 @@ class DisplayViewController: UIViewController,
         }
         //weather.getWeather(city: cityTextField.text!.urlEncoded)
         weather.getWeather(city: cityTextField.text!)
-
     }
     
     
@@ -142,7 +139,6 @@ class DisplayViewController: UIViewController,
     // pressing the "Get weather for the city above" button.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
         getWeatherForCityButtonTapped(sender: getCityWeatherButton)
         return true
     }
