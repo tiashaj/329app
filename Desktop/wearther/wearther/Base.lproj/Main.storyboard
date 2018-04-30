@@ -565,6 +565,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vw-sc-m4a">
+                                <rect key="frame" x="38" y="372" width="100" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="oMG-Ke-hBJ"/>
@@ -573,6 +580,7 @@
                         <outlet property="cityLabel" destination="NtK-wa-ROZ" id="zGR-9A-VTC"/>
                         <outlet property="cityTextField" destination="Xl3-Dc-OzH" id="jfx-k5-x7N"/>
                         <outlet property="cloudCoverLabel" destination="ST3-B2-IPr" id="njs-8r-Y3q"/>
+                        <outlet property="errorLabel" destination="8Vw-sc-m4a" id="soh-M6-6Eh"/>
                         <outlet property="humidityLabel" destination="p2f-dz-bHT" id="5oe-9n-Iuj"/>
                         <outlet property="rainLabel" destination="Vis-Rd-rTO" id="ki4-G6-zT7"/>
                         <outlet property="temperatureLabel" destination="uWU-ud-6bL" id="LMB-YH-Hhy"/>
@@ -582,7 +590,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcd-uV-2pV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2414" y="927"/>
+            <point key="canvasLocation" x="2413.5999999999999" y="926.98650674662679"/>
         </scene>
     </scenes>
     <resources>
