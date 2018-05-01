@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nWw-mg-1Db">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g5o-hI-yo1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -452,6 +452,283 @@
             </objects>
             <point key="canvasLocation" x="4800.8000000000002" y="-761.46926536731644"/>
         </scene>
+        <!--Dig Closet Home View Controller-->
+        <scene sceneID="qIc-wv-rHx">
+            <objects>
+                <viewController id="g5o-hI-yo1" customClass="DigClosetHomeViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3qw-ty-r83">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Closet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNt-sh-w2R">
+                                <rect key="frame" x="94" y="41" width="187" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkt-XB-JKa">
+                                <rect key="frame" x="47" y="146" width="116" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="tshirt.png"/>
+                                <connections>
+                                    <action selector="shortShirt:" destination="g5o-hI-yo1" eventType="touchUpInside" id="hcQ-h3-I6t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqP-kL-FMT">
+                                <rect key="frame" x="203" y="130" width="133" height="139"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="longsleeve.png"/>
+                                <connections>
+                                    <action selector="longShirt:" destination="g5o-hI-yo1" eventType="touchUpInside" id="FYh-3w-xZ5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggr-3A-ihg">
+                                <rect key="frame" x="28" y="297" width="154" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="pants.png"/>
+                                <connections>
+                                    <action selector="pant:" destination="g5o-hI-yo1" eventType="touchUpInside" id="q8k-Sc-NLR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3D-ck-2E6">
+                                <rect key="frame" x="39" y="486" width="132" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="dress.png"/>
+                                <connections>
+                                    <action selector="dresses:" destination="g5o-hI-yo1" eventType="touchUpInside" id="SA2-za-wdb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKc-Rw-ucx">
+                                <rect key="frame" x="218" y="495" width="118" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="shoe.png"/>
+                                <connections>
+                                    <action selector="shoes:" destination="g5o-hI-yo1" eventType="touchUpInside" id="aoB-Xi-quI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYK-vg-b0B">
+                                <rect key="frame" x="218" y="348" width="102" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="shorts.png"/>
+                                <connections>
+                                    <action selector="shorts:" destination="g5o-hI-yo1" eventType="touchUpInside" id="mBU-xg-z6m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="1zY-Rw-uuM"/>
+                    </view>
+                    <connections>
+                        <segue destination="nXF-pb-SWa" kind="presentation" identifier="toShortShirt" id="QMs-rg-V5E"/>
+                        <segue destination="VuR-xc-ESH" kind="presentation" identifier="toLongShirt" id="Hiv-BX-Z2C"/>
+                        <segue destination="2oI-l5-LGS" kind="presentation" identifier="toPant" id="BR6-pu-Zvx"/>
+                        <segue destination="VEw-Jy-Dck" kind="presentation" identifier="toShorts" id="drg-wE-EOC"/>
+                        <segue destination="7Rx-sw-ZBk" kind="presentation" identifier="toDresses" id="AWv-DQ-cJS"/>
+                        <segue destination="0lb-7H-buz" kind="presentation" identifier="toShoes" id="7ag-tU-Ue2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQM-O4-wDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5893.6000000000004" y="-761.46926536731644"/>
+        </scene>
+        <!--Long Shirt View Controller-->
+        <scene sceneID="EeW-Fy-a9V">
+            <objects>
+                <viewController id="VuR-xc-ESH" customClass="LongShirtViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JtB-EK-Xx1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="long sleeved tshirts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNu-dp-LDG">
+                                <rect key="frame" x="71" y="73" width="233" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wg-1w-M5g">
+                                <rect key="frame" x="22" y="78" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="x.png"/>
+                                <connections>
+                                    <action selector="onXOut:" destination="VuR-xc-ESH" eventType="touchUpInside" id="gU7-6O-4jq"/>
+                                    <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="i2F-Ok-BEq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="EZM-xg-6LO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HP5-Ye-duF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6977" y="-1827"/>
+        </scene>
+        <!--Shoe View Controller-->
+        <scene sceneID="ckp-oL-aNb">
+            <objects>
+                <viewController id="0lb-7H-buz" customClass="ShoeViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1UT-lk-KtA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="shoes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pim-gs-2Ym">
+                                <rect key="frame" x="66" y="66" width="233" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnL-0Z-93d">
+                                <rect key="frame" x="25" y="66" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="x.png"/>
+                                <connections>
+                                    <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="ED6-Ma-95O"/>
+                                    <action selector="onXOut:" destination="0lb-7H-buz" eventType="touchUpInside" id="nj1-ZY-Gyl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kxK-0i-OmW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zdT-De-uc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6977" y="777"/>
+        </scene>
+        <!--Dress View Controller-->
+        <scene sceneID="9t1-Pd-nVH">
+            <objects>
+                <viewController id="7Rx-sw-ZBk" customClass="DressViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gvf-iS-xHp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dresses/skirts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ap-uJ-nZy">
+                                <rect key="frame" x="64" y="64" width="233" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L21-bg-lnT">
+                                <rect key="frame" x="39" y="56" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="x.png"/>
+                                <connections>
+                                    <action selector="onXOut:" destination="7Rx-sw-ZBk" eventType="touchUpInside" id="Hog-9b-kVk"/>
+                                    <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="xfi-dn-myt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="D5Y-AO-0j8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVF-yS-h3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6977" y="79"/>
+        </scene>
+        <!--Shorts View Controller-->
+        <scene sceneID="KwN-O0-jOi">
+            <objects>
+                <viewController id="VEw-Jy-Dck" customClass="ShortsViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="svW-0d-uv1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="shorts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auV-s6-r08">
+                                <rect key="frame" x="71" y="86" width="233" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAp-QX-Idu">
+                                <rect key="frame" x="53" y="103" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="x.png"/>
+                                <connections>
+                                    <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="duG-AW-i5I"/>
+                                    <action selector="onXOut:" destination="VEw-Jy-Dck" eventType="touchUpInside" id="rM4-ir-CcD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lg2-07-bgl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpR-k1-say" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6977" y="-630"/>
+        </scene>
+        <!--Pant View Controller-->
+        <scene sceneID="rPE-FI-juS">
+            <objects>
+                <viewController id="2oI-l5-LGS" customClass="PantViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GOJ-FJ-ojY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="long pants" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUO-wr-9TH">
+                                <rect key="frame" x="71" y="92" width="233" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8I-RW-sEx">
+                                <rect key="frame" x="50" y="91" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="x.png"/>
+                                <connections>
+                                    <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="K9o-zP-OyF"/>
+                                    <action selector="onXOut:" destination="2oI-l5-LGS" eventType="touchUpInside" id="e6n-xN-EaT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JFi-PU-BVy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXC-QI-KDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6977" y="-1307"/>
+        </scene>
+        <!--Short Shirt View Controller-->
+        <scene sceneID="L5D-jX-AnK">
+            <objects>
+                <viewController id="nXF-pb-SWa" customClass="ShortShirtViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fwx-Mc-fy6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="short sleeved tshirts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3Q-ux-XnA">
+                                <rect key="frame" x="71" y="66" width="233" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qU8-MS-9HT">
+                                <rect key="frame" x="30" y="69" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="x.png"/>
+                                <connections>
+                                    <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="0db-69-wNW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RIF-OF-KxM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kog-XM-yas" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6977" y="-2545"/>
+        </scene>
         <!--Display View Controller-->
         <scene sceneID="uan-nK-sn3">
             <objects>
@@ -587,14 +864,21 @@
     </scenes>
     <resources>
         <image name="businessman" width="30" height="30"/>
+        <image name="dress.png" width="200" height="200"/>
         <image name="home" width="30" height="30"/>
         <image name="icons8-clothes-30" width="30" height="30"/>
         <image name="logo" width="598" height="543"/>
+        <image name="longsleeve.png" width="200" height="200"/>
+        <image name="pants.png" width="200" height="200"/>
         <image name="settings" width="30" height="30"/>
+        <image name="shoe.png" width="200" height="200"/>
+        <image name="shorts.png" width="512" height="512"/>
+        <image name="tshirt.png" width="512" height="512"/>
+        <image name="x.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CSc-VT-Axp"/>
-        <segue reference="aSc-EZ-hkn"/>
+        <segue reference="IRQ-kj-Yky"/>
         <segue reference="Vl3-0e-XBT"/>
     </inferredMetricsTieBreakers>
 </document>

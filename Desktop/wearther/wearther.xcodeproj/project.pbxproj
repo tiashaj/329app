@@ -15,6 +15,20 @@
 		144660600D8F5C2C7B19DBD0 /* Pods_weartherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8F7B01C6BDE89A6373D85A /* Pods_weartherUITests.framework */; };
 		17D043ACFE794ADBE5337588 /* Pods_weartherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1A1650677D336E9E7C8564 /* Pods_weartherTests.framework */; };
 		375E2F8DC7EFD7EB9C147209 /* Pods_wearther.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D874C4C3F84613306335085 /* Pods_wearther.framework */; };
+		661D52E42098461800F490E8 /* DigClosetHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D52E32098461800F490E8 /* DigClosetHomeViewController.swift */; };
+		661D52E82098480800F490E8 /* tshirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D52E72098480800F490E8 /* tshirt.png */; };
+		661D52EA2098486100F490E8 /* longsleeve.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D52E92098486100F490E8 /* longsleeve.png */; };
+		661D52EC209848CA00F490E8 /* pants.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D52EB209848C900F490E8 /* pants.png */; };
+		661D52EE2098492E00F490E8 /* shorts.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D52ED2098492E00F490E8 /* shorts.png */; };
+		661D52F02098498A00F490E8 /* dress.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D52EF2098498A00F490E8 /* dress.png */; };
+		661D52F220984A1300F490E8 /* shoe.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D52F120984A1200F490E8 /* shoe.png */; };
+		661D52F420984AF200F490E8 /* ShortShirtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D52F320984AF200F490E8 /* ShortShirtViewController.swift */; };
+		661D52F620984DDD00F490E8 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D52F520984DDD00F490E8 /* x.png */; };
+		661D52F820984EAE00F490E8 /* LongShirtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D52F720984EAE00F490E8 /* LongShirtViewController.swift */; };
+		661D52FA20984F4A00F490E8 /* PantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D52F920984F4A00F490E8 /* PantViewController.swift */; };
+		661D52FC20984F5700F490E8 /* ShortsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D52FB20984F5700F490E8 /* ShortsViewController.swift */; };
+		661D52FE20984F6200F490E8 /* DressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D52FD20984F6200F490E8 /* DressViewController.swift */; };
+		661D530020984F6B00F490E8 /* ShoeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D52FF20984F6B00F490E8 /* ShoeViewController.swift */; };
 		66633D89207C54C60086EDAD /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66633D88207C54C60086EDAD /* OutputViewController.swift */; };
 		F804F894206487BE006E1B15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F893206487BE006E1B15 /* AppDelegate.swift */; };
 		F804F899206487BE006E1B15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F804F897206487BE006E1B15 /* Main.storyboard */; };
@@ -55,6 +69,20 @@
 		0A99A4C5208FE5B200BE695E /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		0A99A4C6208FE5B200BE695E /* WeatherGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
 		27DB000AD6FF9FC1D9363C68 /* Pods-weartherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weartherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weartherTests/Pods-weartherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		661D52E32098461800F490E8 /* DigClosetHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigClosetHomeViewController.swift; sourceTree = "<group>"; };
+		661D52E72098480800F490E8 /* tshirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tshirt.png; sourceTree = "<group>"; };
+		661D52E92098486100F490E8 /* longsleeve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = longsleeve.png; sourceTree = "<group>"; };
+		661D52EB209848C900F490E8 /* pants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pants.png; sourceTree = "<group>"; };
+		661D52ED2098492E00F490E8 /* shorts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shorts.png; sourceTree = "<group>"; };
+		661D52EF2098498A00F490E8 /* dress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dress.png; sourceTree = "<group>"; };
+		661D52F120984A1200F490E8 /* shoe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoe.png; sourceTree = "<group>"; };
+		661D52F320984AF200F490E8 /* ShortShirtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortShirtViewController.swift; sourceTree = "<group>"; };
+		661D52F520984DDD00F490E8 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		661D52F720984EAE00F490E8 /* LongShirtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongShirtViewController.swift; sourceTree = "<group>"; };
+		661D52F920984F4A00F490E8 /* PantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantViewController.swift; sourceTree = "<group>"; };
+		661D52FB20984F5700F490E8 /* ShortsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsViewController.swift; sourceTree = "<group>"; };
+		661D52FD20984F6200F490E8 /* DressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressViewController.swift; sourceTree = "<group>"; };
+		661D52FF20984F6B00F490E8 /* ShoeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeViewController.swift; sourceTree = "<group>"; };
 		66633D88207C54C60086EDAD /* OutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
 		9D874C4C3F84613306335085 /* Pods_wearther.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wearther.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1A1650677D336E9E7C8564 /* Pods_weartherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weartherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +193,13 @@
 				0A5A7D6920803189007D1A6B /* ProfileViewController.swift */,
 				0A5A7D6B20803322007D1A6B /* EditProfileViewController.swift */,
 				F804F897206487BE006E1B15 /* Main.storyboard */,
+				661D52E32098461800F490E8 /* DigClosetHomeViewController.swift */,
+				661D52F320984AF200F490E8 /* ShortShirtViewController.swift */,
+				661D52F720984EAE00F490E8 /* LongShirtViewController.swift */,
+				661D52F920984F4A00F490E8 /* PantViewController.swift */,
+				661D52FB20984F5700F490E8 /* ShortsViewController.swift */,
+				661D52FD20984F6200F490E8 /* DressViewController.swift */,
+				661D52FF20984F6B00F490E8 /* ShoeViewController.swift */,
 				0A99A4C3208FE58800BE695E /* DisplayViewController.swift */,
 				0A99A4C5208FE5B200BE695E /* Weather.swift */,
 				0A99A4C6208FE5B200BE695E /* WeatherGetter.swift */,
@@ -173,6 +208,13 @@
 				F804F89F206487BE006E1B15 /* LaunchScreen.storyboard */,
 				F804F8A2206487BE006E1B15 /* Info.plist */,
 				F84A03B42097949100DCF8F1 /* GoogleService-Info.plist */,
+				661D52E72098480800F490E8 /* tshirt.png */,
+				661D52E92098486100F490E8 /* longsleeve.png */,
+				661D52EB209848C900F490E8 /* pants.png */,
+				661D52ED2098492E00F490E8 /* shorts.png */,
+				661D52EF2098498A00F490E8 /* dress.png */,
+				661D52F120984A1200F490E8 /* shoe.png */,
+				661D52F520984DDD00F490E8 /* x.png */,
 			);
 			path = wearther;
 			sourceTree = "<group>";
@@ -306,9 +348,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				661D52F620984DDD00F490E8 /* x.png in Resources */,
+				661D52EE2098492E00F490E8 /* shorts.png in Resources */,
+				661D52E82098480800F490E8 /* tshirt.png in Resources */,
 				F804F8A1206487BE006E1B15 /* LaunchScreen.storyboard in Resources */,
 				F84A03B52097949100DCF8F1 /* GoogleService-Info.plist in Resources */,
+				661D52EA2098486100F490E8 /* longsleeve.png in Resources */,
+				661D52EC209848CA00F490E8 /* pants.png in Resources */,
+				661D52F220984A1300F490E8 /* shoe.png in Resources */,
 				F804F89E206487BE006E1B15 /* Assets.xcassets in Resources */,
+				661D52F02098498A00F490E8 /* dress.png in Resources */,
 				F804F899206487BE006E1B15 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,11 +469,18 @@
 				66633D89207C54C60086EDAD /* OutputViewController.swift in Sources */,
 				F804F8C520648C24006E1B15 /* LoginViewController.swift in Sources */,
 				0A99A4C7208FE5B200BE695E /* Weather.swift in Sources */,
+				661D52FE20984F6200F490E8 /* DressViewController.swift in Sources */,
+				661D52F820984EAE00F490E8 /* LongShirtViewController.swift in Sources */,
 				F804F8C720648C31006E1B15 /* RegisterViewController.swift in Sources */,
+				661D52FC20984F5700F490E8 /* ShortsViewController.swift in Sources */,
+				661D52E42098461800F490E8 /* DigClosetHomeViewController.swift in Sources */,
 				F804F894206487BE006E1B15 /* AppDelegate.swift in Sources */,
+				661D530020984F6B00F490E8 /* ShoeViewController.swift in Sources */,
 				0A99A4C8208FE5B200BE695E /* WeatherGetter.swift in Sources */,
+				661D52F420984AF200F490E8 /* ShortShirtViewController.swift in Sources */,
 				F804F89C206487BE006E1B15 /* wearther.xcdatamodeld in Sources */,
 				0A99A4C4208FE58800BE695E /* DisplayViewController.swift in Sources */,
+				661D52FA20984F4A00F490E8 /* PantViewController.swift in Sources */,
 				0A5A7D6C20803322007D1A6B /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
