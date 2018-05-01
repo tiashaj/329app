@@ -18,11 +18,14 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var confirmPassword: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
     
+    var refUsers: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         password.isSecureTextEntry = true
         confirmPassword.isSecureTextEntry = true
+        
+        refUsers = Database.database().reference().child("users")
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,8 +45,15 @@ class RegisterViewController: UIViewController {
             Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
                 if error == nil {
                     print("You have successfully signed up")
-                    //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
                     
+                    // add user to Firebase Database
+                    let user = ["email": self.email.text!,
+                                "password": self.password.text!,
+                                "name": self.name.text!]
+                    
+                    self.refUsers.child(self.email.text!).setValue(user)
+                    
+                    //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
                     self.present(vc!, animated: true, completion: nil)
                     

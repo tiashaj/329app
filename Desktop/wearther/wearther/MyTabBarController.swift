@@ -13,22 +13,7 @@ class MyTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        let moc = …
-        let usersFetch = NSFetchRequest(entityName: "User")
         
-        do {
-            let fetchedUsers = try moc.executeFetchRequest(employeesFetch) as! [User]
-        } catch {
-            fatalError("Failed to fetch users: \(error)")
-        
-        fetchRequest.predicate = NSPredicate(format: "email == %@", user_email)
-        */
-        
-        /*
-        let weather = WeatherGetter()
-        weather.getWeather(city: "Austin")
-        */
     }
 
     override func didReceiveMemoryWarning() {

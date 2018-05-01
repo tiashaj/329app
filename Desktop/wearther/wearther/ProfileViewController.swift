@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Firebase
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
@@ -23,6 +25,19 @@ class ProfileViewController: UIViewController {
     func changeText() {
         NameLabel.text = retrievedName
         EmailLabel.text = retrievedEmail
+    }
+    
+    @IBAction func btnLogOut(_ sender: Any) {
+        if Auth.auth().currentUser != nil {
+            do {
+                try Auth.auth().signOut()
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login")
+                present(vc, animated: true, completion: nil)
+                
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     override func viewDidLoad() {
