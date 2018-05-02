@@ -118,7 +118,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                             if let profileImageURL = metadata?.downloadURL()?.absoluteString {
                                 let user = ["email": self.email.text!,
                                             "name": self.name.text!,
-                                            "profileImageURL": profileImageURL]
+                                            "profileImageURL": profileImageURL,
+                                            "imageName": imageName]
                                 
                                 self.refUsers.child("Users").child(uid!).setValue(user)
                             }

@@ -39,30 +39,18 @@ class ProfileViewController: UIViewController {
     
     func displayPic(){
         self.profilePic?.contentMode = .scaleAspectFill
+        
         let userID = Auth.auth().currentUser?.uid
+        
         ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let imageURL = value?["profileImageURL"] as? String
-            print(imageURL as Any)
-            if let profileImageURL = imageURL {
-                let url = NSURL(string: profileImageURL)
-                URLSession.shared.dataTask(with: url! as URL, completionHandler: {(data, response, error) in
-                    
-                    // download hit an error
-                    if error != nil {
-                        print(error as Any)
-                        return
-                    } else {
-                        self.profilePic?.image = UIImage(data: data!)
-                        print("Profile pic is set")
-                    }
-                })
-            }
-            
-        }, withCancel: nil)
-        
-        
-        
+            print(imageURL!)
+            let storageRef = Storage.storage().reference(forURL: imageURL!)
+            storageRef.getData(maxSize: 2 * 1024 * 1024, completion: { (data, error) in
+                self.profilePic?.image = UIImage(data:data!)
+            })
+        })
     }
     
     @IBAction func btnEditProfile(_ sender: Any) {
