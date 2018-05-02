@@ -14,6 +14,11 @@ class PantViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func addItemPress(_ sender: Any) {
+        performSegue(withIdentifier: "addPants", sender: self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

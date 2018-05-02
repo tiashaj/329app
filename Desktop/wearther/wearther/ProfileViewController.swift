@@ -8,12 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
-import FirebaseStorage
-<<<<<<< HEAD
-import FirebaseDatabase
-=======
->>>>>>> a5a0af8c697e446477a50bc9b36d8ecb706e2907
 
 class ProfileViewController: UIViewController {
     
@@ -21,8 +15,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var EmailLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     
-    @IBAction func shortsleevedIcon(_ sender: Any) {
-    }
     var ref:DatabaseReference!
     
     override func viewDidLoad() {

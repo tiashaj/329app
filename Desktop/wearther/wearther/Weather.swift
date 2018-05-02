@@ -73,8 +73,7 @@ struct Weather {
     let mainDict = weatherData["main"] as! [String: AnyObject]
     temp = mainDict["temp"] as! Double
     humidity = mainDict["humidity"] as! Int
-    //pressure = mainDict["pressure"] as! Int
-    pressure = (mainDict["jsonKey"] as? NSNumber)?.intValue ?? 0
+    pressure = mainDict["pressure"] as! Int
     
     cloudCover = weatherData["clouds"]!["all"] as! Int
     
