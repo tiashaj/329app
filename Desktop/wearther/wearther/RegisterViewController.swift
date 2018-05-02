@@ -33,16 +33,22 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func register(_ sender: Any) {
-        if email.text! == "" || password.text! == "" || !isValidPassword(password: password.text!) || !passwordsMatch(password: password.text!, confirmPassword: confirmPassword.text!) {
-            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
+        if email.text!.isEmpty || password.text!.isEmpty || name.text!.isEmpty {
             
+            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
+                
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
+                
+            let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+            alertWindow.rootViewController = UIViewController()
+            alertWindow.windowLevel = UIWindowLevelAlert
+            alertWindow.makeKeyAndVisible()
+            alertWindow.rootViewController?.present(alertController, animated: true, completion: nil)
             
-            present(alertController, animated: true, completion: nil)
             
         } else {
-            Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
+            Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: { (user, error) in
                 if error == nil {
                     print("You have successfully signed up")
                     
@@ -53,19 +59,22 @@ class RegisterViewController: UIViewController {
                     
                     self.refUsers.child(self.email.text!).setValue(user)
                     
-                    //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-                    self.present(vc!, animated: true, completion: nil)
+                    //Goes to the Home page
+                    self.performSegue(withIdentifier: "Home", sender: self)
                     
                 } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                    
+                        
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alertController.addAction(defaultAction)
-                    
-                    self.present(alertController, animated: true, completion: nil)
+                        
+                    let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+                    alertWindow.rootViewController = UIViewController()
+                    alertWindow.windowLevel = UIWindowLevelAlert
+                    alertWindow.makeKeyAndVisible()
+                    alertWindow.rootViewController?.present(alertController, animated: true, completion: nil)
                 }
-            }
+            })
         }
     }
     
@@ -78,7 +87,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func segueToLogin(_ sender: Any) {
-        self.performSegue(withIdentifier: "login", sender: sender)
+        self.performSegue(withIdentifier: "Login", sender: sender)
     }
     
     // MARK: - Navigation
