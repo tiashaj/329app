@@ -8,6 +8,7 @@
 
 
 import UIKit
+import MapKit
 import CoreLocation
 
 class DisplayViewController: UIViewController,
@@ -24,7 +25,8 @@ class DisplayViewController: UIViewController,
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var getCityWeatherButton: UIButton!
-    
+    let latitude:Double = 0
+    let longitude:Double = 0
     var weather: WeatherGetter!
     var locationManager:CLLocationManager!
     
@@ -49,6 +51,19 @@ class DisplayViewController: UIViewController,
         cityTextField.enablesReturnKeyAutomatically = true
         //getCityWeatherButton.isEnabled = false
 
+        // For use when the app is open & in the background
+        locationManager.requestAlwaysAuthorization()
+        
+        // For use when the app is open
+        //locationManager.requestWhenInUseAuthorization()
+        
+        // If location services is enabled get the users location
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest // You can change the locaiton accuary here.
+            locationManager.startUpdatingLocation()
+            
+        }
     }
     
     
@@ -60,30 +75,42 @@ class DisplayViewController: UIViewController,
     // MARK: - Button events
     // ---------------------
     
+    //Location Stuff
+    // Print out the location to the console
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            print(location.coordinate)
+        }
+    }
+    
+    // If we have been deined access give the user the option to change it
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if(status == CLAuthorizationStatus.denied) {
+            showLocationDisabledPopUp()
+        }
+    }
+    
+    // Show the popup to the user if we have been deined access
+    func showLocationDisabledPopUp() {
+        let alertController = UIAlertController(title: "Background Location Access Disabled",
+                                                message: "In order to deliver pizza we need your location",
+                                                preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let openAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
+            if let url = URL(string: UIApplicationOpenSettingsURLString) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+        alertController.addAction(openAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func updateLocationButton(sender: UIButton) {
-        let locationManager = CLLocationManager()
-        // Ask for Authorisation from the User.
-        self.locationManager.requestAlwaysAuthorization()
         
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }
-        
-        var latitude:CLLocationDegrees = 0
-        var longitude:CLLocationDegrees = 0
-        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-            print("locations = \(locValue.latitude) \(locValue.longitude)")
-            latitude = locValue.latitude
-            print(latitude)
-            longitude = locValue.longitude
-            print(longitude)
-        }
         
         let geoCoder = CLGeocoder()
         //let location = CLLocation(latitude: 40.730610, longitude:  -73.935242) // <- New York
@@ -97,6 +124,7 @@ class DisplayViewController: UIViewController,
                 } // Prints "New York"
             }
         })
+
     }
     
     @IBAction func getWeatherForCityButtonTapped(sender: UIButton) {
@@ -109,7 +137,7 @@ class DisplayViewController: UIViewController,
         weather.getWeather(city: percString!)
     }
     
-    
+    //Location Methods
     
     
     // MARK: -
