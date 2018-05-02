@@ -75,11 +75,12 @@ class RegisterViewController: UIViewController {
                 if error == nil {
                     print("You have successfully signed up")
                     
+                    let uid = user?.uid
                     // add user to Firebase Database
                     let user = ["email": self.email.text!,
                                 "name": self.name.text!]
                     
-                    self.refUsers.child("Users").childByAutoId().setValue(user)
+                    self.refUsers.child("Users").child(uid!).setValue(user)
                     
                     //Goes to the Home page
                     self.performSegue(withIdentifier: "home", sender: self)

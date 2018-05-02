@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 import Firebase
 import FirebaseAuth
 
@@ -16,15 +15,22 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var EmailLabel: UILabel!
     
-
-    //initiate variable profile
-    var retrievedName: String = ""
-    var retrievedEmail: String = ""
+    var ref:DatabaseReference!
     
     //external function to fill up text lables
-    func changeText() {
-        NameLabel.text = retrievedName
-        EmailLabel.text = retrievedEmail
+    func displayText() {
+        let userID = Auth.auth().currentUser?.uid
+        ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            print(snapshot)
+        }, withCancel: nil)
+        
+        ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let email = value?["email"] as? String
+            let name = value?["name"] as? String
+            self.NameLabel.text = name
+            self.EmailLabel.text = email
+        })
     }
     
     @IBAction func btnLogOut(_ sender: Any) {
@@ -43,14 +49,14 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile Screen"
-        changeText()
+        ref = Database.database().reference()
+        displayText()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
+
     @IBAction func backHome(_ sender: Any) {
         self.performSegue(withIdentifier: "profileToHome", sender: sender)
     }

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FirebaseDatabase
 
 protocol EditProfileProtocolDelegate {
     func somethingHappened()
@@ -19,9 +20,6 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var EmailTextField: UITextField!
     
     var delegate: EditProfileProtocolDelegate?
-    
-    //create core date object
-    var profiles: [NSManagedObject] = []
     
     //press save button
     @IBAction func saveButton(_ sender: Any) {
@@ -92,8 +90,8 @@ class EditProfileViewController: UIViewController {
                 //do nothing
             }
             else{
-                destinationVC.retrievedName = NameTextField.text!
-                destinationVC.retrievedEmail = EmailTextField.text!
+                //destinationVC.retrievedName = NameTextField.text!
+                //destinationVC.retrievedEmail = EmailTextField.text!
 
             }
             //destinationVC.retrievedName = (profiles.value(forKey: "name") as? String)!
