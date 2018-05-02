@@ -22,7 +22,25 @@ class ChooseCategoryViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-
+    @IBAction func short_sleeved(_ sender: Any) {
+    }
+    
+    @IBAction func long_sleeved(_ sender: Any) {
+    }
+    
+    @IBAction func pants(_ sender: Any) {
+    }
+    
+    @IBAction func shorts(_ sender: Any) {
+    }
+    
+    @IBAction func dress(_ sender: Any) {
+    }
+    
+    @IBAction func shoes(_ sender: Any) {
+    }
+    
+    
     /*
     // MARK: - Navigation
 
