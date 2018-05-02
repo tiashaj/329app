@@ -352,6 +352,7 @@
                     <connections>
                         <outlet property="EmailLabel" destination="B14-0S-rM8" id="Oyf-Km-bz0"/>
                         <outlet property="NameLabel" destination="uYk-nm-EAB" id="F8S-Gs-64E"/>
+                        <outlet property="profilePic" destination="FwS-H4-23W" id="BQa-Tv-tAe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esV-21-Bnx" userLabel="First Responder" sceneMemberID="firstResponder"/>

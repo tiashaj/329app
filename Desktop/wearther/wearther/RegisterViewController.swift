@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseDatabase
-import FirebaseStorage
+import Firebase
 
 class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -85,7 +83,6 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                 
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
-                
             displayAlert(alertController: alertController)
         }
         else if !isValidPassword(password: password.text!) {
@@ -93,7 +90,6 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
-            
             displayAlert(alertController: alertController)
         }
         else if !passwordsMatch(password: password.text!, confirmPassword: confirmPassword.text!) {
@@ -101,7 +97,6 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
-            
             displayAlert(alertController: alertController)
         } else {
             Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: { (user, error) in

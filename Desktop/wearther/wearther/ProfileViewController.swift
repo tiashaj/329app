@@ -8,12 +8,12 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var EmailLabel: UILabel!
+    @IBOutlet weak var profilePic: UIImageView!
     
     var ref:DatabaseReference!
     
@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController {
         self.title = "Profile Screen"
         ref = Database.database().reference()
         displayText()
+        displayPic()
     }
     
     //external function to fill up text labels
@@ -34,7 +35,34 @@ class ProfileViewController: UIViewController {
             self.NameLabel.text = name
             self.EmailLabel.text = email
         }, withCancel: nil)
-
+    }
+    
+    func displayPic(){
+        self.profilePic?.contentMode = .scaleAspectFill
+        let userID = Auth.auth().currentUser?.uid
+        ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let imageURL = value?["profileImageURL"] as? String
+            print(imageURL as Any)
+            if let profileImageURL = imageURL {
+                let url = NSURL(string: profileImageURL)
+                URLSession.shared.dataTask(with: url! as URL, completionHandler: {(data, response, error) in
+                    
+                    // download hit an error
+                    if error != nil {
+                        print(error as Any)
+                        return
+                    } else {
+                        self.profilePic?.image = UIImage(data: data!)
+                        print("Profile pic is set")
+                    }
+                })
+            }
+            
+        }, withCancel: nil)
+        
+        
+        
     }
     
     @IBAction func btnEditProfile(_ sender: Any) {
