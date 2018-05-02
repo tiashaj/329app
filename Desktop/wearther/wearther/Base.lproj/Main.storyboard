@@ -279,13 +279,13 @@
                     <connections>
                         <segue destination="d4v-yj-xUB" kind="relationship" relationship="viewControllers" id="K1h-im-VO9"/>
                         <segue destination="d3V-d2-8k9" kind="relationship" relationship="viewControllers" id="Hsq-VE-huu"/>
-                        <segue destination="AcG-7j-8LR" kind="relationship" relationship="viewControllers" id="eLW-Kg-mOw"/>
                         <segue destination="4um-Nr-COS" kind="relationship" relationship="viewControllers" id="aSc-EZ-hkn"/>
+                        <segue destination="g5o-hI-yo1" kind="relationship" relationship="viewControllers" id="pnR-iW-XfX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwU-XX-wWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658" y="-545"/>
+            <point key="canvasLocation" x="2639" y="-505"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="U5k-dO-m9t">
@@ -385,31 +385,6 @@
             <point key="canvasLocation" x="3686" y="-9"/>
         </scene>
         <!--Digital Closet-->
-        <scene sceneID="gra-vI-u7m">
-            <objects>
-                <viewController title="Digital Closet" id="AcG-7j-8LR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ARW-x3-d3I">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Digital Closet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uH6-ds-ZjP">
-                                <rect key="frame" x="136" y="124" width="102" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="0kp-oO-Agh"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Digital Closet" image="icons8-clothes-30" id="5UD-zK-zPC"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uqn-ER-J9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3686" y="752"/>
-        </scene>
-        <!--Dig Closet Home View Controller-->
         <scene sceneID="qIc-wv-rHx">
             <objects>
                 <viewController id="g5o-hI-yo1" customClass="DigClosetHomeViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
@@ -476,6 +451,7 @@
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="1zY-Rw-uuM"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Digital Closet" image="icons8-clothes-30" selectedImage="icons8-clothes-30" id="6Nw-WM-reW"/>
                     <connections>
                         <segue destination="nXF-pb-SWa" kind="presentation" identifier="toShortShirt" id="QMs-rg-V5E"/>
                         <segue destination="VuR-xc-ESH" kind="presentation" identifier="toLongShirt" id="Hiv-BX-Z2C"/>
@@ -595,7 +571,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dresses/Skirts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ap-uJ-nZy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dresses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ap-uJ-nZy">
                                 <rect key="frame" x="71" y="73" width="233" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -1060,7 +1036,7 @@
         <image name="tshirt.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D1j-hM-caZ"/>
+        <segue reference="BWL-br-fIU"/>
         <segue reference="Wdq-PH-5U5"/>
     </inferredMetricsTieBreakers>
 </document>

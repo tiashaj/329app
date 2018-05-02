@@ -119,7 +119,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                                 let user = ["email": self.email.text!,
                                             "name": self.name.text!,
                                             "profileImageURL": profileImageURL]
-                                
+                            
                                 self.refUsers.child("Users").child(uid!).setValue(user)
                             }
                         })

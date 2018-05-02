@@ -7,34 +7,64 @@
 //
 
 import UIKit
+import Firebase
 
 class AddItemViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    var imagePickerController : UIImagePickerController!
-    
     @IBOutlet weak var pictureView: UIImageView!
+    var ref: DatabaseReference!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ref = Database.database().reference()
+    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        imagePickerController.dismiss(animated: true, completion: nil)
         pictureView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func savePhoto(_ sender: Any) {
+        let userID = Auth.auth().currentUser?.uid
+        
+        // if there is a picture
+        if let pic = self.pictureView.image {
+            let imageName = UUID().uuidString
+            let storageRef = Storage.storage().reference().child("digital_closet").child("\(imageName).png")
+            
+            if let uploadData = UIImagePNGRepresentation(pic){
+                storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                    if let error = error {
+                        print(error)
+                        return
+                    }
+                    
+                    if let profileImageURL = metadata?.downloadURL()?.absoluteString {
+//                        let user = ["email": self.email.text!,
+//                                    "name": self.name.text!,
+//                                    "profileImageURL": profileImageURL]
+//
+//                        self.refUsers.child("Users").child(uid!).child(imageName).setValue(user)
+                    }
+                })
+            }
+            
+        }
+        
     }
     
     @IBAction func toGallery(_ sender: Any) {
     }
     
     @IBAction func openPhotos(_ sender: Any) {
+        let picker = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-            imagePickerController = UIImagePickerController()
-            imagePickerController.delegate = self
-            imagePickerController.sourceType = .photoLibrary;
-            imagePickerController.allowsEditing = true
-            self.present(imagePickerController, animated: true, completion: nil)
+            picker.delegate = self
+            picker.sourceType = .photoLibrary;
+            picker.allowsEditing = true
+            self.present(picker, animated: true, completion: nil)
         }
     }
-    
     
     @IBAction func onXOut(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -43,18 +73,9 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     @IBAction func confirmPhotoPress(_ sender: Any) {
         performSegue(withIdentifier: "toChooseCategory", sender: self)
     }
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
