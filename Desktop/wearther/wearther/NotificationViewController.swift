@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class NotificationViewController: UIViewController {
     
@@ -16,12 +17,56 @@ class NotificationViewController: UIViewController {
     
     @IBOutlet weak var minField: UITextField!
     
+    var dayNum: Int = 0
+    
+    var notificationGranted = false
+    
+    func repeatNotification(){
+        let content = UNMutableNotificationContent()
+        content.title = "Get an Outfit!"
+        content.body = "Let WearTher generate your outfit for today"
+        content.categoryIdentifier = "outfit.reminder.category"
+        
+        var dateComponents = DateComponents()
+        //Every Monday at 11:30AM
+        //dateComponents.hour =
+        //dateComponents.minute = 30
+        //dateComponents.weekday = dayNum
+        dateComponents.second = 0
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: "outfit.reminder", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("error in pizza reminder: \(error.localizedDescription)")
+            }
+        }
+        print("added notification:\(request.identifier)")
+        
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        UNUserNotificationCenter.current().requestAuthorization(
+        options: [.alert,.sound]){
+            (granted, error) in
+            self.notificationGranted = granted
+            if let error = error {
+                print("granted, but Error in notification permission:\(error.localizedDescription)")
+            }
+        }
+    }
+    
+    @IBAction func addNotification(_ sender: Any) {
+        if notificationGranted{
+            repeatNotification()
+        }else{
+            print("notification not granted")
+        }
     }
 
     override func didReceiveMemoryWarning() {
