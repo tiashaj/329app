@@ -52,8 +52,12 @@ class WeatherGetter {
     
     // This is a pretty simple networking task, so the shared session will do.
     let session = URLSession.shared
+    print(city)
+    let strCity = String(city)
     
-    let weatherRequestURL = NSURL(string: "\(openWeatherMapBaseURL)?APPID=\(openWeatherMapAPIKey)&q=\(city)")!
+    //let weatherRequestURL = NSURL(string: "\(openWeatherMapBaseURL)?APPID=\(openWeatherMapAPIKey)&q=\(city)")!
+    let weatherRequestURL = NSURL(string: "\(openWeatherMapBaseURL)?q=\(strCity)&APPID=\(openWeatherMapAPIKey)")!
+    print(weatherRequestURL)
     
     // The data task retrieves the data.
     let dataTask = session.dataTask(with: weatherRequestURL as URL) {

@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 class AddItemViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
