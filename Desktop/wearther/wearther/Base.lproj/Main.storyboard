@@ -433,14 +433,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Closet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNt-sh-w2R">
-                                <rect key="frame" x="94" y="41" width="187" height="67"/>
+                                <rect key="frame" x="94" y="20" width="187" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkt-XB-JKa">
-                                <rect key="frame" x="47" y="146" width="116" height="107"/>
+                                <rect key="frame" x="47" y="95" width="116" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="tshirt.png"/>
                                 <connections>
@@ -448,7 +448,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqP-kL-FMT">
-                                <rect key="frame" x="203" y="130" width="133" height="139"/>
+                                <rect key="frame" x="203" y="95" width="133" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="longsleeve.png"/>
                                 <connections>
@@ -456,7 +456,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggr-3A-ihg">
-                                <rect key="frame" x="28" y="297" width="154" height="159"/>
+                                <rect key="frame" x="28" y="231" width="154" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pants.png"/>
                                 <connections>
@@ -464,27 +464,36 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3D-ck-2E6">
-                                <rect key="frame" x="39" y="486" width="132" height="135"/>
+                                <rect key="frame" x="39" y="398" width="132" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="dress.png"/>
                                 <connections>
                                     <action selector="dresses:" destination="g5o-hI-yo1" eventType="touchUpInside" id="SA2-za-wdb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKc-Rw-ucx">
-                                <rect key="frame" x="218" y="495" width="118" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="shoe.png"/>
-                                <connections>
-                                    <action selector="shoes:" destination="g5o-hI-yo1" eventType="touchUpInside" id="aoB-Xi-quI"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYK-vg-b0B">
-                                <rect key="frame" x="218" y="348" width="102" height="84"/>
+                                <rect key="frame" x="218" y="268" width="102" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="shorts.png"/>
                                 <connections>
                                     <action selector="shorts:" destination="g5o-hI-yo1" eventType="touchUpInside" id="mBU-xg-z6m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpG-g1-NpY">
+                                <rect key="frame" x="156" y="558" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Item"/>
+                                <connections>
+                                    <action selector="btnSegueAddItem:" destination="g5o-hI-yo1" eventType="touchUpInside" id="G0U-ga-4Tg"/>
+                                    <segue destination="yxE-gC-u3f" kind="show" identifier="toAddItem" id="Ty4-gB-zFS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKc-Rw-ucx">
+                                <rect key="frame" x="218" y="417" width="118" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="shoe.png"/>
+                                <connections>
+                                    <action selector="shoes:" destination="g5o-hI-yo1" eventType="touchUpInside" id="aoB-Xi-quI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -529,30 +538,14 @@
                                     <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="i2F-Ok-BEq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rA-uW-IOh">
-                                <rect key="frame" x="20" y="87" width="55" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="delete.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veN-Jb-Lk9">
-                                <rect key="frame" x="290" y="80" width="69" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="add.png"/>
-                                <connections>
-                                    <action selector="addItemPress:" destination="VuR-xc-ESH" eventType="touchUpInside" id="jij-A2-0Oy"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="EZM-xg-6LO"/>
                     </view>
-                    <connections>
-                        <segue destination="yxE-gC-u3f" kind="presentation" identifier="addLongShirt" id="Av1-Uv-0i7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP5-Ye-duF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6976.8000000000002" y="-1827.4362818590705"/>
+            <point key="canvasLocation" x="7706" y="-1842"/>
         </scene>
         <!--Shoe View Controller-->
         <scene sceneID="ckp-oL-aNb">
@@ -569,19 +562,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozb-9Y-xDD">
-                                <rect key="frame" x="57" y="60" width="55" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="delete.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeu-Pc-P90">
-                                <rect key="frame" x="263" y="53" width="69" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="add.png"/>
-                                <connections>
-                                    <action selector="addItemPress:" destination="0lb-7H-buz" eventType="touchUpInside" id="s0m-5l-7mq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnL-0Z-93d">
                                 <rect key="frame" x="16" y="20" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -595,13 +575,10 @@
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="kxK-0i-OmW"/>
                     </view>
-                    <connections>
-                        <segue destination="yxE-gC-u3f" kind="presentation" identifier="addShoes" id="eTA-hQ-p1b"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdT-De-uc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6977" y="777"/>
+            <point key="canvasLocation" x="8454" y="-1158"/>
         </scene>
         <!--Dress View Controller-->
         <scene sceneID="9t1-Pd-nVH">
@@ -627,30 +604,14 @@
                                     <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="xfi-dn-myt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-q6-X4G">
-                                <rect key="frame" x="290" y="58" width="69" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="add.png"/>
-                                <connections>
-                                    <action selector="addItemPress:" destination="7Rx-sw-ZBk" eventType="touchUpInside" id="a2m-Zj-SLm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkZ-TJ-kDo">
-                                <rect key="frame" x="27" y="65" width="55" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="delete.png"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="D5Y-AO-0j8"/>
                     </view>
-                    <connections>
-                        <segue destination="yxE-gC-u3f" kind="presentation" identifier="addDress" id="BWL-br-fIU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVF-yS-h3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6977" y="79"/>
+            <point key="canvasLocation" x="7705" y="-1158"/>
         </scene>
         <!--Shorts View Controller-->
         <scene sceneID="KwN-O0-jOi">
@@ -676,30 +637,14 @@
                                     <action selector="onXOut:" destination="VEw-Jy-Dck" eventType="touchUpInside" id="rM4-ir-CcD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AE4-PR-a0a">
-                                <rect key="frame" x="54" y="61" width="55" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="delete.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR2-6d-0Ks">
-                                <rect key="frame" x="259" y="54" width="69" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="add.png"/>
-                                <connections>
-                                    <action selector="addItemPress:" destination="VEw-Jy-Dck" eventType="touchUpInside" id="3a5-1K-4wm"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="lg2-07-bgl"/>
                     </view>
-                    <connections>
-                        <segue destination="yxE-gC-u3f" kind="presentation" identifier="addShorts" id="rdh-nh-oEM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpR-k1-say" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6977" y="-630"/>
+            <point key="canvasLocation" x="6977" y="-1158"/>
         </scene>
         <!--Add Item View Controller-->
         <scene sceneID="JwU-ZN-sPx">
@@ -755,7 +700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5a-EY-iOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8317.6000000000004" y="-625.63718140929541"/>
+            <point key="canvasLocation" x="6828" y="-274"/>
         </scene>
         <!--Choose Category View Controller-->
         <scene sceneID="cUH-fs-Kvt">
@@ -770,7 +715,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="tshirt.png"/>
                                 <connections>
-                                    <action selector="shortShirt:" destination="g5o-hI-yo1" eventType="touchUpInside" id="cgv-dg-ZZb"/>
+                                    <action selector="short_sleeved:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="AgC-RP-oZf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8L-K6-rJu">
@@ -778,7 +723,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="longsleeve.png"/>
                                 <connections>
-                                    <action selector="longShirt:" destination="g5o-hI-yo1" eventType="touchUpInside" id="5lo-eA-za1"/>
+                                    <action selector="long_sleeved:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="dUQ-q8-bUs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ve3-sh-8Ia">
@@ -786,7 +731,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pants.png"/>
                                 <connections>
-                                    <action selector="pant:" destination="g5o-hI-yo1" eventType="touchUpInside" id="ayV-pO-qfm"/>
+                                    <action selector="pants:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="lAa-Km-frq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYW-lb-rsH">
@@ -794,7 +739,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="shorts.png"/>
                                 <connections>
-                                    <action selector="shorts:" destination="g5o-hI-yo1" eventType="touchUpInside" id="M2r-Hj-VGS"/>
+                                    <action selector="shorts:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="v92-26-bPo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cA-bc-4tt">
@@ -802,7 +747,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="dress.png"/>
                                 <connections>
-                                    <action selector="dresses:" destination="g5o-hI-yo1" eventType="touchUpInside" id="nFI-FC-vWP"/>
+                                    <action selector="dresses:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="g8d-ya-QBb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-iq-hdn">
@@ -810,7 +755,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="shoe.png"/>
                                 <connections>
-                                    <action selector="shoes:" destination="g5o-hI-yo1" eventType="touchUpInside" id="46L-15-gUo"/>
+                                    <action selector="shoes:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="ORl-G5-xdc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where Should This Go?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk2-IT-WpK">
@@ -827,7 +772,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOQ-V9-WVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9293.6000000000004" y="-630.13493253373315"/>
+            <point key="canvasLocation" x="7657" y="-275"/>
         </scene>
         <!--Pant View Controller-->
         <scene sceneID="rPE-FI-juS">
@@ -853,30 +798,14 @@
                                     <action selector="onXOut:" destination="2oI-l5-LGS" eventType="touchUpInside" id="e6n-xN-EaT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvO-fz-fe2">
-                                <rect key="frame" x="57" y="61" width="55" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="delete.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahh-o3-Oti">
-                                <rect key="frame" x="259" y="54" width="69" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="add.png"/>
-                                <connections>
-                                    <action selector="addItemPress:" destination="2oI-l5-LGS" eventType="touchUpInside" id="MW2-9e-JvU"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="JFi-PU-BVy"/>
                     </view>
-                    <connections>
-                        <segue destination="yxE-gC-u3f" kind="presentation" identifier="addPants" id="D1j-hM-caZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXC-QI-KDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6977" y="-1191"/>
+            <point key="canvasLocation" x="8454" y="-1843"/>
         </scene>
         <!--Short Shirt View Controller-->
         <scene sceneID="L5D-jX-AnK">
@@ -901,30 +830,14 @@
                                     <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="0db-69-wNW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDA-wO-J1i">
-                                <rect key="frame" x="306" y="68" width="69" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="add.png"/>
-                                <connections>
-                                    <action selector="addItemPress:" destination="nXF-pb-SWa" eventType="touchUpInside" id="dDy-3e-A64"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beA-8p-8cN">
-                                <rect key="frame" x="16" y="75" width="55" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="delete.png"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="RIF-OF-KxM"/>
                     </view>
-                    <connections>
-                        <segue destination="yxE-gC-u3f" kind="presentation" identifier="toAddItem" id="JHA-hK-ohu"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kog-XM-yas" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6976.8000000000002" y="-2545.2773613193403"/>
+            <point key="canvasLocation" x="6977" y="-1843"/>
         </scene>
         <!--Display View Controller-->
         <scene sceneID="uan-nK-sn3">
@@ -1068,10 +981,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add.png" width="1600" height="1600"/>
         <image name="arrow.png" width="512" height="512"/>
         <image name="businessman" width="30" height="30"/>
-        <image name="delete.png" width="200" height="200"/>
         <image name="dress.png" width="200" height="200"/>
         <image name="home" width="30" height="30"/>
         <image name="icons8-clothes-30" width="30" height="30"/>
@@ -1086,7 +997,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CSc-VT-Axp"/>
-        <segue reference="BWL-br-fIU"/>
         <segue reference="Wdq-PH-5U5"/>
     </inferredMetricsTieBreakers>
 </document>
