@@ -14,6 +14,9 @@ class ShoeViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func addItemPress(_ sender: Any) {
+        performSegue(withIdentifier: "addShoes", sender: self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

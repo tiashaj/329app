@@ -1,5 +1,5 @@
 //
-//  PantViewController.swift
+//  ChooseCategoryViewController.swift
 //  wearther
 //
 //  Created by Tiasha Joardar on 5/1/18.
@@ -8,17 +8,8 @@
 
 import UIKit
 
-class PantViewController: UIViewController {
-    
-    @IBAction func onXOut(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func addItemPress(_ sender: Any) {
-        performSegue(withIdentifier: "addPants", sender: self)
-    }
-    
-    
+class ChooseCategoryViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
