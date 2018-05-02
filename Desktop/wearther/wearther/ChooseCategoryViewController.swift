@@ -13,7 +13,8 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class ChooseCategoryViewController: UIViewController {
-
+    var pic:UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -38,6 +39,10 @@ class ChooseCategoryViewController: UIViewController {
     }
     
     @IBAction func shoes(_ sender: Any) {
+    }
+    
+    func addItem(category: String) {
+        
     }
     
     
