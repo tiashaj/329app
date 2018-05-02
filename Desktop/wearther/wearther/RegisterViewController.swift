@@ -77,7 +77,6 @@ class RegisterViewController: UIViewController {
                     
                     // add user to Firebase Database
                     let user = ["email": self.email.text!,
-                                "password": self.password.text!,
                                 "name": self.name.text!]
                     
                     self.refUsers.child("Users").childByAutoId().setValue(user)
