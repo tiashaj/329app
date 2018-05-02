@@ -859,7 +859,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXC-QI-KDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6977" y="-1307"/>
+            <point key="canvasLocation" x="6977" y="-1191"/>
         </scene>
         <!--Short Shirt View Controller-->
         <scene sceneID="L5D-jX-AnK">
@@ -1059,8 +1059,7 @@
         <image name="tshirt.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y17-er-1Qy"/>
-        <segue reference="JHA-hK-ohu"/>
+        <segue reference="D1j-hM-caZ"/>
         <segue reference="qtf-8c-sXW"/>
     </inferredMetricsTieBreakers>
 </document>
