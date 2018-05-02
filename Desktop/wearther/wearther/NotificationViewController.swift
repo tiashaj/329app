@@ -10,9 +10,9 @@
         content.categoryIdentifier = "outfit.reminder.category"
         
         var dateComponents = DateComponents()
-        //Every Monday at 11:30AM
-        //dateComponents.hour = 9
-        //dateComponents.minute = 00
+        //Every day at 9 AM
+        dateComponents.hour = 9
+        dateComponents.minute = 00
         //dateComponents.weekday = 2
         dateComponents.second = 0
         
@@ -28,11 +28,6 @@
         print("added notification:\(request.identifier)")
         
     }
-    @IBOutlet weak var dayField: UITextField!
-    
-    @IBOutlet weak var hourField: UITextField!
-    
-    @IBOutlet weak var minField: UITextField!
     
     var notificationGranted = false
     
@@ -57,12 +52,21 @@
             print("notification not granted")
         }
     }
-    
-    @IBAction func showNotification(_ sender: Any) {
+
+    @IBAction func notifyNow(_ sender: Any) {
         
-        // Do any additional setup after loading the view.
+        let content = UNMutableNotificationContent()
+        content.title = "Your outfit is ready!"
+        content.subtitle = "Wearther has generated an outfit for you"
+        content.body = "Navigate to your Profile to see your outfit for today"
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+        let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
