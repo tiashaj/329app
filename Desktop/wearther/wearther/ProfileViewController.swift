@@ -17,6 +17,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var EmailLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     
+    @IBAction func shortsleevedIcon(_ sender: Any) {
+    }
     var ref:DatabaseReference!
     
     override func viewDidLoad() {
