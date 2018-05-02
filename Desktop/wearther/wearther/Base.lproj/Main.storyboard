@@ -34,7 +34,6 @@
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="dzC-8j-GpE" eventType="touchUpInside" id="CZZ-jK-xfN"/>
-                                    <segue destination="9oW-cC-LAn" kind="show" identifier="home" id="oqc-rc-REg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrO-G2-PW4">
@@ -101,6 +100,7 @@
                         <outlet property="email" destination="oSM-3Y-gpi" id="zdu-Wt-dM1"/>
                         <outlet property="errorMessage" destination="2P7-p8-8p0" id="W4s-ko-N0r"/>
                         <outlet property="password" destination="j1U-FT-max" id="ZxU-QE-BSi"/>
+                        <segue destination="9oW-cC-LAn" kind="show" identifier="home" id="qtf-8c-sXW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hwj-i3-ONM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,7 +152,6 @@
                                 </state>
                                 <connections>
                                     <action selector="register:" destination="OkI-AY-DIu" eventType="touchUpInside" id="Gig-dw-QDh"/>
-                                    <segue destination="9oW-cC-LAn" kind="show" identifier="home" id="Vl3-0e-XBT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jT-BT-6va">
@@ -195,6 +194,7 @@
                         <outlet property="errorMessage" destination="H61-Iv-DZU" id="pkc-ow-7Lj"/>
                         <outlet property="name" destination="zvi-tM-kGI" id="gba-pc-uZU"/>
                         <outlet property="password" destination="DBx-zF-x7v" id="LqM-Ku-3Hx"/>
+                        <segue destination="9oW-cC-LAn" kind="show" identifier="home" id="Wdq-PH-5U5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEz-cO-a3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -901,6 +901,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aSc-EZ-hkn"/>
-        <segue reference="oqc-rc-REg"/>
+        <segue reference="qtf-8c-sXW"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class RegisterViewController: UIViewController {
 
@@ -25,7 +26,7 @@ class RegisterViewController: UIViewController {
         password.isSecureTextEntry = true
         confirmPassword.isSecureTextEntry = true
         
-        refUsers = Database.database().reference().child("users")
+        refUsers = Database.database().reference()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +36,7 @@ class RegisterViewController: UIViewController {
     @IBAction func register(_ sender: Any) {
         if email.text!.isEmpty || password.text!.isEmpty || name.text!.isEmpty {
             
-            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Error", message: "Please enter your name, email, and password", preferredStyle: .alert)
                 
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
@@ -45,8 +46,30 @@ class RegisterViewController: UIViewController {
             alertWindow.windowLevel = UIWindowLevelAlert
             alertWindow.makeKeyAndVisible()
             alertWindow.rootViewController?.present(alertController, animated: true, completion: nil)
+        }
+        else if !isValidPassword(password: password.text!) {
+            let alertController = UIAlertController(title: "Error", message: "Please enter a password with at least 8 characters", preferredStyle: .alert)
             
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
             
+            let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+            alertWindow.rootViewController = UIViewController()
+            alertWindow.windowLevel = UIWindowLevelAlert
+            alertWindow.makeKeyAndVisible()
+            alertWindow.rootViewController?.present(alertController, animated: true, completion: nil)
+        }
+        else if !passwordsMatch(password: password.text!, confirmPassword: confirmPassword.text!) {
+            let alertController = UIAlertController(title: "Error", message: "Passwords do not match", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+            alertWindow.rootViewController = UIViewController()
+            alertWindow.windowLevel = UIWindowLevelAlert
+            alertWindow.makeKeyAndVisible()
+            alertWindow.rootViewController?.present(alertController, animated: true, completion: nil)
         } else {
             Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: { (user, error) in
                 if error == nil {
@@ -57,10 +80,10 @@ class RegisterViewController: UIViewController {
                                 "password": self.password.text!,
                                 "name": self.name.text!]
                     
-                    self.refUsers.child(self.email.text!).setValue(user)
+                    self.refUsers.child("Users").childByAutoId().setValue(user)
                     
                     //Goes to the Home page
-                    self.performSegue(withIdentifier: "Home", sender: self)
+                    self.performSegue(withIdentifier: "home", sender: self)
                     
                 } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -93,10 +116,12 @@ class RegisterViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? MyTabBarController {
             destinationVC.user_email = email.text
         }
     }
+    */
 
 }
