@@ -110,7 +110,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func segueToLogin(_ sender: Any) {
-        self.performSegue(withIdentifier: "Login", sender: sender)
+        self.performSegue(withIdentifier: "registerToLogin", sender: sender)
     }
     
     // MARK: - Navigation
