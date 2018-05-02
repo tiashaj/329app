@@ -40,6 +40,12 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func confirmPhotoPress(_ sender: Any) {
+        performSegue(withIdentifier: "toChooseCategory", sender: self)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
