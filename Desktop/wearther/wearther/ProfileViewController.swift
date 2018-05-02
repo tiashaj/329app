@@ -17,20 +17,61 @@ class ProfileViewController: UIViewController {
     
     var ref:DatabaseReference!
     
-    //external function to fill up text lables
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Profile Screen"
+        ref = Database.database().reference()
+        displayText()
+    }
+    
+    //external function to fill up text labels
     func displayText() {
         let userID = Auth.auth().currentUser?.uid
-        ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
-            print(snapshot)
-        }, withCancel: nil)
-        
         ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let email = value?["email"] as? String
             let name = value?["name"] as? String
             self.NameLabel.text = name
             self.EmailLabel.text = email
-        })
+        }, withCancel: nil)
+
+    }
+    
+    @IBAction func btnEditProfile(_ sender: Any) {
+        let userID = Auth.auth().currentUser?.uid
+        let name = NameLabel.text
+            
+        let alertController = UIAlertController(title: "Edit", message: "Give new values to update user", preferredStyle: .alert)
+            
+        let updateAction = UIAlertAction(title: "Update", style: .default){(_) in
+            let name = alertController.textFields?[0].text
+            self.updateUser(id: userID!, name: name!)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+        alertController.addTextField{(textField) in
+            textField.text = name
+        }
+            
+        alertController.addAction(updateAction)
+        alertController.addAction(cancelAction)
+        
+        let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+        alertWindow.rootViewController = UIViewController()
+        alertWindow.windowLevel = UIWindowLevelAlert
+        alertWindow.makeKeyAndVisible()
+        alertWindow.rootViewController?.present(alertController, animated: true, completion: nil)
+    }
+    
+    func updateUser(id: String, name: String){
+        let user = [
+            "email": self.EmailLabel.text!,
+            "name": name]
+        
+        ref.child("Users").child(id).setValue(user)
+        
+        self.NameLabel.text = name
+        print("User updated")
     }
     
     @IBAction func btnLogOut(_ sender: Any) {
@@ -45,31 +86,8 @@ class ProfileViewController: UIViewController {
             }
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "Profile Screen"
-        ref = Database.database().reference()
-        displayText()
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    @IBAction func backHome(_ sender: Any) {
-        self.performSegue(withIdentifier: "profileToHome", sender: sender)
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
 }
