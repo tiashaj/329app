@@ -14,6 +14,7 @@ import FirebaseDatabase
 
 class ChooseCategoryViewController: UIViewController {
     var pic:UIImage?
+    var url:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,13 +36,13 @@ class ChooseCategoryViewController: UIViewController {
     @IBAction func shorts(_ sender: Any) {
     }
     
-    @IBAction func dress(_ sender: Any) {
+    @IBAction func dresses(_ sender: Any) {
     }
     
     @IBAction func shoes(_ sender: Any) {
     }
     
-    func addItem(category: String) {
+    func addItem(category: String, url: String) {
         
     }
     

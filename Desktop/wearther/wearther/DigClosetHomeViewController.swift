@@ -34,6 +34,10 @@ class DigClosetHomeViewController: UIViewController {
         performSegue(withIdentifier: "toShoes", sender: self)
     }
 
+    @IBAction func btnSegueAddItem(_ sender: Any) {
+        performSegue(withIdentifier: "toAddItem", sender: self)
+    }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -27,38 +27,6 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func savePhoto(_ sender: Any) {
-        let userID = Auth.auth().currentUser?.uid
-        
-        // if there is a picture
-        if let pic = self.pictureView.image {
-            let imageName = UUID().uuidString
-            let storageRef = Storage.storage().reference().child("digital_closet").child("\(imageName).png")
-            
-            if let uploadData = UIImagePNGRepresentation(pic){
-                storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
-                    if let error = error {
-                        print(error)
-                        return
-                    }
-                    
-                    if let profileImageURL = metadata?.downloadURL()?.absoluteString {
-//                        let user = ["email": self.email.text!,
-//                                    "name": self.name.text!,
-//                                    "profileImageURL": profileImageURL]
-//
-//                        self.refUsers.child("Users").child(uid!).child(imageName).setValue(user)
-                    }
-                })
-            }
-            
-        }
-        
-    }
-    
-    @IBAction func toGallery(_ sender: Any) {
-    }
-    
     @IBAction func openPhotos(_ sender: Any) {
         let picker = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
@@ -74,6 +42,27 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     }
 
     @IBAction func confirmPhotoPress(_ sender: Any) {
+        let userID = Auth.auth().currentUser?.uid
+        
+        // if there is a picture
+        if let pic = self.pictureView.image {
+            let imageName = UUID().uuidString
+            let storageRef = Storage.storage().reference().child("digital_closet").child("\(imageName).png")
+            
+            if let uploadData = UIImagePNGRepresentation(pic){
+                storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                    if let error = error {
+                        print(error)
+                        return
+                    }
+                    
+                    if let profileImageURL = metadata?.downloadURL()?.absoluteString {
+                        self.ref.child("Users").child(userID!).child("digital_closet").setValue(profileImageURL)
+                    }
+                })
+            }
+            
+        }
         performSegue(withIdentifier: "toChooseCategory", sender: self)
     }
 
@@ -82,7 +71,6 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -90,6 +78,6 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }
