@@ -13,6 +13,12 @@ class ShortShirtViewController: UIViewController {
     @IBAction func onXOut(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+    @IBAction func addItemPress(_ sender: Any) {
+        performSegue(withIdentifier: "toAddItem", sender: self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

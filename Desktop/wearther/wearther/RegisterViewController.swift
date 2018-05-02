@@ -10,10 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseStorage
-<<<<<<< HEAD
 import FirebaseDatabase
-=======
->>>>>>> a5a0af8c697e446477a50bc9b36d8ecb706e2907
 
 class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 

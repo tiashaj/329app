@@ -9,11 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-<<<<<<< HEAD
 import FirebaseStorage
 import FirebaseDatabase
-=======
->>>>>>> a5a0af8c697e446477a50bc9b36d8ecb706e2907
 
 class LoginViewController: UIViewController {
 
