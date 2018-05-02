@@ -59,12 +59,17 @@ class ProfileViewController: UIViewController {
     @IBAction func btnEditProfile(_ sender: Any) {
         let userID = Auth.auth().currentUser?.uid
         let name = NameLabel.text
-            
+        var imageURL:String?
+        
+        ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            imageURL = value?["profileImageURL"] as? String
+        })
         let alertController = UIAlertController(title: "Edit", message: "Give new values to update user", preferredStyle: .alert)
             
         let updateAction = UIAlertAction(title: "Update", style: .default){(_) in
             let name = alertController.textFields?[0].text
-            self.updateUser(id: userID!, name: name!)
+            self.updateUser(id: userID!, name: name!, imageURL: imageURL!)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             
@@ -82,10 +87,11 @@ class ProfileViewController: UIViewController {
         alertWindow.rootViewController?.present(alertController, animated: true, completion: nil)
     }
     
-    func updateUser(id: String, name: String){
+    func updateUser(id: String, name: String, imageURL: String){
         let user = [
             "email": self.EmailLabel.text!,
-            "name": name]
+            "name": name,
+            "profileImageURL": imageURL]
         
         ref.child("Users").child(id).setValue(user)
         
