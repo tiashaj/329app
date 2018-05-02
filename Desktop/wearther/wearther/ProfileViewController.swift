@@ -49,6 +49,9 @@ class ProfileViewController: UIViewController {
             let storageRef = Storage.storage().reference(forURL: imageURL!)
             storageRef.getData(maxSize: 2 * 1024 * 1024, completion: { (data, error) in
                 self.profilePic?.image = UIImage(data:data!)
+                self.profilePic.layer.masksToBounds = false
+                self.profilePic.clipsToBounds = true
+                self.profilePic.layer.cornerRadius = self.profilePic.frame.size.height / 2
             })
         })
     }
