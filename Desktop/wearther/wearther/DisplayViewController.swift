@@ -8,12 +8,10 @@
 
 
 import UIKit
-import CoreLocation
 
 class DisplayViewController: UIViewController,
     WeatherGetterDelegate,
-    UITextFieldDelegate,
-    CLLocationManagerDelegate
+    UITextFieldDelegate
 {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
@@ -26,7 +24,7 @@ class DisplayViewController: UIViewController,
     @IBOutlet weak var getCityWeatherButton: UIButton!
     
     var weather: WeatherGetter!
-    var locationManager:CLLocationManager!
+    
     
     // MARK: -
     
@@ -48,9 +46,7 @@ class DisplayViewController: UIViewController,
         cityTextField.delegate = self
         cityTextField.enablesReturnKeyAutomatically = true
         //getCityWeatherButton.isEnabled = false
-
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,53 +56,12 @@ class DisplayViewController: UIViewController,
     // MARK: - Button events
     // ---------------------
     
-    @IBAction func updateLocationButton(sender: UIButton) {
-        let locationManager = CLLocationManager()
-        // Ask for Authorisation from the User.
-        self.locationManager.requestAlwaysAuthorization()
-        
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }
-        
-        var latitude:CLLocationDegrees = 0
-        var longitude:CLLocationDegrees = 0
-        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-            print("locations = \(locValue.latitude) \(locValue.longitude)")
-            latitude = locValue.latitude
-            print(latitude)
-            longitude = locValue.longitude
-            print(longitude)
-        }
-        
-        let geoCoder = CLGeocoder()
-        //let location = CLLocation(latitude: 40.730610, longitude:  -73.935242) // <- New York
-        let location = CLLocation(latitude: CLLocationDegrees(latitude), longitude:  CLLocationDegrees(longitude))
-        geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, _) -> Void in placemarks?.forEach
-            {
-                (placemark) in if let city = placemark.locality
-                {
-                    print(city)
-                    
-                } // Prints "New York"
-            }
-        })
-    }
-    
     @IBAction func getWeatherForCityButtonTapped(sender: UIButton) {
         guard let text = cityTextField.text, !text.isEmpty else {
             return
         }
         //weather.getWeather(city: cityTextField.text!.urlEncoded)
-        let spaceString = cityTextField.text
-        let percString = spaceString?.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
-        weather.getWeather(city: percString!)
+        weather.getWeather(city: cityTextField.text!)
     }
     
     
@@ -184,7 +139,6 @@ class DisplayViewController: UIViewController,
     // pressing the "Get weather for the city above" button.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
         getWeatherForCityButtonTapped(sender: getCityWeatherButton)
         return true
     }
@@ -216,8 +170,6 @@ class DisplayViewController: UIViewController,
             completion: nil
         )
     }
-    
-    
     
 }
 
