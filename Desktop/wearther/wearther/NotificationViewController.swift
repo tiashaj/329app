@@ -1,19 +1,23 @@
 //
-//  ShortsViewController.swift
+//  NotificationViewController.swift
 //  wearther
 //
-//  Created by Tiasha Joardar on 5/1/18.
+//  Created by Tiasha Joardar on 5/2/18.
 //  Copyright © 2018 Amy Fang. All rights reserved.
 //
 
 import UIKit
 
-class ShortsViewController: UIViewController {
+class NotificationViewController: UIViewController {
     
-    @IBAction func onXOut(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+    @IBOutlet weak var dayField: UITextField!
     
+    @IBOutlet weak var hourField: UITextField!
+    
+    @IBOutlet weak var minField: UITextField!
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,3 +41,4 @@ class ShortsViewController: UIViewController {
     */
 
 }
+
