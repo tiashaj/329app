@@ -387,7 +387,6 @@
                                 <state key="normal" image="alarm.png"/>
                                 <connections>
                                     <action selector="notifyNow:" destination="y0m-Va-1W2" eventType="touchUpInside" id="1gS-8C-B04"/>
-                                    <action selector="notifyNow:" destination="d3V-d2-8k9" eventType="touchUpInside" id="Q59-Zo-1Gh"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-wk-7ks">
