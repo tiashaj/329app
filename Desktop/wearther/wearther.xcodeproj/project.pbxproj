@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A5A7D6A20803189007D1A6B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A7D6920803189007D1A6B /* ProfileViewController.swift */; };
+		0A67AC36209BBFC3006E245F /* changeBGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67AC35209BBFC3006E245F /* changeBGColor.swift */; };
 		0A7D2E63209B8C2600AE74F0 /* CityList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D2E62209B8C2600AE74F0 /* CityList.txt */; };
 		0A99A4C4208FE58800BE695E /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A99A4C3208FE58800BE695E /* DisplayViewController.swift */; };
 		0A99A4C7208FE5B200BE695E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A99A4C5208FE5B200BE695E /* Weather.swift */; };
@@ -68,6 +69,7 @@
 		05BF01339242F0822E6D0FDC /* Pods-weartherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weartherUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weartherUITests/Pods-weartherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		09C67DB73A9BBD065D614794 /* Pods-wearther.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wearther.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wearther/Pods-wearther.debug.xcconfig"; sourceTree = "<group>"; };
 		0A5A7D6920803189007D1A6B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0A67AC35209BBFC3006E245F /* changeBGColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changeBGColor.swift; sourceTree = "<group>"; };
 		0A7D2E62209B8C2600AE74F0 /* CityList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CityList.txt; sourceTree = "<group>"; };
 		0A99A4C3208FE58800BE695E /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		0A99A4C5208FE5B200BE695E /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
@@ -198,16 +200,17 @@
 				F804F8C620648C31006E1B15 /* RegisterViewController.swift */,
 				F8753187209ADD880015E5EB /* TemperatureViewController.swift */,
 				F8219C27208130590057049B /* MyTabBarController.swift */,
+				0A5A7D6920803189007D1A6B /* ProfileViewController.swift */,
 				0A99A4C3208FE58800BE695E /* DisplayViewController.swift */,
 				F8753189209AE99C0015E5EB /* OutfitViewController.swift */,
 				0A7D2E62209B8C2600AE74F0 /* CityList.txt */,
-				0A5A7D6920803189007D1A6B /* ProfileViewController.swift */,
 				F804F897206487BE006E1B15 /* Main.storyboard */,
 				66DD024C209BB132002EF5D4 /* Theme.swift */,
 				66173908209AC23F003EA7B9 /* GlobalViewController.swift */,
 				661D5327209A7F3A00F490E8 /* NotificationViewController.swift */,
 				661D52E32098461800F490E8 /* DigClosetHomeViewController.swift */,
 				66173906209ABB95003EA7B9 /* SettingsViewController.swift */,
+				0A67AC35209BBFC3006E245F /* changeBGColor.swift */,
 				661D531320990CCE00F490E8 /* AddItemViewController.swift */,
 				661D53172099388100F490E8 /* ChooseCategoryViewController.swift */,
 				661D52F320984AF200F490E8 /* ShortShirtViewController.swift */,
@@ -478,6 +481,7 @@
 				0A99A4C7208FE5B200BE695E /* Weather.swift in Sources */,
 				661D52FE20984F6200F490E8 /* DressViewController.swift in Sources */,
 				661D52F820984EAE00F490E8 /* LongShirtViewController.swift in Sources */,
+				0A67AC36209BBFC3006E245F /* changeBGColor.swift in Sources */,
 				F8753188209ADD880015E5EB /* TemperatureViewController.swift in Sources */,
 				F8D7FF6E209A97E100D20470 /* PicsCollectionViewCell.swift in Sources */,
 				661D53182099388100F490E8 /* ChooseCategoryViewController.swift in Sources */,

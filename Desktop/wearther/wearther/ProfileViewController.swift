@@ -23,10 +23,16 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.title = "Profile Screen"
         ref = Database.database().reference()
         displayText()
         displayPic()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
     }
     
     //external function to fill up text labels

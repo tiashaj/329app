@@ -561,9 +561,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="darkButton:" destination="d3V-d2-8k9" eventType="touchUpInside" id="1c9-0z-Pqc"/>
-                                    <action selector="onRed:" destination="Pnf-jo-5ux" eventType="touchUpInside" id="1Ih-5f-CGI"/>
-                                    <action selector="onRed:" destination="d3V-d2-8k9" eventType="touchUpInside" id="kG4-N2-4O4"/>
+                                    <action selector="onRed:" destination="d3V-d2-8k9" eventType="touchUpInside" id="Qip-cb-pm3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvb-gk-HEH">
@@ -575,9 +573,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="lightButton:" destination="d3V-d2-8k9" eventType="touchUpInside" id="7Tf-ml-hqU"/>
-                                    <action selector="onBlue:" destination="d3V-d2-8k9" eventType="touchUpInside" id="AVR-Hb-Fse"/>
-                                    <action selector="onBlue:" destination="Pnf-jo-5ux" eventType="touchUpInside" id="Ovy-ey-i7a"/>
+                                    <action selector="onBlue:" destination="d3V-d2-8k9" eventType="touchUpInside" id="ZwB-7F-ckW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIC-Ok-Sr6">
@@ -619,7 +615,6 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="JCn-GV-MV5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uS-mF-K13" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Pnf-jo-5ux" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3685.5999999999999" y="-9.4452773613193415"/>
         </scene>
@@ -1468,7 +1463,7 @@
         <image name="tshirt" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CSc-VT-Axp"/>
+        <segue reference="Ty4-gB-zFS"/>
         <segue reference="x4l-zs-eub"/>
     </inferredMetricsTieBreakers>
 </document>

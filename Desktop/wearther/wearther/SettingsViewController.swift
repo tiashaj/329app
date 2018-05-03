@@ -15,6 +15,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         UNUserNotificationCenter.current().requestAuthorization(
         options: [.alert,.sound]){
             (granted, error) in
@@ -23,6 +24,11 @@ class SettingsViewController: UIViewController {
                 print("granted, but Error in notification permission:\(error.localizedDescription)")
             }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
     }
     /**
     @IBAction func darkButton(_ sender: UIButton) {
@@ -37,23 +43,21 @@ class SettingsViewController: UIViewController {
     **/
     
     @IBAction func onRed(_ sender: Any) {
-        view.backgroundColor = UIColor(red: 1.0, green: 0.8, blue: 0.8, alpha: 1.0)
-        self.backgroundColor = view.backgroundColor
+        UIColourScheme.instance.changeToRed(for:self)
     }
     
     @IBAction func onBlue(_ sender: Any) {
-        view.backgroundColor = UIColor(red: 0.5, green: 0.8, blue: 1.0, alpha: 1.0)
+        UIColourScheme.instance.changeToBlue(for:self)
         
     }
     
     @IBAction func onYellow(_ sender: Any) {
-        view.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 0.8, alpha: 1.0)
+        UIColourScheme.instance.changeToYellow(for:self)
        
     }
     
     @IBAction func onGray(_ sender: Any) {
-        view.backgroundColor = UIColor.lightGray
-        
+        UIColourScheme.instance.changeToLightGray(for:self)
     }
  
     

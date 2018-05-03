@@ -34,9 +34,14 @@ class DisplayViewController: UIViewController,
     
     
     // MARK: -
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         weather = WeatherGetter(delegate: self)
         
         // Initialize UI

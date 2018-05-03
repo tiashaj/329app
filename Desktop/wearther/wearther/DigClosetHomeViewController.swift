@@ -40,8 +40,14 @@ class DigClosetHomeViewController: SettingsViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
       //  view.backgroundColor = SettingsViewController.backgroundColor
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
     }
 
     override func didReceiveMemoryWarning() {
