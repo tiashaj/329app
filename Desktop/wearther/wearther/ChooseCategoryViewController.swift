@@ -69,7 +69,7 @@ class ChooseCategoryViewController: UIViewController {
                 }
                 
                 if let profileImageURL = metadata?.downloadURL()?.absoluteString {
-                    self.ref.child("Users").child(userID!).child(category).child(imageName).child("url").setValue(profileImageURL)
+                    self.ref.child("Users").child(userID!).child(category).child(imageName).setValue(profileImageURL)
                 }
             })
         }

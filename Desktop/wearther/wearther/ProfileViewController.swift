@@ -48,6 +48,7 @@ class ProfileViewController: UIViewController {
         ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let imageURL = value?["profileImageURL"] as? String
+            print(imageURL!)
             let storageRef = Storage.storage().reference(forURL: imageURL!)
             storageRef.getData(maxSize: 2 * 1024 * 1024, completion: { (data, error) in
                 self.profilePic?.image = UIImage(data:data!)
