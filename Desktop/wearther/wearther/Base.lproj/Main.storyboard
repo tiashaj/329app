@@ -1432,6 +1432,7 @@
                         <outlet property="cityLabel" destination="NtK-wa-ROZ" id="zGR-9A-VTC"/>
                         <outlet property="cityTextField" destination="Xl3-Dc-OzH" id="jfx-k5-x7N"/>
                         <outlet property="cloudCoverLabel" destination="ST3-B2-IPr" id="njs-8r-Y3q"/>
+                        <outlet property="generateOutfitButton" destination="7fW-gl-9Ns" id="7dc-pC-iFU"/>
                         <outlet property="humidityLabel" destination="p2f-dz-bHT" id="5oe-9n-Iuj"/>
                         <outlet property="rainLabel" destination="Vis-Rd-rTO" id="ki4-G6-zT7"/>
                         <outlet property="temperatureLabel" destination="uWU-ud-6bL" id="LMB-YH-Hhy"/>

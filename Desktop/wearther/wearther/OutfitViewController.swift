@@ -14,6 +14,8 @@ import FirebaseDatabase
 
 class OutfitViewController: UIViewController {
 
+    var weather: WeatherGetter!
+    
     @IBOutlet weak var topsImage: UIImageView!
     @IBOutlet weak var bottomsImage: UIImageView!
     @IBOutlet weak var outerwearImage: UIImageView!
@@ -32,6 +34,8 @@ class OutfitViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        weather.getWeather(city: "austin")
+        //segueTemp = weather.temp
         print(segueTemp)
         self.weatherTemp = segueTemp
         ref = Database.database().reference()

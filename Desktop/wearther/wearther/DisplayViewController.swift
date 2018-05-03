@@ -32,6 +32,9 @@ class DisplayViewController: UIViewController,
     var locationManager:CLLocationManager!
     var cityString:String = ""
     
+    @IBOutlet weak var generateOutfitButton: UIButton!
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         UIColourScheme.instance.set(for:self)
@@ -58,6 +61,9 @@ class DisplayViewController: UIViewController,
         cityTextField.delegate = self
         cityTextField.enablesReturnKeyAutomatically = true
         cityString = readDataFromFile(file: "CityList")
+        generateOutfitButton.isEnabled = false
+        weather.getWeather(city: "austin")
+        
 
         //getCityWeatherButton.isEnabled = false
 
@@ -154,6 +160,7 @@ class DisplayViewController: UIViewController,
             //weather.getWeather(city: cityTextField.text!.urlEncoded)
             let percString = spaceString.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
             weather.getWeather(city: percString)
+            generateOutfitButton.isEnabled = true
         }
         else
         {
