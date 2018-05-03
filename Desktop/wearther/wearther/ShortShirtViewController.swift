@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.swift
+//  ShortShirtViewController.swift
 //  wearther
 //
 //  Created by Tiasha Joardar on 5/2/18.
@@ -7,25 +7,43 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 import FirebaseDatabase
+import FirebaseStorage
 
 class ShortShirtViewController: UIViewController, UICollectionViewDataSource {
-    var images = [UIImage]()
+    
     @IBOutlet weak var imageCollection: UICollectionView!
+    
+    
+    var customLayout:CustomImageFlowLayout!
+    var images = [Pic]()
+    var ref:DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadImages()
+        ref = Database.database().reference()
+        loadDB()
+        
+        customLayout = CustomImageFlowLayout()
+        self.imageCollection.collectionViewLayout = customLayout
     }
     
-    func loadImages(){
-        images.append(UIImage(named: "tshirt.png")!)
-        images.append(UIImage(named: "tshirt.png")!)
-        images.append(UIImage(named: "tshirt.png")!)
-        images.append(UIImage(named: "tshirt.png")!)
-        
-        self.imageCollection.reloadData()
+    func loadDB(){
+        let userID = Auth.auth().currentUser?.uid
+        ref.child("Users").child(userID!).child("short_sleeves").observe(DataEventType.value) { (snapshot) in
+            var newImages = [Pic]()
+            
+            for picSnapshot in snapshot.children {
+                print(picSnapshot)
+                let picObject = Pic(snapshot: picSnapshot as! DataSnapshot)
+                newImages.append(picObject)
+            }
+            self.images = newImages
+            self.imageCollection.reloadData()
+        }
     }
     
     @IBAction func onXOut(_ sender: Any) {
@@ -39,8 +57,10 @@ class ShortShirtViewController: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = imageCollection.dequeueReusableCell(withReuseIdentifier: "Cell", for:indexPath) as! PicsCollectionViewCell
         let image = images[indexPath.row]
-        cell.imageView.image = image
-        
+        let storageRef = Storage.storage().reference(forURL: image.url!)
+        storageRef.getData(maxSize: 3 * 1024 * 1024, completion: { (data, error) in
+            cell.imageView.image = UIImage(data:data!)
+        })
         return cell
     }
     

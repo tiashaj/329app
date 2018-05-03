@@ -49,6 +49,7 @@
 		F804F8C720648C31006E1B15 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F8C620648C31006E1B15 /* RegisterViewController.swift */; };
 		F8219C28208130590057049B /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8219C27208130590057049B /* MyTabBarController.swift */; };
 		F84A03B52097949100DCF8F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F84A03B42097949100DCF8F1 /* GoogleService-Info.plist */; };
+		F8753186209AB2A10015E5EB /* Pic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8753185209AB2A10015E5EB /* Pic.swift */; };
 		F8D7FF6C209A97B000D20470 /* CustomImageFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */; };
 		F8D7FF6E209A97E100D20470 /* PicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -125,6 +126,7 @@
 		F804F8C620648C31006E1B15 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F8219C27208130590057049B /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		F84A03B42097949100DCF8F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F8753185209AB2A10015E5EB /* Pic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pic.swift; sourceTree = "<group>"; };
 		F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
 		F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +219,7 @@
 				661D531320990CCE00F490E8 /* AddItemViewController.swift */,
 				661D53172099388100F490E8 /* ChooseCategoryViewController.swift */,
 				661D52F320984AF200F490E8 /* ShortShirtViewController.swift */,
+				F8753185209AB2A10015E5EB /* Pic.swift */,
 				661D52F720984EAE00F490E8 /* LongShirtViewController.swift */,
 				661D52F920984F4A00F490E8 /* PantViewController.swift */,
 				661D52FB20984F5700F490E8 /* ShortsViewController.swift */,
@@ -522,6 +525,7 @@
 				F804F89C206487BE006E1B15 /* wearther.xcdatamodeld in Sources */,
 				0A99A4C4208FE58800BE695E /* DisplayViewController.swift in Sources */,
 				661D52FA20984F4A00F490E8 /* PantViewController.swift in Sources */,
+				F8753186209AB2A10015E5EB /* Pic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
