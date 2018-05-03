@@ -16,10 +16,15 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     
     @IBOutlet weak var pictureView: UIImageView!
     var ref: DatabaseReference!
+    var pic:UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+    }
+    
+    @IBAction func onXOut(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -37,31 +42,10 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
         }
     }
     
-    @IBAction func onXOut(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-
     @IBAction func confirmPhotoPress(_ sender: Any) {
-        let userID = Auth.auth().currentUser?.uid
-        
         // if there is a picture
         if let pic = self.pictureView.image {
-            let imageName = UUID().uuidString
-            let storageRef = Storage.storage().reference().child("digital_closet").child("\(imageName).png")
-            
-            if let uploadData = UIImagePNGRepresentation(pic){
-                storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
-                    if let error = error {
-                        print(error)
-                        return
-                    }
-                    
-                    if let profileImageURL = metadata?.downloadURL()?.absoluteString {
-                        self.ref.child("Users").child(userID!).child("digital_closet").setValue(profileImageURL)
-                    }
-                })
-            }
-            
+            self.pic = pic
         }
         performSegue(withIdentifier: "toChooseCategory", sender: self)
     }
@@ -69,14 +53,13 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-
-    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let destinationVC = segue.destination as? ChooseCategoryViewController {
+            destinationVC.pic = pic
+            print("pic was transported")
+        }
     }
 
 
