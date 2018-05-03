@@ -5,7 +5,7 @@
 //  Created by Tiasha Joardar on 5/2/18.
 //  Copyright © 2018 Amy Fang. All rights reserved.
 //
- /**
+
 
 import FirebaseDatabase
 
@@ -47,4 +47,4 @@ class ShortShirtViewController: UIViewController, UICollectionViewDataSource {
         super.didReceiveMemoryWarning()
 }
  
-**/
+
