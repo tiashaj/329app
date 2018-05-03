@@ -9,6 +9,7 @@
 import UIKit
 
 class CustomImageFlowLayout: UICollectionViewFlowLayout {
+    
     override init() {
         super.init()
         setupLayout()
@@ -34,4 +35,5 @@ class CustomImageFlowLayout: UICollectionViewFlowLayout {
         minimumLineSpacing = 1
         scrollDirection = .vertical
     }
+
 }
