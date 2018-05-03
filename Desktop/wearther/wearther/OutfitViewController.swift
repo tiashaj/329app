@@ -34,7 +34,6 @@ class OutfitViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        weather.getWeather(city: "austin")
         //segueTemp = weather.temp
         print(segueTemp)
         self.weatherTemp = segueTemp

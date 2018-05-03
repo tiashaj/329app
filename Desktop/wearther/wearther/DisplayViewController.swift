@@ -164,7 +164,15 @@ class DisplayViewController: UIViewController,
         }
         else
         {
-            print("not a real city")
+            let alertController = UIAlertController(title: "Error", message: "Please enter a valid city", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+            alertWindow.rootViewController = UIViewController()
+            alertWindow.windowLevel = UIWindowLevelAlert
+            alertWindow.makeKeyAndVisible()
+            alertWindow.rootViewController?.present(alertController, animated: true, completion: nil)
             return
         }
     }
@@ -197,26 +205,7 @@ class DisplayViewController: UIViewController,
             self.humidityLabel.text = "\(weather.humidity)%"
         }
         
-        if let tempInt: Int = Int(round(weather.tempFahrenheit)){
-            var outfit:String = ""
-            segueTemp = Int(round(weather.tempFahrenheit))
-            if (tempInt > 120 || tempInt < -20){
-                outfit = "Enter a temperature between -20 and 120"
-            }
-            else if(tempInt >= 70){
-                outfit = "short-sleeved shirt and short pants."
-            }
-            else if(tempInt < 70 && tempInt >= 60){
-                outfit = "short-sleeved shirt and long pants. Bring a sweater!"
-            }
-            else if(tempInt < 60 && tempInt >= 50){
-                outfit = "long-sleeved shirt and long pants. Bring a sweater!"
-            }
-            else {
-                outfit = "thick coat, sweater, and long pants."
-            }
-            print(outfit)
-        }
+        segueTemp = Int(round(weather.tempFahrenheit))
     }
 
     //segue function
