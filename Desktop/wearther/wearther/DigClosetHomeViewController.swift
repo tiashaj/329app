@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DigClosetHomeViewController: UIViewController {
+class DigClosetHomeViewController: SettingsViewController {
     
     @IBAction func shortShirt(_ sender: Any) {
         performSegue(withIdentifier: "toShortShirt", sender: self)

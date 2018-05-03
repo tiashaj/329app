@@ -16,6 +16,8 @@
 		375E2F8DC7EFD7EB9C147209 /* Pods_wearther.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D874C4C3F84613306335085 /* Pods_wearther.framework */; };
 		661738FA209A8A90003EA7B9 /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 661738F6209A8A8C003EA7B9 /* alarm.png */; };
 		66173903209A8C82003EA7B9 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 66173902209A8C81003EA7B9 /* settings.png */; };
+		66173907209ABB96003EA7B9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66173906209ABB95003EA7B9 /* SettingsViewController.swift */; };
+		66173909209AC23F003EA7B9 /* GlobalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66173908209AC23F003EA7B9 /* GlobalViewController.swift */; };
 		661D52E42098461800F490E8 /* DigClosetHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D52E32098461800F490E8 /* DigClosetHomeViewController.swift */; };
 		661D52E82098480800F490E8 /* tshirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D52E72098480800F490E8 /* tshirt.png */; };
 		661D52EA2098486100F490E8 /* longsleeve.png in Resources */ = {isa = PBXBuildFile; fileRef = 661D52E92098486100F490E8 /* longsleeve.png */; };
@@ -81,6 +83,8 @@
 		27DB000AD6FF9FC1D9363C68 /* Pods-weartherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weartherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weartherTests/Pods-weartherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		661738F6209A8A8C003EA7B9 /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
 		66173902209A8C81003EA7B9 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		66173906209ABB95003EA7B9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		66173908209AC23F003EA7B9 /* GlobalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewController.swift; sourceTree = "<group>"; };
 		661D52E32098461800F490E8 /* DigClosetHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigClosetHomeViewController.swift; sourceTree = "<group>"; };
 		661D52E72098480800F490E8 /* tshirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tshirt.png; sourceTree = "<group>"; };
 		661D52E92098486100F490E8 /* longsleeve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = longsleeve.png; sourceTree = "<group>"; };
@@ -214,8 +218,10 @@
 				66633D88207C54C60086EDAD /* OutputViewController.swift */,
 				0A5A7D6920803189007D1A6B /* ProfileViewController.swift */,
 				F804F897206487BE006E1B15 /* Main.storyboard */,
+				66173908209AC23F003EA7B9 /* GlobalViewController.swift */,
 				661D5327209A7F3A00F490E8 /* NotificationViewController.swift */,
 				661D52E32098461800F490E8 /* DigClosetHomeViewController.swift */,
+				66173906209ABB95003EA7B9 /* SettingsViewController.swift */,
 				661D531320990CCE00F490E8 /* AddItemViewController.swift */,
 				661D53172099388100F490E8 /* ChooseCategoryViewController.swift */,
 				661D52F320984AF200F490E8 /* ShortShirtViewController.swift */,
@@ -521,11 +527,13 @@
 				661D530020984F6B00F490E8 /* ShoeViewController.swift in Sources */,
 				0A99A4C8208FE5B200BE695E /* WeatherGetter.swift in Sources */,
 				661D52F420984AF200F490E8 /* ShortShirtViewController.swift in Sources */,
+				66173909209AC23F003EA7B9 /* GlobalViewController.swift in Sources */,
 				661D531420990CCE00F490E8 /* AddItemViewController.swift in Sources */,
 				F804F89C206487BE006E1B15 /* wearther.xcdatamodeld in Sources */,
 				0A99A4C4208FE58800BE695E /* DisplayViewController.swift in Sources */,
 				661D52FA20984F4A00F490E8 /* PantViewController.swift in Sources */,
 				F8753186209AB2A10015E5EB /* Pic.swift in Sources */,
+				66173907209ABB96003EA7B9 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

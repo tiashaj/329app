@@ -1,8 +1,39 @@
- import UIKit
- import UserNotifications
- 
- class NotificationViewController: UIViewController {
+//
+//  SettingsViewController.swift
+//  wearther
+//
+//  Created by Tiasha Joardar on 5/2/18.
+//  Copyright © 2018 Amy Fang. All rights reserved.
+//
+
+import UIKit
+import UserNotifications
+
+class SettingsViewController: UIViewController {
     
+    //var backgroundColor = 
+    
+    @IBAction func onRed(_ sender: Any) {
+        view.backgroundColor = UIColor(red: 1.0, green: 0.8, blue: 0.8, alpha: 1.0)
+    }
+    
+    @IBAction func onBlue(_ sender: Any) {
+        view.backgroundColor = UIColor(red: 0.5, green: 0.8, blue: 1.0, alpha: 1.0)
+    }
+    
+    @IBAction func onYellow(_ sender: Any) {
+        view.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 0.8, alpha: 1.0)
+    }
+    
+    @IBAction func onGray(_ sender: Any) {
+        view.backgroundColor = UIColor.lightGray
+    }
+    
+    @IBAction func onXOut(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+
     func repeatNotification(){
         let content = UNMutableNotificationContent()
         content.title = "Get an Outfit!"
@@ -52,7 +83,7 @@
             print("notification not granted")
         }
     }
-
+    
     @IBAction func notifyNow(_ sender: Any) {
         
         let content = UNMutableNotificationContent()
@@ -70,5 +101,6 @@
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-            
- }
+    
+
+}
