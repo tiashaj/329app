@@ -587,11 +587,18 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="VuR-xc-ESH" id="ZTa-M0-dOV"/>
+                                    <outlet property="delegate" destination="VuR-xc-ESH" id="kDU-rl-ILx"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="EZM-xg-6LO"/>
                     </view>
+                    <connections>
+                        <outlet property="imageCollection" destination="ApQ-Qy-DUQ" id="gPx-fG-UuN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HP5-Ye-duF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -650,11 +657,18 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="0lb-7H-buz" id="sI6-LT-yke"/>
+                                    <outlet property="delegate" destination="0lb-7H-buz" id="azB-Nz-Twe"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="kxK-0i-OmW"/>
                     </view>
+                    <connections>
+                        <outlet property="imageCollection" destination="CyA-bj-OoP" id="Rw0-eL-7nJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdT-De-uc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -713,11 +727,18 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Rx-sw-ZBk" id="1Cr-rN-ZuB"/>
+                                    <outlet property="delegate" destination="7Rx-sw-ZBk" id="3eF-tW-FA4"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="D5Y-AO-0j8"/>
                     </view>
+                    <connections>
+                        <outlet property="imageCollection" destination="K3p-Rh-qFa" id="mOm-xb-DCX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVF-yS-h3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -776,11 +797,18 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="VEw-Jy-Dck" id="xFk-8o-Hd0"/>
+                                    <outlet property="delegate" destination="VEw-Jy-Dck" id="XbP-7P-b4U"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="lg2-07-bgl"/>
                     </view>
+                    <connections>
+                        <outlet property="imageCollection" destination="Lbr-3F-ai8" id="fez-KM-IMR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpR-k1-say" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -967,11 +995,18 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2oI-l5-LGS" id="k9Q-kS-M7r"/>
+                                    <outlet property="delegate" destination="2oI-l5-LGS" id="TGf-A6-fc9"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="JFi-PU-BVy"/>
                     </view>
+                    <connections>
+                        <outlet property="imageCollection" destination="4JR-D6-c4o" id="6AE-ks-ZS5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXC-QI-KDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -15,15 +15,12 @@ import FirebaseStorage
 class ShortShirtViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var imageCollection: UICollectionView!
-    
-    
     var customLayout:CustomImageFlowLayout!
     var images = [Pic]()
     var ref:DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         ref = Database.database().reference()
         loadDB()
         
