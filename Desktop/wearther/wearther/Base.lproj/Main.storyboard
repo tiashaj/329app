@@ -1143,7 +1143,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="coat"/>
                                 <connections>
-                                    <action selector="shoes:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="ORl-G5-xdc"/>
+                                    <action selector="outer_wear:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="NJN-ZH-AUJ"/>
                                 </connections>
                             </button>
                         </subviews>
