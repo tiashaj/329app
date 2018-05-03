@@ -11,23 +11,51 @@ import UserNotifications
 
 class SettingsViewController: UIViewController {
     
-    //var backgroundColor = 
+    var backgroundColor:UIColor?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        UNUserNotificationCenter.current().requestAuthorization(
+        options: [.alert,.sound]){
+            (granted, error) in
+            self.notificationGranted = granted
+            if let error = error {
+                print("granted, but Error in notification permission:\(error.localizedDescription)")
+            }
+        }
+    }
+    /**
+    @IBAction func darkButton(_ sender: UIButton) {
+        Theme.darkTheme()
+        self.loadView()
+    }
+    
+    @IBAction func lightButton(_ sender: UIButton) {
+        Theme.defaultTheme()
+        self.loadView()
+    }
+    **/
     
     @IBAction func onRed(_ sender: Any) {
         view.backgroundColor = UIColor(red: 1.0, green: 0.8, blue: 0.8, alpha: 1.0)
+        self.backgroundColor = view.backgroundColor
     }
     
     @IBAction func onBlue(_ sender: Any) {
         view.backgroundColor = UIColor(red: 0.5, green: 0.8, blue: 1.0, alpha: 1.0)
+        
     }
     
     @IBAction func onYellow(_ sender: Any) {
         view.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 0.8, alpha: 1.0)
+       
     }
     
     @IBAction func onGray(_ sender: Any) {
         view.backgroundColor = UIColor.lightGray
+        
     }
+ 
     
     @IBAction func onXOut(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -62,19 +90,6 @@ class SettingsViewController: UIViewController {
     
     var notificationGranted = false
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        UNUserNotificationCenter.current().requestAuthorization(
-        options: [.alert,.sound]){
-            (granted, error) in
-            self.notificationGranted = granted
-            if let error = error {
-                print("granted, but Error in notification permission:\(error.localizedDescription)")
-            }
-        }
-    }
     
     @IBAction func addNotification(_ sender: Any) {
         if notificationGranted{
