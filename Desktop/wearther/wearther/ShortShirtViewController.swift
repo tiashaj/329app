@@ -5,18 +5,12 @@
 //  Created by Tiasha Joardar on 5/2/18.
 //  Copyright © 2018 Amy Fang. All rights reserved.
 //
-<<<<<<< HEAD
  /**
 
-=======
-
-import UIKit
->>>>>>> 47d25559a4a6ced93b6d4ef984f001cffc804799
 import FirebaseDatabase
 
 class ShortShirtViewController: UIViewController, UICollectionViewDataSource {
     var images = [UIImage]()
-    @IBOutlet weak var imageCollection: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +19,10 @@ class ShortShirtViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func loadImages(){
-        images.append(UIImage(named: "tshirt.png")!)
-        images.append(UIImage(named: "tshirt.png")!)
-        images.append(UIImage(named: "tshirt.png")!)
-        images.append(UIImage(named: "tshirt.png")!)
+        images.append(UIImage(named: "tshirt.png"))
+        images.append(UIImage(named: "tshirt.png"))
+        images.append(UIImage(named: "tshirt.png"))
+        images.append(UIImage(named: "tshirt.png"))
         
         self.imageCollection.reloadData()
     }
@@ -51,7 +45,6 @@ class ShortShirtViewController: UIViewController, UICollectionViewDataSource {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
 }
  
 **/
