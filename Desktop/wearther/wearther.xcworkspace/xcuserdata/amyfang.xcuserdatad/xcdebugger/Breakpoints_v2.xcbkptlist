@@ -214,75 +214,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wearther/OutfitViewController.swift"
-            timestampString = "547028771.604125"
+            timestampString = "547067703.94766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "wearther.OutfitViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "wearther"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amyfang/Documents/GitHub/329app/Desktop/wearther/wearther/OutfitViewController.swift"
-                  timestampString = "547026225.90553"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "244">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in wearther.OutfitViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "wearther"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amyfang/Documents/GitHub/329app/Desktop/wearther/wearther/OutfitViewController.swift"
-                  timestampString = "547026225.9085979"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "21">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "wearther/OutfitViewController.swift"
-            timestampString = "547028771.6046619"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "wearther/OutfitViewController.swift"
-            timestampString = "547028771.604948"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>

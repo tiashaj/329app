@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nWw-mg-1Db">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d3V-d2-8k9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -561,8 +561,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="darkButton:" destination="d3V-d2-8k9" eventType="touchUpInside" id="1c9-0z-Pqc"/>
                                     <action selector="onRed:" destination="Pnf-jo-5ux" eventType="touchUpInside" id="1Ih-5f-CGI"/>
-                                    <action selector="onRed:" destination="d3V-d2-8k9" eventType="touchUpInside" id="dzj-eK-ug7"/>
+                                    <action selector="onRed:" destination="d3V-d2-8k9" eventType="touchUpInside" id="kG4-N2-4O4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvb-gk-HEH">
@@ -574,7 +575,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="onBlue:" destination="d3V-d2-8k9" eventType="touchUpInside" id="Ndb-W1-CTO"/>
+                                    <action selector="lightButton:" destination="d3V-d2-8k9" eventType="touchUpInside" id="7Tf-ml-hqU"/>
+                                    <action selector="onBlue:" destination="d3V-d2-8k9" eventType="touchUpInside" id="AVR-Hb-Fse"/>
+                                    <action selector="onBlue:" destination="Pnf-jo-5ux" eventType="touchUpInside" id="Ovy-ey-i7a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIC-Ok-Sr6">
