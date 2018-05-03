@@ -13,11 +13,12 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class ChooseCategoryViewController: UIViewController {
+    var ref: DatabaseReference!
     var pic:UIImage?
-    var url:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,36 +26,52 @@ class ChooseCategoryViewController: UIViewController {
     }
     
     @IBAction func short_sleeved(_ sender: Any) {
+        addItem(category: "short_sleeves")
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func long_sleeved(_ sender: Any) {
+        addItem(category: "long_sleeves")
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func pants(_ sender: Any) {
+        addItem(category: "pants")
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func shorts(_ sender: Any) {
+        addItem(category: "shorts")
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func dresses(_ sender: Any) {
+        addItem(category: "dresses")
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func shoes(_ sender: Any) {
+        addItem(category: "shoes")
+        dismiss(animated: true, completion: nil)
     }
     
-    func addItem(category: String, url: String) {
+    func addItem(category: String) {
+        let userID = Auth.auth().currentUser?.uid
         
+        let imageName = UUID().uuidString
+        let storageRef = Storage.storage().reference().child("digital_closet").child("\(imageName).png")
+        
+        if let uploadData = UIImagePNGRepresentation(self.pic!){
+            storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                if let error = error {
+                    print(error)
+                    return
+                }
+                
+                if let profileImageURL = metadata?.downloadURL()?.absoluteString {
+                    self.ref.child("Users").child(userID!).child(category).child(imageName).setValue(profileImageURL)
+                }
+            })
+        }
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
