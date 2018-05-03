@@ -128,15 +128,14 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                         })
                     }
                     
-                    //Goes to the Home page
-                    self.performSegue(withIdentifier: "home", sender: self)
+                    //Goes to the Temp page
+                    self.performSegue(withIdentifier: "toTemp", sender: self)
                     
                 } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                         
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alertController.addAction(defaultAction)
-                        
                     self.displayAlert(alertController: alertController)
                 }
             })

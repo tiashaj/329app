@@ -58,7 +58,6 @@ class AddItemViewController: UIViewController, UINavigationControllerDelegate, U
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? ChooseCategoryViewController {
             destinationVC.pic = pic
-            print("pic was transported")
         }
     }
 

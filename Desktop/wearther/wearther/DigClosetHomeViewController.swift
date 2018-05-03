@@ -30,8 +30,8 @@ class DigClosetHomeViewController: SettingsViewController {
         performSegue(withIdentifier: "toDresses", sender: self)
     }
     
-    @IBAction func shoes(_ sender: Any) {
-        performSegue(withIdentifier: "toShoes", sender: self)
+    @IBAction func outer_wear(_ sender: Any) {
+        performSegue(withIdentifier: "toOuterwear", sender: self)
     }
 
     @IBAction func btnSegueAddItem(_ sender: Any) {

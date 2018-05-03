@@ -27,32 +27,32 @@ class ChooseCategoryViewController: UIViewController {
     
     @IBAction func short_sleeved(_ sender: Any) {
         addItem(category: "short_sleeves")
-        dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "backToCloset", sender: self)
     }
     
     @IBAction func long_sleeved(_ sender: Any) {
         addItem(category: "long_sleeves")
-        dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "backToCloset", sender: self)
     }
     
     @IBAction func pants(_ sender: Any) {
         addItem(category: "pants")
-        dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "backToCloset", sender: self)
     }
     
     @IBAction func shorts(_ sender: Any) {
         addItem(category: "shorts")
-        dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "backToCloset", sender: self)
     }
     
     @IBAction func dresses(_ sender: Any) {
         addItem(category: "dresses")
-        dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "backToCloset", sender: self)
     }
     
-    @IBAction func shoes(_ sender: Any) {
-        addItem(category: "shoes")
-        dismiss(animated: true, completion: nil)
+    @IBAction func outer_wear(_ sender: Any) {
+        addItem(category: "outer_wear")
+        self.performSegue(withIdentifier: "backToCloset", sender: self)
     }
     
     func addItem(category: String) {

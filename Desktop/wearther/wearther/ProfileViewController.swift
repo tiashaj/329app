@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var EmailLabel: UILabel!
+    @IBOutlet weak var TempLabel: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     
     var ref:DatabaseReference!
@@ -35,6 +36,9 @@ class ProfileViewController: UIViewController {
             let value = snapshot.value as? NSDictionary
             let email = value?["email"] as? String
             let name = value?["name"] as? String
+            if let temp = value?["temperature"] as? Int {
+                self.TempLabel.text = "\(temp)"
+            }
             self.NameLabel.text = name
             self.EmailLabel.text = email
         }, withCancel: nil)
@@ -62,18 +66,39 @@ class ProfileViewController: UIViewController {
     @IBAction func btnEditProfile(_ sender: Any) {
         let userID = Auth.auth().currentUser?.uid
         let name = NameLabel.text
+        let temp = TempLabel.text
         
         let alertController = UIAlertController(title: "Edit", message: "Give new values to update user", preferredStyle: .alert)
             
         let updateAction = UIAlertAction(title: "Update", style: .default){(_) in
             let name = alertController.textFields?[0].text
-            self.ref.child("Users").child(userID!).child("name").setValue(name)
-            self.NameLabel.text = name
+            let temp = alertController.textFields?[1].text
+            
+            if (temp?.isNumeric)! {
+                self.ref.child("Users").child(userID!).child("name").setValue(name)
+                self.ref.child("Users").child(userID!).child("temperature").setValue(Int(temp!))
+                self.NameLabel.text = name
+                self.TempLabel.text = temp
+            } else {
+                let alertController = UIAlertController(title: "Error", message: "Please enter a valid temperature", preferredStyle: .alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+                alertWindow.rootViewController = UIViewController()
+                alertWindow.windowLevel = UIWindowLevelAlert
+                alertWindow.makeKeyAndVisible()
+                alertWindow.rootViewController?.present(alertController, animated: true, completion: nil)
+            }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             
         alertController.addTextField{(textField) in
             textField.text = name
+        }
+        alertController.addTextField{(textField) in
+            textField.text = temp
         }
             
         alertController.addAction(updateAction)

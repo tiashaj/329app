@@ -194,12 +194,132 @@
                         <outlet property="errorMessage" destination="H61-Iv-DZU" id="pkc-ow-7Lj"/>
                         <outlet property="name" destination="zvi-tM-kGI" id="gba-pc-uZU"/>
                         <outlet property="password" destination="DBx-zF-x7v" id="LqM-Ku-3Hx"/>
-                        <segue destination="9oW-cC-LAn" kind="show" identifier="home" id="Wdq-PH-5U5"/>
+                        <segue destination="kAp-aO-Owu" kind="show" identifier="toTemp" id="fwe-Ne-Fou"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEz-cO-a3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1641" y="-195"/>
+        </scene>
+        <!--Temperature View Controller-->
+        <scene sceneID="SDy-FE-piB">
+            <objects>
+                <viewController id="kAp-aO-Owu" customClass="TemperatureViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Ot-bT-RUF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D5U-hc-GnO">
+                                <rect key="frame" x="100" y="288" width="174" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="At what temperature do you need to wear a sweater?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhS-kA-KY1">
+                                <rect key="frame" x="65" y="210" width="245" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-sb-3Gr">
+                                <rect key="frame" x="289" y="293" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="o" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoJ-K3-XDn">
+                                <rect key="frame" x="282" y="293" width="6" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NV2-8q-DX2">
+                                <rect key="frame" x="145" y="374" width="85" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.3185220292" blue="0.36174552250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSubmit:" destination="kAp-aO-Owu" eventType="touchUpInside" id="5Pv-IY-9zi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4NO-wF-u4L"/>
+                    </view>
+                    <connections>
+                        <outlet property="temperature" destination="D5U-hc-GnO" id="3qj-zt-qgT"/>
+                        <segue destination="9oW-cC-LAn" kind="show" identifier="toHome" id="fmD-s5-Ejj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rek-Nk-fjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2501.5999999999999" y="345.87706146926541"/>
+        </scene>
+        <!--Outfit View Controller-->
+        <scene sceneID="Leo-eU-zJC">
+            <objects>
+                <viewController id="bIx-VL-NRi" customClass="OutfitViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KnL-RH-Q6k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IaS-ow-i3b">
+                                <rect key="frame" x="42" y="153" width="127" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gj1-g0-qLc">
+                                <rect key="frame" x="205" y="153" width="127" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CWt-7e-tyZ">
+                                <rect key="frame" x="123" y="299" width="127" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORM-5d-P4b">
+                                <rect key="frame" x="108" y="527" width="156" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.3185220292" blue="0.36174552250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Generate Outfit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnGenerateOutfit:" destination="bIx-VL-NRi" eventType="touchUpInside" id="ocF-HZ-gfN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To generate your outfit, click the button" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-4u-Q83">
+                                <rect key="frame" x="85" y="58" width="204" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oE-ed-Bxk">
+                                <rect key="frame" x="16" y="20" width="33" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arrow"/>
+                                <connections>
+                                    <action selector="onXOut:" destination="bIx-VL-NRi" eventType="touchUpInside" id="GYq-mh-m0X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="jYq-KJ-9Sc"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomsImage" destination="Gj1-g0-qLc" id="599-yL-bUo"/>
+                        <outlet property="outerwearImage" destination="CWt-7e-tyZ" id="SKN-Dr-gdx"/>
+                        <outlet property="topsImage" destination="IaS-ow-i3b" id="hkP-Ka-r1M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3b-A3-Gqz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3624.8000000000002" y="-2189.0554722638681"/>
         </scene>
         <!--Home-->
         <scene sceneID="62i-bl-mmg">
@@ -303,21 +423,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPN-B1-VwW">
-                                <rect key="frame" x="20" y="323" width="55" height="21"/>
+                                <rect key="frame" x="16" y="323" width="55" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;name&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYk-nm-EAB">
-                                <rect key="frame" x="74" y="294" width="238" height="21"/>
+                                <rect key="frame" x="83" y="294" width="238" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;email&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B14-0S-rM8">
-                                <rect key="frame" x="74" y="323" width="238" height="21"/>
+                                <rect key="frame" x="83" y="323" width="238" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -343,6 +463,34 @@
                                 <rect key="frame" x="67" y="80" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sweater Temp:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bM-XW-YAM">
+                                <rect key="frame" x="16" y="351" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;t&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2p-V1-3mV">
+                                <rect key="frame" x="147" y="352" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="o" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yO6-1B-G2f">
+                                <rect key="frame" x="183" y="351" width="8" height="9"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9O-nD-Ycw">
+                                <rect key="frame" x="193" y="351" width="10" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="a6g-lh-xyB"/>
@@ -352,6 +500,7 @@
                     <connections>
                         <outlet property="EmailLabel" destination="B14-0S-rM8" id="Oyf-Km-bz0"/>
                         <outlet property="NameLabel" destination="uYk-nm-EAB" id="F8S-Gs-64E"/>
+                        <outlet property="TempLabel" destination="L2p-V1-3mV" id="vVA-fu-aTW"/>
                         <outlet property="profilePic" destination="FwS-H4-23W" id="BQa-Tv-tAe"/>
                     </connections>
                 </viewController>
@@ -377,20 +526,20 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Th-Yv-ajU">
                                 <rect key="frame" x="290" y="192" width="59" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="alarm.png"/>
+                                <state key="normal" image="alarm"/>
                                 <connections>
                                     <action selector="notifyNow:" destination="y0m-Va-1W2" eventType="touchUpInside" id="1gS-8C-B04"/>
                                     <action selector="notifyNow:" destination="d3V-d2-8k9" eventType="touchUpInside" id="xlI-g1-r0R"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings.png" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-wk-7ks">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings-1" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-wk-7ks">
                                 <rect key="frame" x="67" y="20" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxY-0V-bov">
                                 <rect key="frame" x="211" y="192" width="56" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="add.png"/>
+                                <state key="normal" image="add"/>
                                 <connections>
                                     <action selector="addNotification:" destination="d3V-d2-8k9" eventType="touchUpInside" id="Xcf-kt-oe0"/>
                                     <action selector="addNotification:" destination="y0m-Va-1W2" eventType="touchUpInside" id="fBj-Jp-cG1"/>
@@ -455,7 +604,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O70-TV-R9W">
                                 <rect key="frame" x="16" y="20" width="36" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="arrow.png"/>
+                                <state key="normal" image="arrow"/>
                                 <connections>
                                     <action selector="onXOut:" destination="d3V-d2-8k9" eventType="touchUpInside" id="abf-UZ-nQw"/>
                                 </connections>
@@ -529,7 +678,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqP-kL-FMT">
                                 <rect key="frame" x="203" y="95" width="133" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="longsleeve.png"/>
+                                <state key="normal" image="longsleeve"/>
                                 <connections>
                                     <action selector="longShirt:" destination="g5o-hI-yo1" eventType="touchUpInside" id="FYh-3w-xZ5"/>
                                 </connections>
@@ -537,7 +686,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggr-3A-ihg">
                                 <rect key="frame" x="28" y="231" width="154" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="pants.png"/>
+                                <state key="normal" image="pants"/>
                                 <connections>
                                     <action selector="pant:" destination="g5o-hI-yo1" eventType="touchUpInside" id="q8k-Sc-NLR"/>
                                 </connections>
@@ -545,7 +694,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3D-ck-2E6">
                                 <rect key="frame" x="39" y="398" width="132" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="dress.png"/>
+                                <state key="normal" image="dress"/>
                                 <connections>
                                     <action selector="dresses:" destination="g5o-hI-yo1" eventType="touchUpInside" id="SA2-za-wdb"/>
                                 </connections>
@@ -553,7 +702,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYK-vg-b0B">
                                 <rect key="frame" x="218" y="268" width="102" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="shorts.png"/>
+                                <state key="normal" image="shorts"/>
                                 <connections>
                                     <action selector="shorts:" destination="g5o-hI-yo1" eventType="touchUpInside" id="mBU-xg-z6m"/>
                                 </connections>
@@ -567,20 +716,21 @@
                                     <segue destination="yxE-gC-u3f" kind="show" identifier="toAddItem" id="Ty4-gB-zFS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKc-Rw-ucx">
-                                <rect key="frame" x="218" y="417" width="118" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="shoe.png"/>
-                                <connections>
-                                    <action selector="shoes:" destination="g5o-hI-yo1" eventType="touchUpInside" id="aoB-Xi-quI"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkt-XB-JKa">
                                 <rect key="frame" x="47" y="111" width="116" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="tshirt.png"/>
+                                <state key="normal" title="Button" image="tshirt"/>
                                 <connections>
                                     <action selector="shortShirt:" destination="g5o-hI-yo1" eventType="touchUpInside" id="hcQ-h3-I6t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKc-Rw-ucx">
+                                <rect key="frame" x="205" y="404" width="129" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="coat"/>
+                                <connections>
+                                    <action selector="outer_wear:" destination="g5o-hI-yo1" eventType="touchUpInside" id="KUg-Zq-2BI"/>
+                                    <segue destination="KJa-sa-uPd" kind="show" identifier="toOuterwear" id="Kee-DZ-oZK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -594,7 +744,6 @@
                         <segue destination="2oI-l5-LGS" kind="presentation" identifier="toPant" id="BR6-pu-Zvx"/>
                         <segue destination="VEw-Jy-Dck" kind="presentation" identifier="toShorts" id="drg-wE-EOC"/>
                         <segue destination="7Rx-sw-ZBk" kind="presentation" identifier="toDresses" id="AWv-DQ-cJS"/>
-                        <segue destination="0lb-7H-buz" kind="presentation" identifier="toShoes" id="7ag-tU-Ue2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQM-O4-wDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -619,7 +768,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wg-1w-M5g">
                                 <rect key="frame" x="16" y="20" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="arrow.png"/>
+                                <state key="normal" image="arrow"/>
                                 <connections>
                                     <action selector="onXOut:" destination="VuR-xc-ESH" eventType="touchUpInside" id="gU7-6O-4jq"/>
                                     <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="i2F-Ok-BEq"/>
@@ -628,7 +777,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ApQ-Qy-DUQ">
                                 <rect key="frame" x="0.0" y="152" width="375" height="515"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tAa-bp-S4S">
                                     <size key="itemSize" width="185" height="146"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -644,7 +793,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oZs-4q-Rqq">
-                                                    <rect key="frame" x="0.0" y="9" width="185" height="137"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="146"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -671,76 +820,6 @@
             </objects>
             <point key="canvasLocation" x="7704.8000000000002" y="-1842.7286356821592"/>
         </scene>
-        <!--Shoe View Controller-->
-        <scene sceneID="ckp-oL-aNb">
-            <objects>
-                <viewController id="0lb-7H-buz" customClass="ShoeViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1UT-lk-KtA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shoes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pim-gs-2Ym">
-                                <rect key="frame" x="71" y="68" width="233" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnL-0Z-93d">
-                                <rect key="frame" x="16" y="20" width="33" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="arrow.png"/>
-                                <connections>
-                                    <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="ED6-Ma-95O"/>
-                                    <action selector="onXOut:" destination="0lb-7H-buz" eventType="touchUpInside" id="nj1-ZY-Gyl"/>
-                                </connections>
-                            </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CyA-bj-OoP">
-                                <rect key="frame" x="0.0" y="152" width="375" height="515"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M71-ZX-2B7">
-                                    <size key="itemSize" width="185" height="146"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="GD7-fq-kKq" customClass="PicsCollectionViewCell" customModule="wearther" customModuleProvider="target">
-                                        <rect key="frame" x="95" y="0.0" width="185" height="146"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="185" height="146"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u55-dB-MAK">
-                                                    <rect key="frame" x="0.0" y="9" width="185" height="137"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <connections>
-                                            <outlet property="imageView" destination="u55-dB-MAK" id="LOQ-fF-FNP"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="0lb-7H-buz" id="sI6-LT-yke"/>
-                                    <outlet property="delegate" destination="0lb-7H-buz" id="azB-Nz-Twe"/>
-                                </connections>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="kxK-0i-OmW"/>
-                    </view>
-                    <connections>
-                        <outlet property="imageCollection" destination="CyA-bj-OoP" id="Rw0-eL-7nJ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zdT-De-uc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8453.6000000000004" y="-1158.1709145427287"/>
-        </scene>
         <!--Dress View Controller-->
         <scene sceneID="9t1-Pd-nVH">
             <objects>
@@ -759,7 +838,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L21-bg-lnT">
                                 <rect key="frame" x="16" y="20" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="arrow.png"/>
+                                <state key="normal" image="arrow"/>
                                 <connections>
                                     <action selector="onXOut:" destination="7Rx-sw-ZBk" eventType="touchUpInside" id="Hog-9b-kVk"/>
                                     <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="xfi-dn-myt"/>
@@ -768,7 +847,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="K3p-Rh-qFa">
                                 <rect key="frame" x="0.0" y="152" width="375" height="515"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xSN-WK-3nt">
                                     <size key="itemSize" width="185" height="146"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -784,7 +863,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WfH-Xe-4Mo">
-                                                    <rect key="frame" x="0.0" y="9" width="185" height="137"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="146"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -811,6 +890,75 @@
             </objects>
             <point key="canvasLocation" x="7704.8000000000002" y="-1158.1709145427287"/>
         </scene>
+        <!--Outerwear View Controller-->
+        <scene sceneID="Fx4-GD-CTC">
+            <objects>
+                <viewController id="KJa-sa-uPd" customClass="OuterwearViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VrC-pO-Ge1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQB-lG-5dP">
+                                <rect key="frame" x="16" y="20" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arrow"/>
+                                <connections>
+                                    <action selector="onXOut:" destination="KJa-sa-uPd" eventType="touchUpInside" id="YNI-aQ-6Os"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Outerwear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoS-tx-kPj">
+                                <rect key="frame" x="71" y="80" width="233" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qe0-jz-ZPF">
+                                <rect key="frame" x="0.0" y="152" width="375" height="515"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yet-Jg-LyX">
+                                    <size key="itemSize" width="185" height="146"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="bHA-2A-s74" customClass="PicsCollectionViewCell" customModule="wearther" customModuleProvider="target">
+                                        <rect key="frame" x="95" y="0.0" width="185" height="146"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="185" height="146"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r1s-UR-hoA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="146"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="imageView" destination="r1s-UR-hoA" id="aS2-rn-eIj"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="KJa-sa-uPd" id="zYq-CS-lBR"/>
+                                    <outlet property="delegate" destination="KJa-sa-uPd" id="bDD-pv-Mae"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="z7e-2j-RaF"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageCollection" destination="Qe0-jz-ZPF" id="Uzh-Db-ZiU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kt6-at-6z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8454" y="-1158"/>
+        </scene>
         <!--Shorts View Controller-->
         <scene sceneID="KwN-O0-jOi">
             <objects>
@@ -829,7 +977,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAp-QX-Idu">
                                 <rect key="frame" x="16" y="20" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="arrow.png"/>
+                                <state key="normal" image="arrow"/>
                                 <connections>
                                     <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="duG-AW-i5I"/>
                                     <action selector="onXOut:" destination="VEw-Jy-Dck" eventType="touchUpInside" id="rM4-ir-CcD"/>
@@ -838,7 +986,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lbr-3F-ai8">
                                 <rect key="frame" x="0.0" y="152" width="375" height="515"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xxz-vY-WVm">
                                     <size key="itemSize" width="185" height="146"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -854,7 +1002,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0E-uv-reU">
-                                                    <rect key="frame" x="0.0" y="9" width="185" height="137"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="146"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -896,7 +1044,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="nvs-Ew-c1c">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="nvs-Ew-c1c">
                                 <rect key="frame" x="42" y="116" width="291" height="386"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -919,7 +1067,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwn-3Q-tFW">
                                 <rect key="frame" x="16" y="20" width="33" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="arrow.png"/>
+                                <state key="normal" image="arrow"/>
                                 <connections>
                                     <action selector="onXOut:" destination="yxE-gC-u3f" eventType="touchUpInside" id="KIj-3j-iwr"/>
                                 </connections>
@@ -948,7 +1096,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0E-pl-mGv">
                                 <rect key="frame" x="50" y="122" width="116" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="tshirt.png"/>
+                                <state key="normal" title="Button" image="tshirt"/>
                                 <connections>
                                     <action selector="short_sleeved:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="AgC-RP-oZf"/>
                                 </connections>
@@ -956,7 +1104,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8L-K6-rJu">
                                 <rect key="frame" x="195" y="106" width="133" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="longsleeve.png"/>
+                                <state key="normal" image="longsleeve"/>
                                 <connections>
                                     <action selector="long_sleeved:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="dUQ-q8-bUs"/>
                                 </connections>
@@ -964,7 +1112,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ve3-sh-8Ia">
                                 <rect key="frame" x="39" y="265" width="154" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="pants.png"/>
+                                <state key="normal" image="pants"/>
                                 <connections>
                                     <action selector="pants:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="lAa-Km-frq"/>
                                 </connections>
@@ -972,7 +1120,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYW-lb-rsH">
                                 <rect key="frame" x="210" y="315" width="102" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="shorts.png"/>
+                                <state key="normal" image="shorts"/>
                                 <connections>
                                     <action selector="shorts:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="v92-26-bPo"/>
                                 </connections>
@@ -980,17 +1128,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cA-bc-4tt">
                                 <rect key="frame" x="50" y="458" width="132" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="dress.png"/>
+                                <state key="normal" image="dress"/>
                                 <connections>
                                     <action selector="dresses:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="g8d-ya-QBb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-iq-hdn">
-                                <rect key="frame" x="202" y="477" width="118" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="shoe.png"/>
-                                <connections>
-                                    <action selector="shoes:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="ORl-G5-xdc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where Should This Go?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk2-IT-WpK">
@@ -1000,14 +1140,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-iq-hdn">
+                                <rect key="frame" x="210" y="467" width="118" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="coat"/>
+                                <connections>
+                                    <action selector="shoes:" destination="7Jo-uP-Yig" eventType="touchUpInside" id="ORl-G5-xdc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="7td-cz-tnc"/>
                     </view>
+                    <connections>
+                        <segue destination="9oW-cC-LAn" kind="show" identifier="backToCloset" id="x4l-zs-eub"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOQ-V9-WVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7657" y="-275"/>
+            <point key="canvasLocation" x="7705" y="-275"/>
         </scene>
         <!--Pant View Controller-->
         <scene sceneID="rPE-FI-juS">
@@ -1027,7 +1178,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8I-RW-sEx">
                                 <rect key="frame" x="16" y="20" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="arrow.png"/>
+                                <state key="normal" image="arrow"/>
                                 <connections>
                                     <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="K9o-zP-OyF"/>
                                     <action selector="onXOut:" destination="2oI-l5-LGS" eventType="touchUpInside" id="e6n-xN-EaT"/>
@@ -1036,7 +1187,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4JR-D6-c4o">
                                 <rect key="frame" x="0.0" y="152" width="375" height="515"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aFj-6B-r8e">
                                     <size key="itemSize" width="185" height="146"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1052,7 +1203,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppW-Mf-h96">
-                                                    <rect key="frame" x="0.0" y="9" width="185" height="137"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="146"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -1097,7 +1248,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qU8-MS-9HT">
                                 <rect key="frame" x="16" y="20" width="33" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="arrow.png"/>
+                                <state key="normal" image="arrow"/>
                                 <connections>
                                     <action selector="onXOut:" destination="nXF-pb-SWa" eventType="touchUpInside" id="0db-69-wNW"/>
                                 </connections>
@@ -1105,7 +1256,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xOY-He-UzJ">
                                 <rect key="frame" x="0.0" y="152" width="375" height="515"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WIQ-u9-fZL">
                                     <size key="itemSize" width="185" height="146"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1121,7 +1272,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p8V-v8-Mj2">
-                                                    <rect key="frame" x="0.0" y="9" width="185" height="137"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="146"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -1266,8 +1417,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Update Current Location"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fW-gl-9Ns">
+                                <rect key="frame" x="134" y="475" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Generate Outfit"/>
+                                <connections>
+                                    <segue destination="bIx-VL-NRi" kind="show" identifier="toOutfitGenerator" id="VuG-MH-X6L"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="oMG-Ke-hBJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="LPa-pT-tVk"/>
@@ -1284,28 +1443,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcd-uV-2pV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2786" y="-1478"/>
+            <point key="canvasLocation" x="2784.8000000000002" y="-1478.4107946026988"/>
         </scene>
     </scenes>
     <resources>
-        <image name="add.png" width="1600" height="1600"/>
-        <image name="alarm.png" width="512" height="512"/>
-        <image name="arrow.png" width="512" height="512"/>
+        <image name="add" width="1600" height="1600"/>
+        <image name="alarm" width="512" height="512"/>
+        <image name="arrow" width="512" height="512"/>
         <image name="businessman" width="30" height="30"/>
-        <image name="dress.png" width="200" height="200"/>
+        <image name="coat" width="256" height="256"/>
+        <image name="dress" width="200" height="200"/>
         <image name="home" width="30" height="30"/>
         <image name="icons8-clothes-30" width="30" height="30"/>
         <image name="logo" width="598" height="543"/>
-        <image name="longsleeve.png" width="200" height="200"/>
-        <image name="pants.png" width="200" height="200"/>
-        <image name="photo.png" width="927" height="720"/>
+        <image name="longsleeve" width="200" height="200"/>
+        <image name="pants" width="200" height="200"/>
+        <image name="photo" width="927" height="720"/>
         <image name="settings" width="30" height="30"/>
-        <image name="settings.png" width="1600" height="1600"/>
-        <image name="shoe.png" width="200" height="200"/>
-        <image name="shorts.png" width="512" height="512"/>
-        <image name="tshirt.png" width="512" height="512"/>
+        <image name="settings-1" width="1600" height="1600"/>
+        <image name="shorts" width="512" height="512"/>
+        <image name="tshirt" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qtf-8c-sXW"/>
+        <segue reference="x4l-zs-eub"/>
     </inferredMetricsTieBreakers>
 </document>

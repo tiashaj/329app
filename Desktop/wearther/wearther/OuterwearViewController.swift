@@ -1,8 +1,8 @@
 //
-//  ShoeViewController.swift
+//  OuterwearViewController.swift
 //  wearther
 //
-//  Created by Tiasha Joardar on 5/1/18.
+//  Created by Tiasha Joardar on 5/3/18.
 //  Copyright © 2018 Amy Fang. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 
-class ShoeViewController: UIViewController, UICollectionViewDataSource {
+class OuterwearViewController: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var imageCollection: UICollectionView!
     var customLayout:CustomImageFlowLayout!
@@ -30,7 +30,7 @@ class ShoeViewController: UIViewController, UICollectionViewDataSource {
     
     func loadDB(){
         let userID = Auth.auth().currentUser?.uid
-        ref.child("Users").child(userID!).child("shoes").observe(DataEventType.value) { (snapshot) in
+        ref.child("Users").child(userID!).child("outer_wear").observe(DataEventType.value) { (snapshot) in
             var newImages = [Pic]()
             
             for picSnapshot in snapshot.children {
@@ -60,7 +60,7 @@ class ShoeViewController: UIViewController, UICollectionViewDataSource {
         })
         return cell
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
