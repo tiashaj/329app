@@ -15,7 +15,6 @@
 		17D043ACFE794ADBE5337588 /* Pods_weartherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1A1650677D336E9E7C8564 /* Pods_weartherTests.framework */; };
 		375E2F8DC7EFD7EB9C147209 /* Pods_wearther.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D874C4C3F84613306335085 /* Pods_wearther.framework */; };
 		661738FA209A8A90003EA7B9 /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 661738F6209A8A8C003EA7B9 /* alarm.png */; };
-		661738FD209A8A90003EA7B9 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 661738F9209A8A90003EA7B9 /* photo.png */; };
 		66173903209A8C82003EA7B9 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 66173902209A8C81003EA7B9 /* settings.png */; };
 		66173905209A9415003EA7B9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66173904209A9415003EA7B9 /* SettingsViewController.swift */; };
 		661D52E42098461800F490E8 /* DigClosetHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D52E32098461800F490E8 /* DigClosetHomeViewController.swift */; };
@@ -51,6 +50,8 @@
 		F804F8C720648C31006E1B15 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804F8C620648C31006E1B15 /* RegisterViewController.swift */; };
 		F8219C28208130590057049B /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8219C27208130590057049B /* MyTabBarController.swift */; };
 		F84A03B52097949100DCF8F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F84A03B42097949100DCF8F1 /* GoogleService-Info.plist */; };
+		F8D7FF6C209A97B000D20470 /* CustomImageFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */; };
+		F8D7FF6E209A97E100D20470 /* PicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +80,6 @@
 		0A99A4C6208FE5B200BE695E /* WeatherGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
 		27DB000AD6FF9FC1D9363C68 /* Pods-weartherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weartherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weartherTests/Pods-weartherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		661738F6209A8A8C003EA7B9 /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm.png; sourceTree = "<group>"; };
-		661738F9209A8A90003EA7B9 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photo.png; path = ../../../../../../Desktop/photo.png; sourceTree = "<group>"; };
 		66173902209A8C81003EA7B9 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		66173904209A9415003EA7B9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		661D52E32098461800F490E8 /* DigClosetHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigClosetHomeViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +127,8 @@
 		F804F8C620648C31006E1B15 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F8219C27208130590057049B /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		F84A03B42097949100DCF8F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
+		F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,8 @@
 				661D52FD20984F6200F490E8 /* DressViewController.swift */,
 				661D52FF20984F6B00F490E8 /* ShoeViewController.swift */,
 				0A99A4C3208FE58800BE695E /* DisplayViewController.swift */,
+				F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */,
+				F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */,
 				0A99A4C5208FE5B200BE695E /* Weather.swift */,
 				0A99A4C6208FE5B200BE695E /* WeatherGetter.swift */,
 				F804F89A206487BE006E1B15 /* wearther.xcdatamodeld */,
@@ -233,7 +237,6 @@
 				F84A03B42097949100DCF8F1 /* GoogleService-Info.plist */,
 				66173902209A8C81003EA7B9 /* settings.png */,
 				661738F6209A8A8C003EA7B9 /* alarm.png */,
-				661738F9209A8A90003EA7B9 /* photo.png */,
 				661D52E72098480800F490E8 /* tshirt.png */,
 				661D52E92098486100F490E8 /* longsleeve.png */,
 				661D52EB209848C900F490E8 /* pants.png */,
@@ -389,7 +392,6 @@
 				661D5310209909B400F490E8 /* add.png in Resources */,
 				661738FA209A8A90003EA7B9 /* alarm.png in Resources */,
 				661D52EC209848CA00F490E8 /* pants.png in Resources */,
-				661738FD209A8A90003EA7B9 /* photo.png in Resources */,
 				661D5304209905DF00F490E8 /* arrow.png in Resources */,
 				661D52F220984A1300F490E8 /* shoe.png in Resources */,
 				66173903209A8C82003EA7B9 /* settings.png in Resources */,
@@ -509,12 +511,14 @@
 				0A99A4C7208FE5B200BE695E /* Weather.swift in Sources */,
 				661D52FE20984F6200F490E8 /* DressViewController.swift in Sources */,
 				661D52F820984EAE00F490E8 /* LongShirtViewController.swift in Sources */,
+				F8D7FF6E209A97E100D20470 /* PicsCollectionViewCell.swift in Sources */,
 				661D53182099388100F490E8 /* ChooseCategoryViewController.swift in Sources */,
 				F804F8C720648C31006E1B15 /* RegisterViewController.swift in Sources */,
 				661D52FC20984F5700F490E8 /* ShortsViewController.swift in Sources */,
 				661D5328209A7F3A00F490E8 /* NotificationViewController.swift in Sources */,
 				661D52E42098461800F490E8 /* DigClosetHomeViewController.swift in Sources */,
 				F804F894206487BE006E1B15 /* AppDelegate.swift in Sources */,
+				F8D7FF6C209A97B000D20470 /* CustomImageFlowLayout.swift in Sources */,
 				661D530020984F6B00F490E8 /* ShoeViewController.swift in Sources */,
 				0A99A4C8208FE5B200BE695E /* WeatherGetter.swift in Sources */,
 				661D52F420984AF200F490E8 /* ShortShirtViewController.swift in Sources */,
