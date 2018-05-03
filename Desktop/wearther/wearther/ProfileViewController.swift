@@ -14,6 +14,11 @@ import FirebaseDatabase
 
 class ProfileViewController: UIViewController {
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
+    }
+    
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var EmailLabel: UILabel!
     @IBOutlet weak var TempLabel: UILabel!
@@ -28,11 +33,6 @@ class ProfileViewController: UIViewController {
         ref = Database.database().reference()
         displayText()
         displayPic()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        UIColourScheme.instance.set(for:self)
     }
     
     //external function to fill up text labels

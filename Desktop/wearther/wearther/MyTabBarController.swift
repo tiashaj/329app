@@ -21,6 +21,10 @@ class MyTabBarController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
+    }
 
     /*
     // MARK: - Navigation

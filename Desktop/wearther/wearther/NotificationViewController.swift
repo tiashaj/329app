@@ -3,6 +3,11 @@
  
  class NotificationViewController: UIViewController {
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
+    }
+    
     func repeatNotification(){
         let content = UNMutableNotificationContent()
         content.title = "Get an Outfit!"

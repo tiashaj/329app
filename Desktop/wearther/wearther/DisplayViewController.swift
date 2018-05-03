@@ -32,12 +32,12 @@ class DisplayViewController: UIViewController,
     var locationManager:CLLocationManager!
     var cityString:String = ""
     
-    
-    // MARK: -
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         UIColourScheme.instance.set(for:self)
     }
+    
+    // MARK: -
     
     override func viewDidLoad() {
         super.viewDidLoad()

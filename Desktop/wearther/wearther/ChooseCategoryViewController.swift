@@ -16,6 +16,11 @@ class ChooseCategoryViewController: UIViewController {
     var ref: DatabaseReference!
     var pic:UIImage?
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()

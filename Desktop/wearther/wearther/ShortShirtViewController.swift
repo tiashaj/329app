@@ -14,6 +14,11 @@ import FirebaseStorage
 
 class ShortShirtViewController: UIViewController, UICollectionViewDataSource {
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
+    }
+    
     @IBOutlet weak var imageCollection: UICollectionView!
     var customLayout:CustomImageFlowLayout!
     var images = [Pic]()

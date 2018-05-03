@@ -27,6 +27,11 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
+    }
+    
     @IBAction func login(_ sender: Any) {
         if (self.email.text?.isEmpty)! || (self.password.text?.isEmpty)! {
             //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in

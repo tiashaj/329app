@@ -14,6 +14,11 @@ import FirebaseDatabase
 
 class AddItemViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
+    }
+    
     @IBOutlet weak var pictureView: UIImageView!
     var ref: DatabaseReference!
     var pic:UIImage?

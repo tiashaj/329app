@@ -14,6 +14,11 @@ class OutputViewController: UIViewController {
     @IBOutlet weak var temp: UITextField!
     @IBOutlet weak var outfit: UILabel!
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
+    }
+    
     
     @IBAction func onClick(_ sender: Any) {
         

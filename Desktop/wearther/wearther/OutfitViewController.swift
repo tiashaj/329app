@@ -23,6 +23,11 @@ class OutfitViewController: UIViewController {
     var weatherTemp:Int?
     var finalOutfit = [String:String]()
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIColourScheme.instance.set(for:self)
+    }
+    
     var segueTemp:Int = 0
     
     override func viewDidLoad() {
