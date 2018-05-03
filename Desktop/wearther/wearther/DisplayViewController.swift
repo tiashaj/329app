@@ -28,6 +28,7 @@ class DisplayViewController: UIViewController,
     let latitude:Double = 0
     let longitude:Double = 0
     var weather: WeatherGetter!
+    var segueTemp:Int = 0
     var locationManager:CLLocationManager!
     
     // MARK: -
@@ -174,6 +175,7 @@ class DisplayViewController: UIViewController,
         
         if let tempInt: Int = Int(round(weather.tempFahrenheit)){
             var outfit:String = ""
+            segueTemp = Int(round(weather.tempFahrenheit))
             if (tempInt > 120 || tempInt < -20){
                 outfit = "Enter a temperature between -20 and 120"
             }
@@ -192,6 +194,14 @@ class DisplayViewController: UIViewController,
             print(outfit)
         }
     }
+
+    @IBAction func generateOutfitButton(_ sender: Any) {
+        let vc = OutfitViewController(nibName: "OutfitViewController", bundle: nil)
+        print(segueTemp)
+        vc.segueTemp = segueTemp
+        navigationController?.pushViewController(vc, animated: true)
+    }
+ 
     
     func didNotGetWeather(error: NSError) {
         // This method is called asynchronously, which means it won't execute in the main queue.
@@ -223,7 +233,7 @@ class DisplayViewController: UIViewController,
         print("Count: \(prospectiveText.count)")
         return true
     }
-     */
+    */
     
     // Pressing the clear button on the text field (the x-in-a-circle button
     // on the right side of the field)
