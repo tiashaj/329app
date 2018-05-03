@@ -30,6 +30,8 @@ class DisplayViewController: UIViewController,
     var weather: WeatherGetter!
     var segueTemp:Int = 0
     var locationManager:CLLocationManager!
+    var cityString:String = ""
+    
     
     // MARK: -
     
@@ -50,6 +52,8 @@ class DisplayViewController: UIViewController,
         cityTextField.placeholder = "Enter city name"
         cityTextField.delegate = self
         cityTextField.enablesReturnKeyAutomatically = true
+        cityString = readDataFromFile(file: "CityList")
+
         //getCityWeatherButton.isEnabled = false
 
         /*
@@ -139,10 +143,18 @@ class DisplayViewController: UIViewController,
         guard let text = cityTextField.text, !text.isEmpty else {
             return
         }
-        //weather.getWeather(city: cityTextField.text!.urlEncoded)
-        let spaceString = cityTextField.text
-        let percString = spaceString?.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
-        weather.getWeather(city: percString!)
+        let spaceString:String = cityTextField.text!
+        if cityString.lowercased().range(of: spaceString.lowercased()) != nil {
+            print("exists")
+            //weather.getWeather(city: cityTextField.text!.urlEncoded)
+            let percString = spaceString.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+            weather.getWeather(city: percString)
+        }
+        else
+        {
+            print("not a real city")
+            return
+        }
     }
     
     //Location Methods
@@ -195,11 +207,12 @@ class DisplayViewController: UIViewController,
         }
     }
 
-    @IBAction func generateOutfitButton(_ sender: Any) {
-        let vc = OutfitViewController(nibName: "OutfitViewController", bundle: nil)
-        print(segueTemp)
-        vc.segueTemp = segueTemp
-        navigationController?.pushViewController(vc, animated: true)
+    //segue function
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? OutfitViewController
+        {
+            destinationVC.segueTemp = segueTemp
+        }
     }
  
     
@@ -283,7 +296,23 @@ class DisplayViewController: UIViewController,
         )
     }
     
-    
+    func readDataFromFile(file:String)-> String!{
+        guard Bundle.main.path(forResource: file, ofType: "txt") != nil
+            else {
+                return nil
+        }
+        do {
+            let filepath:String = Bundle.main.path(forResource: "CityList", ofType: "txt")!
+            return try? String(contentsOfFile: filepath, encoding: String.Encoding.utf8)
+            
+            //let contents = try String(contentsOfFile: filepath, usedEncoding: nil)
+            //return contents
+        } catch {
+            print ("File Read Error")
+            return nil
+        }
+        
+    }
     
 }
 

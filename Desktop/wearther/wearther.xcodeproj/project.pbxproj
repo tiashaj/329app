@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A5A7D6A20803189007D1A6B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A7D6920803189007D1A6B /* ProfileViewController.swift */; };
+		0A7D2E63209B8C2600AE74F0 /* CityList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A7D2E62209B8C2600AE74F0 /* CityList.txt */; };
 		0A99A4C4208FE58800BE695E /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A99A4C3208FE58800BE695E /* DisplayViewController.swift */; };
 		0A99A4C7208FE5B200BE695E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A99A4C5208FE5B200BE695E /* Weather.swift */; };
 		0A99A4C8208FE5B200BE695E /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A99A4C6208FE5B200BE695E /* WeatherGetter.swift */; };
@@ -66,6 +67,7 @@
 		05BF01339242F0822E6D0FDC /* Pods-weartherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weartherUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weartherUITests/Pods-weartherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		09C67DB73A9BBD065D614794 /* Pods-wearther.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wearther.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wearther/Pods-wearther.debug.xcconfig"; sourceTree = "<group>"; };
 		0A5A7D6920803189007D1A6B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0A7D2E62209B8C2600AE74F0 /* CityList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CityList.txt; sourceTree = "<group>"; };
 		0A99A4C3208FE58800BE695E /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		0A99A4C5208FE5B200BE695E /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		0A99A4C6208FE5B200BE695E /* WeatherGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
@@ -108,7 +110,7 @@
 		F8753185209AB2A10015E5EB /* Pic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pic.swift; sourceTree = "<group>"; };
 		F8753187209ADD880015E5EB /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		F8753189209AE99C0015E5EB /* OutfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitViewController.swift; sourceTree = "<group>"; };
-		F875318B209AED840015E5EB /* OuterwearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OuterwearViewController.swift; path = /Users/amyfang/Documents/GitHub/329app/Desktop/wearther/wearther/OuterwearViewController.swift; sourceTree = "<absolute>"; };
+		F875318B209AED840015E5EB /* OuterwearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OuterwearViewController.swift; path = "/Users/Kevin/Documents/CS 329E/329app/Desktop/wearther/wearther/OuterwearViewController.swift"; sourceTree = "<absolute>"; };
 		F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
 		F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,8 +196,9 @@
 				F804F8C620648C31006E1B15 /* RegisterViewController.swift */,
 				F8753187209ADD880015E5EB /* TemperatureViewController.swift */,
 				F8219C27208130590057049B /* MyTabBarController.swift */,
-				66633D88207C54C60086EDAD /* OutputViewController.swift */,
+				0A99A4C3208FE58800BE695E /* DisplayViewController.swift */,
 				F8753189209AE99C0015E5EB /* OutfitViewController.swift */,
+				0A7D2E62209B8C2600AE74F0 /* CityList.txt */,
 				0A5A7D6920803189007D1A6B /* ProfileViewController.swift */,
 				F804F897206487BE006E1B15 /* Main.storyboard */,
 				66173908209AC23F003EA7B9 /* GlobalViewController.swift */,
@@ -210,9 +213,9 @@
 				661D52FB20984F5700F490E8 /* ShortsViewController.swift */,
 				661D52FD20984F6200F490E8 /* DressViewController.swift */,
 				F875318B209AED840015E5EB /* OuterwearViewController.swift */,
-				0A99A4C3208FE58800BE695E /* DisplayViewController.swift */,
 				F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */,
 				F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */,
+				66633D88207C54C60086EDAD /* OutputViewController.swift */,
 				F8753185209AB2A10015E5EB /* Pic.swift */,
 				0A99A4C5208FE5B200BE695E /* Weather.swift */,
 				0A99A4C6208FE5B200BE695E /* WeatherGetter.swift */,
@@ -357,6 +360,7 @@
 				F804F8A1206487BE006E1B15 /* LaunchScreen.storyboard in Resources */,
 				F84A03B52097949100DCF8F1 /* GoogleService-Info.plist in Resources */,
 				F804F89E206487BE006E1B15 /* Assets.xcassets in Resources */,
+				0A7D2E63209B8C2600AE74F0 /* CityList.txt in Resources */,
 				F804F899206487BE006E1B15 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

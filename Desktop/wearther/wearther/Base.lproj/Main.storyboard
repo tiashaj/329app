@@ -1422,7 +1422,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Generate Outfit"/>
                                 <connections>
-                                    <action selector="generateOutfitButton:" destination="nWw-mg-1Db" eventType="touchUpInside" id="Png-7H-Jkl"/>
                                     <segue destination="bIx-VL-NRi" kind="show" identifier="toOutfitGenerator" id="VuG-MH-X6L"/>
                                 </connections>
                             </button>
@@ -1466,6 +1465,7 @@
         <image name="tshirt" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="CSc-VT-Axp"/>
         <segue reference="x4l-zs-eub"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -23,19 +23,19 @@ class OutfitViewController: UIViewController {
     var weatherTemp:Int?
     var finalOutfit = [String:String]()
     
-    var segueTemp:Int = 70
+    var segueTemp:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.weatherTemp = 35
         print(segueTemp)
-        userTemp = segueTemp
+        self.userTemp = segueTemp
         ref = Database.database().reference()
         ref.child("Users").child(self.userID!).observe(DataEventType.value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            self.userTemp = value?["temperature"] as? Int
+            //self.userTemp = value?["temperature"] as? Int
             print(self.userID!)
-            print(self.userTemp ?? 85)
+            print(self.userTemp!)
         }
     }
 
