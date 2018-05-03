@@ -1463,7 +1463,6 @@
         <image name="tshirt" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ty4-gB-zFS"/>
         <segue reference="x4l-zs-eub"/>
     </inferredMetricsTieBreakers>
 </document>

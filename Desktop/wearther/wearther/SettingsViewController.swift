@@ -59,6 +59,20 @@ class SettingsViewController: UIViewController {
     @IBAction func onGray(_ sender: Any) {
         UIColourScheme.instance.changeToLightGray(for:self)
     }
+    
+    /*
+    @IBAction func onBold(_ sender: Any) {
+        UIColourScheme.instance.changeToBold(for: self)
+    }
+    
+    @IBAction func onThin(_ sender: Any) {
+        UIColourScheme.instance.changeToThin(for: self)
+    }
+    
+    @IBAction func onNormal(_ sender: Any) {
+        UIColourScheme.instance.changeToNormal(for: self)
+    }
+ */
  
     
     @IBAction func onXOut(_ sender: Any) {
