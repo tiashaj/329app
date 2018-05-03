@@ -52,6 +52,7 @@
 		F8219C28208130590057049B /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8219C27208130590057049B /* MyTabBarController.swift */; };
 		F84A03B52097949100DCF8F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F84A03B42097949100DCF8F1 /* GoogleService-Info.plist */; };
 <<<<<<< HEAD
+<<<<<<< HEAD
 		F8D7FF6C209A97B000D20470 /* CustomImageFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */; };
 		F8D7FF6E209A97E100D20470 /* PicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */; };
 		F8D7FF70209AA4F200D20470 /* Pic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FF6F209AA4F200D20470 /* Pic.swift */; };
@@ -60,6 +61,11 @@
 		F8D7FF6E209A97E100D20470 /* PicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */; };
 =======
 >>>>>>> 2a6ad15229aa1149c5b1e3ab8da374addfed0c73
+||||||| merged common ancestors
+		F8D7FF6C209A97B000D20470 /* CustomImageFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */; };
+		F8D7FF6E209A97E100D20470 /* PicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */; };
+=======
+>>>>>>> 1b63c0d8889a35d0025e4284938219fb36500ae7
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +143,7 @@
 		F8219C27208130590057049B /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		F84A03B42097949100DCF8F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 <<<<<<< HEAD
+<<<<<<< HEAD
 		F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
 		F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F8D7FF6F209AA4F200D20470 /* Pic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pic.swift; sourceTree = "<group>"; };
@@ -145,6 +152,11 @@
 		F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsCollectionViewCell.swift; sourceTree = "<group>"; };
 =======
 >>>>>>> 2a6ad15229aa1149c5b1e3ab8da374addfed0c73
+||||||| merged common ancestors
+		F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
+		F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsCollectionViewCell.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> 1b63c0d8889a35d0025e4284938219fb36500ae7
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +255,7 @@
 				661D52FF20984F6B00F490E8 /* ShoeViewController.swift */,
 				0A99A4C3208FE58800BE695E /* DisplayViewController.swift */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */,
 				F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */,
 				F8D7FF6F209AA4F200D20470 /* Pic.swift */,
@@ -251,6 +264,11 @@
 				F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */,
 =======
 >>>>>>> 2a6ad15229aa1149c5b1e3ab8da374addfed0c73
+||||||| merged common ancestors
+				F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */,
+				F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */,
+=======
+>>>>>>> 1b63c0d8889a35d0025e4284938219fb36500ae7
 				0A99A4C5208FE5B200BE695E /* Weather.swift */,
 				0A99A4C6208FE5B200BE695E /* WeatherGetter.swift */,
 				F804F89A206487BE006E1B15 /* wearther.xcdatamodeld */,
