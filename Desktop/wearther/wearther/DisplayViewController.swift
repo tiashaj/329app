@@ -51,19 +51,21 @@ class DisplayViewController: UIViewController,
         cityTextField.enablesReturnKeyAutomatically = true
         //getCityWeatherButton.isEnabled = false
 
+        /*
         // For use when the app is open & in the background
-        locationManager.requestAlwaysAuthorization()
+        //locationManager.requestAlwaysAuthorization()
         
         // For use when the app is open
-        //locationManager.requestWhenInUseAuthorization()
+        locationManager.requestWhenInUseAuthorization()
         
         // If location services is enabled get the users location
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
+            locationManager.delegate? = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest // You can change the locaiton accuary here.
             locationManager.startUpdatingLocation()
             
         }
+        */
     }
     
     
@@ -75,8 +77,10 @@ class DisplayViewController: UIViewController,
     // MARK: - Button events
     // ---------------------
     
+    /*
     //Location Stuff
     // Print out the location to the console
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             print(location.coordinate)
@@ -126,6 +130,7 @@ class DisplayViewController: UIViewController,
         })
 
     }
+ */
     
     @IBAction func getWeatherForCityButtonTapped(sender: UIButton) {
         guard let text = cityTextField.text, !text.isEmpty else {
@@ -152,7 +157,7 @@ class DisplayViewController: UIViewController,
         DispatchQueue.main.async() {
             self.cityLabel.text = weather.city
             self.weatherLabel.text = weather.weatherDescription
-            self.temperatureLabel.text = "\(Int(round(weather.tempCelsius)))°"
+            self.temperatureLabel.text = "\(Int(round(weather.tempFahrenheit)))°"
             self.cloudCoverLabel.text = "\(weather.cloudCover)%"
             self.windLabel.text = "\(weather.windSpeed) m/s"
             
@@ -207,6 +212,7 @@ class DisplayViewController: UIViewController,
         textField.text = ""
         return true
     }
+    
     
     // Pressing the return button on the keyboard should be like
     // pressing the "Get weather for the city above" button.

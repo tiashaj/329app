@@ -277,10 +277,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="d4v-yj-xUB" kind="relationship" relationship="viewControllers" id="K1h-im-VO9"/>
                         <segue destination="d3V-d2-8k9" kind="relationship" relationship="viewControllers" id="Hsq-VE-huu"/>
                         <segue destination="4um-Nr-COS" kind="relationship" relationship="viewControllers" id="aSc-EZ-hkn"/>
                         <segue destination="g5o-hI-yo1" kind="relationship" relationship="viewControllers" id="pnR-iW-XfX"/>
+                        <segue destination="nWw-mg-1Db" kind="relationship" relationship="viewControllers" id="9Tq-qG-Oe7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwU-XX-wWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -880,7 +880,7 @@
             </objects>
             <point key="canvasLocation" x="6976.8000000000002" y="-1843.6281859070466"/>
         </scene>
-        <!--Display View Controller-->
+        <!--Item-->
         <scene sceneID="uan-nK-sn3">
             <objects>
                 <viewController id="nWw-mg-1Db" customClass="DisplayViewController" customModule="wearther" customModuleProvider="target" sceneMemberID="viewController">
@@ -997,14 +997,12 @@
                                 <rect key="frame" x="69" y="372" width="169" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Update Current Location"/>
-                                <connections>
-                                    <action selector="updateLocationButtonWithSender:" destination="nWw-mg-1Db" eventType="touchUpInside" id="Ash-07-eAO"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="oMG-Ke-hBJ"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="LPa-pT-tVk"/>
                     <connections>
                         <outlet property="cityLabel" destination="NtK-wa-ROZ" id="zGR-9A-VTC"/>
                         <outlet property="cityTextField" destination="Xl3-Dc-OzH" id="jfx-k5-x7N"/>
@@ -1018,7 +1016,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcd-uV-2pV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2414" y="927"/>
+            <point key="canvasLocation" x="2786" y="-1478"/>
         </scene>
     </scenes>
     <resources>
