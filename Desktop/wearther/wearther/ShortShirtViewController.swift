@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class ShortShirtViewController: UIViewController, UICollectionViewDataSource {
+class ShortShirtViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
