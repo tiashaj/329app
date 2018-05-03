@@ -132,7 +132,9 @@ class DisplayViewController: UIViewController,
     }
  */
     
-    @IBAction func getWeatherForCityButtonTapped(sender: UIButton) {
+    //Will crash if you put a non-real city in
+    
+    @IBAction func getWeatherForCityButtonTapped(sender: Any) {
         guard let text = cityTextField.text, !text.isEmpty else {
             return
         }
@@ -167,8 +169,27 @@ class DisplayViewController: UIViewController,
             else {
                 self.rainLabel.text = "None"
             }
-            
             self.humidityLabel.text = "\(weather.humidity)%"
+        }
+        
+        if let tempInt: Int = Int(round(weather.tempFahrenheit)){
+            var outfit:String = ""
+            if (tempInt > 120 || tempInt < -20){
+                outfit = "Enter a temperature between -20 and 120"
+            }
+            else if(tempInt >= 70){
+                outfit = "short-sleeved shirt and short pants."
+            }
+            else if(tempInt < 70 && tempInt >= 60){
+                outfit = "short-sleeved shirt and long pants. Bring a sweater!"
+            }
+            else if(tempInt < 60 && tempInt >= 50){
+                outfit = "long-sleeved shirt and long pants. Bring a sweater!"
+            }
+            else {
+                outfit = "thick coat, sweater, and long pants."
+            }
+            print(outfit)
         }
     }
     
@@ -219,6 +240,7 @@ class DisplayViewController: UIViewController,
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
+        // < ===== ======>
         getWeatherForCityButtonTapped(sender: getCityWeatherButton)
         return true
     }
@@ -254,6 +276,8 @@ class DisplayViewController: UIViewController,
     
     
 }
+
+
 
 /*
 extension String {
