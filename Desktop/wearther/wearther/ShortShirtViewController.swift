@@ -7,7 +7,6 @@
 //
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 import UIKit
 import Firebase
 ||||||| merged common ancestors
@@ -15,11 +14,6 @@ import UIKit
 =======
 
 >>>>>>> 2a6ad15229aa1149c5b1e3ab8da374addfed0c73
-||||||| merged common ancestors
-import UIKit
-=======
-
->>>>>>> 1b63c0d8889a35d0025e4284938219fb36500ae7
 import FirebaseDatabase
 import FirebaseAuth
 import FirebaseStorage
@@ -33,15 +27,10 @@ class ShortShirtViewController: UIViewController, UICollectionViewDataSource {
     var ref:DatabaseReference!
 ||||||| merged common ancestors
     var images = [UIImage]()
-<<<<<<< HEAD
     @IBOutlet weak var imageCollection: UICollectionView!
 =======
     var images = [UIImage]()
 >>>>>>> 2a6ad15229aa1149c5b1e3ab8da374addfed0c73
-||||||| merged common ancestors
-    @IBOutlet weak var imageCollection: UICollectionView!
-=======
->>>>>>> 1b63c0d8889a35d0025e4284938219fb36500ae7
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,10 +58,10 @@ class ShortShirtViewController: UIViewController, UICollectionViewDataSource {
         }
 ||||||| merged common ancestors
     func loadImages(){
-        images.append(UIImage(named: "tshirt.png"))
-        images.append(UIImage(named: "tshirt.png"))
-        images.append(UIImage(named: "tshirt.png"))
-        images.append(UIImage(named: "tshirt.png"))
+        images.append(UIImage(named: "tshirt.png")!)
+        images.append(UIImage(named: "tshirt.png")!)
+        images.append(UIImage(named: "tshirt.png")!)
+        images.append(UIImage(named: "tshirt.png")!)
         
         self.imageCollection.reloadData()
 =======
