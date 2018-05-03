@@ -19,7 +19,7 @@ class OutfitViewController: UIViewController {
     @IBOutlet weak var outerwearImage: UIImageView!
     var ref:DatabaseReference!
     let userID = Auth.auth().currentUser?.uid
-    var userTemp:Int? = 75
+    var userTemp:Int?
     var weatherTemp:Int?
     var finalOutfit = [String:String]()
     
@@ -27,13 +27,12 @@ class OutfitViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.weatherTemp = 35
         print(segueTemp)
-        self.userTemp = segueTemp
+        self.weatherTemp = segueTemp
         ref = Database.database().reference()
         ref.child("Users").child(self.userID!).observe(DataEventType.value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            //self.userTemp = value?["temperature"] as? Int
+            self.userTemp = value?["temperature"] as? Int
             print(self.userID!)
             print(self.userTemp!)
         }

@@ -110,7 +110,7 @@
 		F8753185209AB2A10015E5EB /* Pic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pic.swift; sourceTree = "<group>"; };
 		F8753187209ADD880015E5EB /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		F8753189209AE99C0015E5EB /* OutfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitViewController.swift; sourceTree = "<group>"; };
-		F875318B209AED840015E5EB /* OuterwearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OuterwearViewController.swift; path = "/Users/Kevin/Documents/CS 329E/329app/Desktop/wearther/wearther/OuterwearViewController.swift"; sourceTree = "<absolute>"; };
+		F875318B209AED840015E5EB /* OuterwearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OuterwearViewController.swift; path = /Users/amyfang/Documents/GitHub/329app/Desktop/wearther/wearther/OuterwearViewController.swift; sourceTree = "<absolute>"; };
 		F8D7FF6B209A97B000D20470 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
 		F8D7FF6D209A97E100D20470 /* PicsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
