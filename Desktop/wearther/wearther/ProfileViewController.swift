@@ -123,6 +123,7 @@ class ProfileViewController: UIViewController {
                 try Auth.auth().signOut()
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login")
                 present(vc, animated: true, completion: nil)
+                UIColourScheme.instance.changeToLightGray(for:self)
                 
             } catch let error as NSError {
                 print(error.localizedDescription)
